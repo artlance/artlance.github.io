@@ -3,7 +3,7 @@
 
 importScripts('sw-toolbox.js');
 
-toolbox.precache(["index.html","style/style.css"]);
+toolbox.precache(["index.html", "css/style.css"]);
 
 toolbox.router.get('/upload/*', toolbox.cacheFirst);
 
