@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <title>ZENO</title>
-    <meta name="description" content="">
+    <meta name="description" content="zeno description">
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="address=no">
     <link rel="stylesheet" href="css/style.css">
@@ -18,10 +18,12 @@
     <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="apple-icon-512x512.png">
     <link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico">
     <link rel="manifest" href="manifest.json">
     <meta name="msapplication-TileColor" content="#F5AB19">
     <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
@@ -35,20 +37,13 @@
     <meta name="msapplication-starturl" content="/">
     <script>
     if ('serviceWorker' in navigator) {
-        console.log('Supported');
-    } else {
-        console.log('NOT Supported');
-    }
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js').then(function(registration) {
-          // Registration was successful
-          console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        }, function(err) {
-          // registration failed :(
-          console.log('ServiceWorker registration failed: ', err);
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+                console.log('ServiceWorker registration failed: ', err);
+            });
         });
-      });
     }
     </script>
 </head>
