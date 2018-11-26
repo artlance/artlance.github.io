@@ -1,0 +1,737 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>ZENO</title>
+    <meta name="description" content="">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#F5AB19">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Zeno">
+    <meta name="apple-mobile-web-app-title" content="Zeno">
+    <meta name="theme-color" content="#F5AB19">
+    <meta name="msapplication-navbutton-color" content="#F5AB19">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="/">
+    <script>
+    if ('serviceWorker' in navigator) {
+        console.log('Supported');
+    } else {
+        console.log('NOT Supported');
+    }
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('sw.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+    </script>
+</head>
+<body class="no-js">
+    <div class="main">
+        <a href="#" class="navigation-toggle"><span class="navigation-toggle-icon"></span></a>
+        <header class="header-global">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-9">
+                        <div class="row">
+                            <div class="col-auto">
+                                <div class="logo">
+                                    <a href="/" class="logo-link"></a>
+                                </div>
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-auto">
+                                <div class="header-navigation">
+                                    <ul class="header-navigation-list">
+                                        <li><a class="header-navigation-add" href="#">Create Station</a></li>
+                                        <li><a href="#">Discover</a></li>
+                                        <li><a href="#">Genres</a></li>
+                                    </ul>
+                                </div>
+                                <!-- /.header-navigation -->
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-auto">
+                                <div class="header-search">
+                                    <form>
+                                        <input type="text" class="header-search-input" placeholder="Search by Genre, Location or Country">
+                                        <input type="submit" class="header-search-button" value="search">
+                                    </form>
+                                </div>
+                                <!-- /.header-search -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-3">
+                        <ul class="header-toolbar-list">
+                            <li><a href="#" class="notification-link"></a></li>
+                            <li><a href="#" class="account-link" style="background-image: url('upload/account.jpg');"></a></li>
+                        </ul>
+                        <!-- /.header-toolbar-list -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </header>
+        <div class="hero">
+            <div class="hero-background">
+                <div class="hero-background-slider">
+                    <div class="hero-background-slide" style="background-image: url('upload/stations/station-background-1.jpg');"></div>
+                    <div class="hero-background-slide" style="background-image: url('upload/stations/station-background-2.jpg');"></div>
+                    <div class="hero-background-slide" style="background-image: url('upload/stations/station-10.jpg');"></div>
+                </div>
+                <!-- /.hero-background-slider -->
+            </div>
+            <!-- /.hero-background -->
+            <div class="hero-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="hero-header-title">Popular Stations</div>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-6">
+                            <div class="hero-header-filter">
+                                <a class="hero-header-toggle" href="#">Genres <span class="hero-header-toggle-value">All Genres</span></a>
+                            </div>
+                            <!-- /.hero-header-filter -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.hero-header -->
+            <div class="hero-stations">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="hero-stations-list">
+                                <div class="hero-station hero-station-active">
+                                    <div class="hero-station-content">
+                                        <div class="hero-station-meta">
+                                            <div class="hero-station-live">LIVE</div>
+                                            <div class="hero-station-time">13:40</div>
+                                        </div>
+                                        <div class="hero-station-title">Electro Garten</div>
+                                        <div class="hero-station-tags">
+                                            <span class="station-tags">
+                                                <span class="station-tag">Electronic</span>
+                                                <span class="station-tag">House</span>
+                                            </span>
+                                            <!-- /.station-tags -->
+                                        </div>
+                                        <!-- /.hero-station-tags -->
+                                        <div class="hero-station-play-navigation">
+                                            <a href="#" class="station-play">
+                                                <span class="station-play-button"></span>
+                                                Play Now
+                                            </a>
+                                        </div>
+                                        <!-- /.hero-station-play-navigation -->
+                                    </div>
+                                    <!-- /.hero-station-content -->
+                                </div>
+                                <!-- /.hero-station -->
+                                <div class="hero-station">
+                                    <div class="hero-station-content">
+                                        <div class="hero-station-meta">
+                                            <div class="hero-station-live">LIVE</div>
+                                            <div class="hero-station-time">13:40</div>
+                                        </div>
+                                        <div class="hero-station-title">Brooklyn Live</div>
+                                        <div class="hero-station-tags">
+                                            <span class="station-tags">
+                                                <span class="station-tag">News</span>
+                                                <span class="station-tag">Jazz</span>
+                                            </span>
+                                            <!-- /.station-tags -->
+                                        </div>
+                                        <!-- /.hero-station-tags -->
+                                        <div class="hero-station-play-navigation">
+                                            <a href="#" class="station-play">
+                                                <span class="station-play-button"></span>
+                                                Play Now
+                                            </a>
+                                        </div>
+                                        <!-- /.hero-station-play-navigation -->
+                                    </div>
+                                    <!-- /.hero-station-content -->
+                                </div>
+                                <!-- /.hero-station -->
+                                <div class="hero-station">
+                                    <div class="hero-station-content">
+                                        <div class="hero-station-meta">
+                                            <div class="hero-station-live">LIVE</div>
+                                            <div class="hero-station-time">13:40</div>
+                                        </div>
+                                        <div class="hero-station-title">Flylo FM</div>
+                                        <div class="hero-station-tags">
+                                            <span class="station-tags">
+                                                <span class="station-tag">Electronic</span>
+                                                <span class="station-tag">House</span>
+                                            </span>
+                                            <!-- /.station-tags -->
+                                        </div>
+                                        <!-- /.hero-station-tags -->
+                                        <div class="hero-station-play-navigation">
+                                            <a href="#" class="station-play">
+                                                <span class="station-play-button"></span>
+                                                Play Now
+                                            </a>
+                                        </div>
+                                        <!-- /.hero-station-play-navigation -->
+                                    </div>
+                                    <!-- /.hero-station-content -->
+                                </div>
+                                <!-- /.hero-station -->
+                            </div>
+                            <!-- /.hero-stations-list -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.hero-stations -->
+        </div>
+        <!-- /.hero -->
+        <div class="spanning">
+            <!-- Filter by
+            Language
+            Genre
+            Country
+            Tags
+            Length
+            Popular
+            Method
+
+            English
+            Electronic
+            Rock
+            Clear All -->
+            <div class="stations-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="stations-header-title"><h1>Discover Stations</h1></div>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-6">
+                            <ul class="stations-filter">
+                                <li><a href="#" class="button button-ghost button-secondary">Filter</a></li>
+                                <li><a href="#" class="button">Show All</a></li>
+                            </ul>
+                            <!-- /.stations-filter -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.stations-header -->
+            <div class="stations">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="station">
+                                <a href="#" class="station-link">
+                                    <span class="station-poster">
+                                        <span class="station-poster-image" style="background-image: url('upload/stations/station-1.jpg');">
+                                        </span>
+                                        <!-- /.station-poster-image -->
+                                        <span class="station-labels">
+                                            <span class="station-label">Most Popular</span>
+                                        </span>
+                                        <!-- /.station-labels -->
+                                        <span class="station-tags">
+                                            <span class="station-tag">Electronic</span>
+                                            <span class="station-tag">House</span>
+                                        </span>
+                                        <!-- /.station-tags -->
+                                    </span>
+                                    <!-- /.station-poster -->
+                                    <span class="station-title">Electro Garten</span>
+                                    <span class="station-meta">
+                                        <span class="station-location">Berlin, DE</span>
+                                        <span class="station-languages">
+                                            <span class="station-language">English</span>
+                                            <span class="station-language">Deutsch</span>
+                                        </span>
+                                        <!-- /.station-languages -->
+                                    </span>
+                                    <!-- /.station-meta -->
+                                </a>
+                                <!-- /.station-link -->
+                            </div>
+                            <!-- /.station -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-3">
+                            <div class="station">
+                                <a href="#" class="station-link">
+                                    <span class="station-poster">
+                                        <span class="station-poster-image" style="background-image: url('upload/stations/station-2.jpg');">
+                                        </span>
+                                        <!-- /.station-poster-image -->
+                                        <span class="station-tags">
+                                            <span class="station-tag">Talk</span>
+                                            <span class="station-tag">News</span>
+                                        </span>
+                                        <!-- /.station-tags -->
+                                    </span>
+                                    <!-- /.station-poster -->
+                                    <span class="station-title">Groove Station</span>
+                                    <span class="station-meta">
+                                        <span class="station-location">Berlin, DE</span>
+                                        <span class="station-languages">
+                                            <span class="station-language">English</span>
+                                            <span class="station-language">Deutsch</span>
+                                        </span>
+                                        <!-- /.station-languages -->
+                                    </span>
+                                    <!-- /.station-meta -->
+                                </a>
+                                <!-- /.station-link -->
+                            </div>
+                            <!-- /.station -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-3">
+                            <div class="station">
+                                <a href="#" class="station-link">
+                                    <span class="station-poster">
+                                        <span class="station-poster-image" style="background-image: url('upload/stations/station-3.jpg');">
+                                        </span>
+                                        <!-- /.station-poster-image -->
+                                        <span class="station-tags">
+                                            <span class="station-tag">Jazz</span>
+                                            <span class="station-tag">Fusion</span>
+                                        </span>
+                                        <!-- /.station-tags -->
+                                    </span>
+                                    <!-- /.station-poster -->
+                                    <span class="station-title">Smooth Jazz Florida</span>
+                                    <span class="station-meta">
+                                        <span class="station-location">Florida, CA</span>
+                                        <span class="station-languages">
+                                            <span class="station-language">English</span>
+                                        </span>
+                                        <!-- /.station-languages -->
+                                    </span>
+                                    <!-- /.station-meta -->
+                                </a>
+                                <!-- /.station-link -->
+                            </div>
+                            <!-- /.station -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-3">
+                            <div class="station">
+                                <a href="#" class="station-link">
+                                    <span class="station-poster">
+                                        <span class="station-poster-image" style="background-image: url('upload/stations/station-4.jpg');">
+                                        </span>
+                                        <!-- /.station-poster-image -->
+                                        <span class="station-tags">
+                                            <span class="station-tag">Classic</span>
+                                        </span>
+                                        <!-- /.station-tags -->
+                                    </span>
+                                    <!-- /.station-poster -->
+                                    <span class="station-title">Venice Classic</span>
+                                    <span class="station-meta">
+                                        <span class="station-location">Venice, IT</span>
+                                        <span class="station-languages">
+                                            <span class="station-language">English</span>
+                                        </span>
+                                        <!-- /.station-languages -->
+                                    </span>
+                                    <!-- /.station-meta -->
+                                </a>
+                                <!-- /.station-link -->
+                            </div>
+                            <!-- /.station -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-3">
+                            <div class="station">
+                                <a href="#" class="station-link">
+                                    <span class="station-poster">
+                                        <span class="station-poster-image" style="background-image: url('upload/stations/station-5.jpg');">
+                                        </span>
+                                        <!-- /.station-poster-image -->
+                                        <span class="station-tags">
+                                            <span class="station-tag">Ambient</span>
+                                            <span class="station-tag">House</span>
+                                        </span>
+                                        <!-- /.station-tags -->
+                                    </span>
+                                    <!-- /.station-poster -->
+                                    <span class="station-title">Lounge FM</span>
+                                    <span class="station-meta">
+                                        <span class="station-location">Istanbul, TR</span>
+                                        <span class="station-languages">
+                                            <span class="station-language">English</span>
+                                        </span>
+                                        <!-- /.station-languages -->
+                                    </span>
+                                    <!-- /.station-meta -->
+                                </a>
+                                <!-- /.station-link -->
+                            </div>
+                            <!-- /.station -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-3">
+                            <div class="station">
+                                <a href="#" class="station-link">
+                                    <span class="station-poster">
+                                        <span class="station-poster-image" style="background-image: url('upload/stations/station-6.jpg');">
+                                        </span>
+                                        <!-- /.station-poster-image -->
+                                        <span class="station-tags">
+                                            <span class="station-tag">Rock</span>
+                                            <span class="station-tag">Classic Rock</span>
+                                        </span>
+                                        <!-- /.station-tags -->
+                                    </span>
+                                    <!-- /.station-poster -->
+                                    <span class="station-title">Classic Rock HD</span>
+                                    <span class="station-meta">
+                                        <span class="station-location">New York, NY</span>
+                                        <span class="station-languages">
+                                            <span class="station-language">English</span>
+                                        </span>
+                                        <!-- /.station-languages -->
+                                    </span>
+                                    <!-- /.station-meta -->
+                                </a>
+                                <!-- /.station-link -->
+                            </div>
+                            <!-- /.station -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-3">
+                            <div class="station">
+                                <a href="#" class="station-link">
+                                    <span class="station-poster">
+                                        <span class="station-poster-image" style="background-image: url('upload/stations/station-7.jpg');">
+                                        </span>
+                                        <!-- /.station-poster-image -->
+                                        <span class="station-tags">
+                                            <span class="station-tag">Electronic</span>
+                                        </span>
+                                        <!-- /.station-tags -->
+                                    </span>
+                                    <!-- /.station-poster -->
+                                    <span class="station-title">Box UK</span>
+                                    <span class="station-meta">
+                                        <span class="station-location">London, UK</span>
+                                        <span class="station-languages">
+                                            <span class="station-language">English</span>
+                                        </span>
+                                        <!-- /.station-languages -->
+                                    </span>
+                                    <!-- /.station-meta -->
+                                </a>
+                                <!-- /.station-link -->
+                            </div>
+                            <!-- /.station -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-12">
+                            <div class="collections">
+                                <div class="collections-title">Collections For You</div>
+                                <div class="collection-slider-wrap">
+                                    <div class="collection-slider">
+                                        <div class="collection-slide">
+                                            <a href="#" class="collection">
+                                                <span class="collection-photos">
+                                                    <span class="collection-photo-list">
+                                                        <span class="collection-photo" style="background-image: url('upload/stations/station-2.jpg');"></span>
+                                                        <span class="collection-photo" style="background-image: url('upload/stations/station-1.jpg');"></span>
+                                                        <span class="collection-photo" style="background-image: url('upload/stations/station-3.jpg');"></span>
+                                                    </span>
+                                                </span>
+                                                <!-- /.collection-photos -->
+                                                <span class="collection-title">Electronic / Dance</span>
+                                                <span class="collection-meta">60 Stations</span>
+                                            </a>
+                                            <!-- /.collection -->
+                                        </div>
+                                        <!-- /.collection-slide -->
+                                        <div class="collection-slide">
+                                            <a href="#" class="collection">
+                                                <span class="collection-photos">
+                                                    <span class="collection-photo-list">
+                                                        <span class="collection-photo" style="background-image: url('upload/stations/station-5.jpg');"></span>
+                                                        <span class="collection-photo" style="background-image: url('upload/stations/station-6.jpg');"></span>
+                                                        <span class="collection-photo" style="background-image: url('upload/stations/station-4.jpg');"></span>
+                                                    </span>
+                                                </span>
+                                                <!-- /.collection-photos -->
+                                                <span class="collection-title">Comedy / Fun</span>
+                                                <span class="collection-meta">60 Stations</span>
+                                            </a>
+                                            <!-- /.collection -->
+                                        </div>
+                                        <!-- /.collection-slide -->
+                                        <div class="collection-slide">
+                                            <a href="#" class="collection">
+                                                <span class="collection-photos">
+                                                    <span class="collection-photo-list">
+                                                        <span class="collection-photo" style="background-image: url('upload/stations/station-8.jpg');"></span>
+                                                        <span class="collection-photo" style="background-image: url('upload/stations/station-7.jpg');"></span>
+                                                        <span class="collection-photo" style="background-image: url('upload/stations/station-9.jpg');"></span>
+                                                    </span>
+                                                </span>
+                                                <!-- /.collection-photos -->
+                                                <span class="collection-title">Contemporary Hit</span>
+                                                <span class="collection-meta">60 Stations</span>
+                                            </a>
+                                            <!-- /.collection -->
+                                        </div>
+                                        <!-- /.collection-slide -->
+                                    </div>
+                                    <!-- /.collection-slider -->
+                                </div>
+                                <!-- /.collection-slider-wrap -->
+                            </div>
+                            <!-- /.collections -->
+                        </div>
+                        <!-- /.col-12 -->
+                        <div class="col-3">
+                            <div class="station">
+                                <a href="#" class="station-link">
+                                    <span class="station-poster">
+                                        <span class="station-poster-image" style="background-image: url('upload/stations/station-8.jpg');">
+                                        </span>
+                                        <!-- /.station-poster-image -->
+                                        <span class="station-tags">
+                                            <span class="station-tag">Ambient</span>
+                                            <span class="station-tag">Deep House</span>
+                                        </span>
+                                        <!-- /.station-tags -->
+                                    </span>
+                                    <!-- /.station-poster -->
+                                    <span class="station-title">Ambient Radio</span>
+                                    <span class="station-meta">
+                                        <span class="station-location">Berlin, DE</span>
+                                        <span class="station-languages">
+                                            <span class="station-language">English</span>
+                                            <span class="station-language">Deutsch</span>
+                                        </span>
+                                        <!-- /.station-languages -->
+                                    </span>
+                                    <!-- /.station-meta -->
+                                </a>
+                                <!-- /.station-link -->
+                            </div>
+                            <!-- /.station -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-3">
+                            <div class="station">
+                                <a href="#" class="station-link">
+                                    <span class="station-poster">
+                                        <span class="station-poster-image" style="background-image: url('upload/stations/station-9.jpg');">
+                                        </span>
+                                        <!-- /.station-poster-image -->
+                                        <span class="station-tags">
+                                            <span class="station-tag">Hits</span>
+                                        </span>
+                                        <!-- /.station-tags -->
+                                    </span>
+                                    <!-- /.station-poster -->
+                                    <span class="station-title">Easy Hits Florida</span>
+                                    <span class="station-meta">
+                                        <span class="station-location">Florida, CA</span>
+                                        <span class="station-languages">
+                                            <span class="station-language">English</span>
+                                        </span>
+                                        <!-- /.station-languages -->
+                                    </span>
+                                    <!-- /.station-meta -->
+                                </a>
+                                <!-- /.station-link -->
+                            </div>
+                            <!-- /.station -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-6">
+                            <div class="station">
+                                <a href="#" class="station-link">
+                                    <span class="station-poster">
+                                        <span class="station-poster-image" style="background-image: url('upload/stations/station-10.jpg');">
+                                        </span>
+                                        <!-- /.station-poster-image -->
+                                        <span class="station-labels">
+                                            <span class="station-label">Most Popular</span>
+                                        </span>
+                                        <!-- /.station-labels -->
+                                        <span class="station-tags">
+                                            <span class="station-tag">Electronic</span>
+                                            <span class="station-tag">House</span>
+                                        </span>
+                                        <!-- /.station-tags -->
+                                    </span>
+                                    <!-- /.station-poster -->
+                                    <span class="station-title">Nashville FM</span>
+                                    <span class="station-meta">
+                                        <span class="station-location">Berlin, DE</span>
+                                        <span class="station-languages">
+                                            <span class="station-language">English</span>
+                                            <span class="station-language">Deutsch</span>
+                                        </span>
+                                        <!-- /.station-languages -->
+                                    </span>
+                                    <!-- /.station-meta -->
+                                </a>
+                                <!-- /.station-link -->
+                            </div>
+                            <!-- /.station -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.stations -->
+            <div class="devices">
+                <div class="container">
+                    <div class="devices-wrap">
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <div class="devices-content">
+                                    <div class="devices-title">Listen anywhere that you want!</div>
+                                    <div class="devices-description">
+                                        <p>ZenoLive is available on Web, <a href="#">App&nbsp;Store</a>, <a href="#">Play&nbsp;Store</a> and <a href="#">Chromecast</a>.</p>
+                                    </div>
+                                </div>
+                                <!-- /.devices-content -->
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-8">
+                                <div class="devices-img">
+                                    <img src="upload/devices.svg" width="703" height="416" alt="Listen anywhere that you want!">
+                                </div>
+                                <!-- /.devices-img -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.devices-wrap -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.devices -->
+            <div class="add-station">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-8">
+                            <a href="#" class="add-station-link">
+                                <span class="add-station-icon">
+                                    <span class="add-station-plus"></span>
+                                </span>
+                                <span class="add-station-title">Create a Station in Seconds</span>
+                            </a>
+                            <div class="add-station-note">
+                                <p>Your station, your music and your community.<br> Just for free.</p>
+                            </div>
+                            <div class="add-station-navigation">
+                                <a href="#" class="button button-big">Get Started</a>
+                            </div>
+                            <!-- /.add-station-navigation -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.add-station -->
+        </div>
+        <!-- /.spanning-columns -->
+    </div>
+    <!-- /.main -->
+    <footer class="footer-global">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-line"></div>
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="copyright">
+                        <p>Copyright ZenoLive 2018. All rights reserved.</p>
+                    </div>
+                </div>
+                <!-- /.col -->
+                <div class="col-md-6">
+                    <div class="footer-navigation">
+                        <ul class="footer-navigation-list">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Stations</a></li>
+                            <li><a href="#">Locations</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Legal</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Terms and Conditions</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.footer-navigation -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </footer>
+    <script src="js/jquery.js"></script>
+    <script src="js/migrate.js"></script>
+    <script src="js/library.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

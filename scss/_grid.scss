@@ -1,0 +1,16 @@
+/* grid */
+.main {
+    min-height: 100%;
+    overflow: hidden;
+    padding-bottom: $footer;
+}
+.container,
+.container-fluid {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.container-fluid {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1480px;
+}

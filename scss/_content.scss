@@ -1,0 +1,228 @@
+/* content */
+.stations-header {
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+.stations-header-title {
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    h1 {
+        font-size: 100%;
+        font-weight: normal;
+    }
+}
+.stations-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    li {
+        margin: 0 0 20px 20px;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+.stations {
+    margin-bottom: 50px;
+}
+.station {
+    display: block;
+    margin-bottom: 29px;
+}
+.station-link {
+    display: block;
+    color: $s;
+    &:hover {
+        color: $s;
+        .station-poster-image:before {
+            opacity: 0.1;
+        }
+    }
+}
+.station-poster {
+    display: block;
+    position: relative;
+}
+.station-poster-image {
+    display: block;
+    height: 0;
+    height: 300px;
+    border-radius: 8px;
+    background: $s no-repeat 50% 50%;
+    background-size: cover;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        background: $w;
+        border-radius: 8px;
+        transition: opacity $d*2 $f;
+    }
+}
+.station-labels {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.station-label {
+    background: $p;
+    color: $w;
+    margin: 0 10px 10px 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    border-radius: 14px;
+    padding: 3px 14px 4px;
+}
+.station-tags {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.station-tag {
+    color: $s;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 0 10px 10px 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    border-radius: 14px;
+    padding: 3px 14px 4px;
+}
+.station-title {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 13px 0 7px;
+}
+.station-meta {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #6A6A6C;
+}
+.station-location {
+    display: inline-block;
+    color: #6A6A6C;
+    position: relative;
+    padding-left: 23px;
+    font-weight: bold;
+    margin: 0 4px;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 12px;
+        height: 16px;
+        background: transparent url('../upload/ic_location.svg') 0 0 no-repeat;
+        transform: translate3d(0, -50%, 0);
+    }
+}
+.station-languages {
+    display: inline-block;
+    color: #B5B5BA;
+    margin: 0 2px;
+}
+.station-language {
+    &:after {
+        content: ", ";
+    }
+    &:last-child {
+        &:after {
+            display: none;
+        }
+    }
+}
+.no-js .collection-slide {
+    display: none;
+    &:first-child {
+        display: block;
+    }
+}
+.collections {
+    border-top: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+    margin-bottom: 30px;
+    padding-bottom: 3px;
+    padding-top: 24px;
+}
+.collections-title {
+    color: #6A6A6C;
+    font-size: 18px;
+    margin-bottom: 18px;
+    padding-top: 4px;
+}
+.collection-slider-wrap {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.collection-slide {
+    padding: 0 15px 26px;
+}
+.collection {
+    display: block;
+    text-align: center;
+}
+.collection-photos {
+    background: #28282a;
+    display: block;
+    border-radius: 8px;
+    padding: 19px;
+    margin-bottom: 6px;
+}
+.collection-photo-list {
+    height: 112px;
+    margin: 0 auto;
+    width: 212px;
+    position: relative;
+    display: block;
+}
+.collection-photo {
+    position: absolute;
+    opacity: 0.6;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.50);
+    left: 0;
+    top: 50%;
+    width: 92px;
+    height: 92px;
+    background: $text no-repeat 50% 50%;
+    background-size: cover;
+    transform: translate3d(0, -50%, 0);
+    &:nth-child(2) {
+        right: 0;
+        width: 112px;
+        height: 112px;
+        opacity: 1;
+        z-index: 2;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &:nth-child(3) {
+        left: auto;
+        right: 0;
+    }
+}
+.collection-title {
+    display: block;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+    padding: 12px 0 9px;
+}
+.collection-meta {
+    display: block;
+    color: #B5B5BA;
+}

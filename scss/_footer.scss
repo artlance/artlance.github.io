@@ -1,0 +1,30 @@
+/* footer */
+.footer-global {
+    margin-top: -$footer;
+    height: $footer;
+    font-size: 16px;
+    color: #B5B5BA;
+    padding-bottom: 15px;
+    a {
+        color: #6A6A6C;
+        &:hover {
+            color: #28282A;
+        }
+    }
+}
+.footer-line {
+    height: 1px;
+    font-size: 0;
+    background: #e9e9e9;
+    margin-bottom: 17px;
+}
+.footer-navigation-list {
+    display: flex;
+    justify-content: flex-end;
+    li {
+        margin: 0 0 0 19px;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
