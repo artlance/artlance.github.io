@@ -21,6 +21,7 @@
 .footer-navigation-list {
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
     li {
         margin: 0 0 0 19px;
         &:first-child {

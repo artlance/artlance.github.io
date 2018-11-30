@@ -52,6 +52,24 @@ a.hero-header-toggle {
     position: absolute;
     transition: opacity $d $f;
 }
+.no-js {
+    .hero-stations-slide {
+        display: none;
+        &:first-child {
+            display: block;
+        }
+    }
+}
+.hero-stations-slide {
+    .hero-station-content {
+        left: auto;
+        opacity: 1;
+        right: auto;
+        bottom: auto;
+        position: relative;
+        text-align: center;
+    }
+}
 .hero-header-toggle-value {
     color: $w;
     padding-left: 7px;

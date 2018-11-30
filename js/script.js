@@ -44,7 +44,16 @@ $(document).ready(function() {
         slidesToShow: 3,
         slidesToScroll: 1,
         //asNavFor: '',
-        //fade: true
+        //fade: true,
+        responsive: [
+            {
+              breakpoint: 991,
+              settings: {
+                slidesToShow: 1,
+                dots: true
+              }
+            }
+          ]
     });
 
     //slider
@@ -63,8 +72,28 @@ $(document).ready(function() {
         slide: '.hero-background-slide',
         slidesToShow: 1,
         slidesToScroll: 1,
-        //asNavFor: '',
+        asNavFor: '.hero-stations-slider',
         fade: true
+    });
+
+    //slider
+    $('.hero-stations-slider').slick({
+        dots: true,
+        arrows: false,
+        draggable: true,
+        infinite: true,
+        centerMode: false,
+        centerPadding: '0px',
+        autoplay: false,
+        autoplaySpeed: 5000,
+        speed: 600,
+        pauseOnHover: false,
+        pauseOnDotsHover: false,
+        slide: '.hero-stations-slide',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        asNavFor: '.hero-background-slider',
+        //fade: true
     });
 
     //------------------------------------------------------------------------//

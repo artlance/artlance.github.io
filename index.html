@@ -49,7 +49,6 @@
 </head>
 <body class="no-js">
     <div class="main">
-        <a href="#" class="navigation-toggle"><span class="navigation-toggle-icon"></span></a>
         <header class="header-global">
             <div class="container-fluid">
                 <div class="row">
@@ -61,7 +60,7 @@
                                 </div>
                             </div>
                             <!-- /.col -->
-                            <div class="col-auto">
+                            <div class="col-auto col-header-navigation">
                                 <div class="header-navigation">
                                     <ul class="header-navigation-list">
                                         <li><a class="header-navigation-add" href="#">Create Station</a></li>
@@ -72,7 +71,7 @@
                                 <!-- /.header-navigation -->
                             </div>
                             <!-- /.col -->
-                            <div class="col-auto">
+                            <div class="col-auto col-header-search">
                                 <div class="header-search">
                                     <form>
                                         <input type="text" class="header-search-input" placeholder="Search by Genre, Location or Country">
@@ -88,7 +87,9 @@
                     <!-- /.col -->
                     <div class="col-3">
                         <ul class="header-toolbar-list">
+                            <li class="d-lg-none"><a href="#" class="notification-link"></a></li>
                             <li><a href="#" class="notification-link"></a></li>
+                            <li><a href="#" class="navigation-toggle"><span class="navigation-toggle-icon"></span></a></li>
                             <li><a href="#" class="account-link" style="background-image: url('upload/account.jpg');"></a></li>
                         </ul>
                         <!-- /.header-toolbar-list -->
@@ -112,11 +113,11 @@
             <div class="hero-header">
                 <div class="container">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6">
                             <div class="hero-header-title">Popular Stations</div>
                         </div>
                         <!-- /.col -->
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6">
                             <div class="hero-header-filter">
                                 <a class="hero-header-toggle" href="#">Genres <span class="hero-header-toggle-value">All Genres</span></a>
                             </div>
@@ -129,6 +130,90 @@
                 <!-- /.container -->
             </div>
             <!-- /.hero-header -->
+            <div class="hero-stations-mobile d-lg-none">
+                <div class="hero-stations-slider">
+                    <div class="hero-stations-slide">
+                        <div class="hero-station-content">
+                            <div class="hero-station-meta">
+                                <div class="hero-station-live">LIVE</div>
+                                <div class="hero-station-time">13:40</div>
+                            </div>
+                            <div class="hero-station-title">Electro Garten</div>
+                            <div class="hero-station-tags">
+                                <span class="station-tags">
+                                    <span class="station-tag">Electronic</span>
+                                    <span class="station-tag">House</span>
+                                </span>
+                                <!-- /.station-tags -->
+                            </div>
+                            <!-- /.hero-station-tags -->
+                            <div class="hero-station-play-navigation">
+                                <a href="#" class="station-play">
+                                    <span class="station-play-button"></span>
+                                    Play Now
+                                </a>
+                            </div>
+                            <!-- /.hero-station-play-navigation -->
+                        </div>
+                        <!-- /.hero-station-content -->
+                    </div>
+                    <!-- /.hero-stations-slide -->
+                    <div class="hero-stations-slide">
+                        <div class="hero-station-content">
+                            <div class="hero-station-meta">
+                                <div class="hero-station-live">LIVE</div>
+                                <div class="hero-station-time">13:40</div>
+                            </div>
+                            <div class="hero-station-title">Brooklyn Live</div>
+                            <div class="hero-station-tags">
+                                <span class="station-tags">
+                                    <span class="station-tag">News</span>
+                                    <span class="station-tag">Jazz</span>
+                                </span>
+                                <!-- /.station-tags -->
+                            </div>
+                            <!-- /.hero-station-tags -->
+                            <div class="hero-station-play-navigation">
+                                <a href="#" class="station-play">
+                                    <span class="station-play-button"></span>
+                                    Play Now
+                                </a>
+                            </div>
+                            <!-- /.hero-station-play-navigation -->
+                        </div>
+                        <!-- /.hero-station-content -->
+                    </div>
+                    <!-- /.hero-stations-slide -->
+                    <div class="hero-stations-slide">
+                        <div class="hero-station-content">
+                            <div class="hero-station-meta">
+                                <div class="hero-station-live">LIVE</div>
+                                <div class="hero-station-time">13:40</div>
+                            </div>
+                            <div class="hero-station-title">Flylo FM</div>
+                            <div class="hero-station-tags">
+                                <span class="station-tags">
+                                    <span class="station-tag">Electronic</span>
+                                    <span class="station-tag">House</span>
+                                </span>
+                                <!-- /.station-tags -->
+                            </div>
+                            <!-- /.hero-station-tags -->
+                            <div class="hero-station-play-navigation">
+                                <a href="#" class="station-play">
+                                    <span class="station-play-button"></span>
+                                    Play Now
+                                </a>
+                            </div>
+                            <!-- /.hero-station-play-navigation -->
+                        </div>
+                        <!-- /.hero-station-content -->
+                    </div>
+                    <!-- /.hero-stations-slide -->
+                </div>
+                <!-- /.hero-stations-slider -->
+            </div>
+            <!-- /.hero-stations-mobile -->
             <div class="hero-stations">
                 <div class="container">
                     <div class="row">
@@ -241,11 +326,11 @@
             <div class="stations-header">
                 <div class="container">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6">
                             <div class="stations-header-title"><h1>Discover Stations</h1></div>
                         </div>
                         <!-- /.col -->
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6">
                             <ul class="stations-filter">
                                 <li><a href="#" class="button button-ghost button-secondary">Filter</a></li>
                                 <li><a href="#" class="button">Show All</a></li>
@@ -262,7 +347,7 @@
             <div class="stations">
                 <div class="container">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6">
                             <div class="station">
                                 <a href="#" class="station-link">
                                     <span class="station-poster">
@@ -296,7 +381,7 @@
                             <!-- /.station -->
                         </div>
                         <!-- /.col -->
-                        <div class="col-3">
+                        <div class="col-6 col-lg-3">
                             <div class="station">
                                 <a href="#" class="station-link">
                                     <span class="station-poster">
@@ -326,7 +411,7 @@
                             <!-- /.station -->
                         </div>
                         <!-- /.col -->
-                        <div class="col-3">
+                        <div class="col-6 col-lg-3">
                             <div class="station">
                                 <a href="#" class="station-link">
                                     <span class="station-poster">
@@ -355,7 +440,7 @@
                             <!-- /.station -->
                         </div>
                         <!-- /.col -->
-                        <div class="col-3">
+                        <div class="col-6 col-lg-3">
                             <div class="station">
                                 <a href="#" class="station-link">
                                     <span class="station-poster">
@@ -383,7 +468,7 @@
                             <!-- /.station -->
                         </div>
                         <!-- /.col -->
-                        <div class="col-3">
+                        <div class="col-6 col-lg-3">
                             <div class="station">
                                 <a href="#" class="station-link">
                                     <span class="station-poster">
@@ -412,7 +497,7 @@
                             <!-- /.station -->
                         </div>
                         <!-- /.col -->
-                        <div class="col-3">
+                        <div class="col-6 col-lg-3">
                             <div class="station">
                                 <a href="#" class="station-link">
                                     <span class="station-poster">
@@ -441,7 +526,7 @@
                             <!-- /.station -->
                         </div>
                         <!-- /.col -->
-                        <div class="col-3">
+                        <div class="col-6 col-lg-3">
                             <div class="station">
                                 <a href="#" class="station-link">
                                     <span class="station-poster">
@@ -530,7 +615,7 @@
                             <!-- /.collections -->
                         </div>
                         <!-- /.col-12 -->
-                        <div class="col-3">
+                        <div class="col-6 col-lg-3">
                             <div class="station">
                                 <a href="#" class="station-link">
                                     <span class="station-poster">
@@ -560,7 +645,7 @@
                             <!-- /.station -->
                         </div>
                         <!-- /.col -->
-                        <div class="col-3">
+                        <div class="col-6 col-lg-3">
                             <div class="station">
                                 <a href="#" class="station-link">
                                     <span class="station-poster">
@@ -588,7 +673,7 @@
                             <!-- /.station -->
                         </div>
                         <!-- /.col -->
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6">
                             <div class="station">
                                 <a href="#" class="station-link">
                                     <span class="station-poster">
@@ -632,7 +717,14 @@
                 <div class="container">
                     <div class="devices-wrap">
                         <div class="row align-items-center">
-                            <div class="col-4">
+                            <div class="col-12 col-lg-8">
+                                <div class="devices-img">
+                                    <img src="upload/devices.svg" width="703" height="416" alt="Listen anywhere that you want!">
+                                </div>
+                                <!-- /.devices-img -->
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-12 col-lg-4 order-lg-first">
                                 <div class="devices-content">
                                     <div class="devices-title">Listen anywhere that you want!</div>
                                     <div class="devices-description">
@@ -640,13 +732,6 @@
                                     </div>
                                 </div>
                                 <!-- /.devices-content -->
-                            </div>
-                            <!-- /.col -->
-                            <div class="col-8">
-                                <div class="devices-img">
-                                    <img src="upload/devices.svg" width="703" height="416" alt="Listen anywhere that you want!">
-                                </div>
-                                <!-- /.devices-img -->
                             </div>
                             <!-- /.col -->
                         </div>
@@ -660,12 +745,12 @@
             <div class="add-station">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-8">
+                        <div class="col-12 col-lg-8">
                             <a href="#" class="add-station-link">
                                 <span class="add-station-icon">
                                     <span class="add-station-plus"></span>
                                 </span>
-                                <span class="add-station-title">Create a Station in Seconds</span>
+                                <span class="add-station-title">Create a Station in&nbsp;Seconds</span>
                             </a>
                             <div class="add-station-note">
                                 <p>Your station, your music and your community.<br> Just for free.</p>
@@ -696,13 +781,13 @@
             </div>
             <!-- /.row -->
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-12 col-lg-6">
                     <div class="copyright">
                         <p>Copyright ZenoLive 2018. All rights reserved.</p>
                     </div>
                 </div>
                 <!-- /.col -->
-                <div class="col-md-6">
+                <div class="col-12 col-lg-6">
                     <div class="footer-navigation">
                         <ul class="footer-navigation-list">
                             <li><a href="#">About</a></li>
@@ -723,9 +808,9 @@
         </div>
         <!-- /.container -->
     </footer>
-    <script src="js/jquery.js"></script>
-    <script src="js/migrate.js"></script>
-    <script src="js/library.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/migrate.min.js"></script>
+    <script src="js/library.min.js"></script>
+    <script src="js/script.min.js"></script>
 </body>
 </html>
