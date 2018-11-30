@@ -105,6 +105,7 @@ input.header-search-button {
     width: 32px;
     height: 32px;
     background: transparent url('../upload/ic_notifications.svg') 50% 50% no-repeat;
+    background-size: 16px 16px;
     transition: opacity $d $f;
     font-size: 0;
     line-height: 0;
@@ -136,4 +137,63 @@ input.header-search-button {
     font-size: 0;
     line-height: 0;
     display: none;
+}
+.search-link {
+    opacity: 0.8;
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: transparent url('../upload/ic_search.svg') 50% 50% no-repeat;
+    background-size: 16px 16px;
+    transition: opacity $d $f;
+    font-size: 0;
+    line-height: 0;
+    &:hover {
+        opacity: 1;
+    }
+}
+.navigation-toggle {
+    display: block;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    z-index: 5050;
+}
+.navigation-toggle-icon {
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    right: 6px;
+    height: 2px;
+    background: $p;
+    transform: translate3d(0, -50%, 0);
+    transition: background-color $d $f;
+    border-radius: 1px;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background: $p;
+        transform: translate3d(0, -6px, 0);
+        transition: transform $d $f;
+        border-radius: 1px;
+    }
+    &:after {
+        transform: translate3d(0, 6px, 0);
+    }
+}
+.navigation-open {
+    .navigation-toggle-icon {
+        background-color: $tr;
+        &:after {
+            transform: rotate(-45deg);
+        }
+        &:before {
+            transform: rotate(45deg);
+        }
+    }
 }

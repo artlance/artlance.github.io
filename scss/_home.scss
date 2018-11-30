@@ -61,6 +61,15 @@ a.hero-header-toggle {
     }
 }
 .hero-stations-slide {
+    height: 320px;
+    padding-top: 48px;
+    .station-tags {
+        justify-content: center;
+    }
+    .station-tag {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
     .hero-station-content {
         left: auto;
         opacity: 1;
