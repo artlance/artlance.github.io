@@ -2,6 +2,9 @@
 @include media-breakpoint-down(xl) {
 }
 @include media-breakpoint-down(lg) {
+    .col-header-search {
+        display: none;
+    }
 }
 @include media-breakpoint-down(md) {
     .main {
@@ -77,8 +80,7 @@
     .hero-stations {
         display: none;
     }
-    .col-header-navigation,
-    .col-header-search {
+    .col-header-navigation {
         display: none;
     }
     .hero-header-title {
