@@ -13,6 +13,8 @@
     background-size: 68px 16px;
     width: 68px;
     height: 32px;
+    font-size: 0;
+    line-height: 0;
     &-link {
         display: block;
         width: 68px;
@@ -104,6 +106,8 @@ input.header-search-button {
     height: 32px;
     background: transparent url('../upload/ic_notifications.svg') 50% 50% no-repeat;
     transition: opacity $d $f;
+    font-size: 0;
+    line-height: 0;
     &:hover {
         opacity: 1;
     }
@@ -115,6 +119,8 @@ input.header-search-button {
     height: 38px;
     background: $text 50% 50% no-repeat;
     background-size: cover;
+    font-size: 0;
+    line-height: 0;
 }
 .header-toolbar-list {
     display: flex;
@@ -125,4 +131,9 @@ input.header-search-button {
     li {
         margin-left: 33px;
     }
+}
+.navigation-toggle {
+    font-size: 0;
+    line-height: 0;
+    display: none;
 }
