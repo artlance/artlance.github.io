@@ -119,8 +119,22 @@
                         </div>
                         <!-- /.col -->
                         <div class="col-12 col-lg-6">
-                            <div class="hero-header-filter">
-                                <a class="hero-header-toggle" href="#">Genres <span class="hero-header-toggle-value">All Genres</span></a>
+                            <div class="hero-header-filter drop">
+                                <a class="hero-header-toggle drop-toggle" href="#">Genres <span class="hero-header-toggle-value">All Genres</span></a>
+                                <div class="hero-filter-drop drop-box">
+                                    <ul class="hero-sort-list">
+                                        <li class="active"><a href="#">All Genres</a></li>
+                                        <li><a href="#">Electronic</a></li>
+                                        <li><a href="#">Jazz</a></li>
+                                        <li><a href="#">Pop</a></li>
+                                        <li><a href="#">Hip-Hop</a></li>
+                                        <li><a href="#">Comedy / Fun</a></li>
+                                        <li><a href="#">News</a></li>
+                                        <li><a href="#">Rock</a></li>
+                                    </ul>
+                                    <!-- /.hero-sort-list -->
+                                </div>
+                                <!-- /.drop-box -->
                             </div>
                             <!-- /.hero-header-filter -->
                         </div>
@@ -311,19 +325,174 @@
         </div>
         <!-- /.hero -->
         <div class="spanning">
-            <!-- Filter by
-            Language
-            Genre
-            Country
-            Tags
-            Length
-            Popular
-            Method
-
-            English
-            Electronic
-            Rock
-            Clear All -->
+            <div class="filter-block" id="filter-block">
+                <div class="stations-filter-options">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="filter-block-title">Filter by</div>
+                                <div class="filter-list">
+                                    <div class="filter-item active">
+                                        <div class="select-block drop">
+                                            <a href="#" class="select-toggle drop-toggle">Language</a>
+                                            <div class="select-box drop-box">
+                                                <ul class="select-box-list">
+                                                    <li>
+                                                        <span class="checkbox">
+                                                            <input type="checkbox" id="filter-t1-1" checked>
+                                                            <label for="filter-t1-1">English</label>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="checkbox">
+                                                            <input type="checkbox" id="filter-t1-2">
+                                                            <label for="filter-t1-2">Deutsch</label>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- /.select-box -->
+                                        </div>
+                                        <!-- /.select-box -->
+                                    </div>
+                                    <!-- /.filter-item -->
+                                    <div class="filter-item active">
+                                        <div class="select-block drop">
+                                            <a href="#" class="select-toggle drop-toggle">Genre</a>
+                                            <div class="select-box drop-box">
+                                                <ul class="select-box-list">
+                                                    <li>
+                                                        <span class="checkbox">
+                                                            <input type="checkbox" id="filter-t2-1" checked>
+                                                            <label for="filter-t2-1">Electronic</label>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="checkbox">
+                                                            <input type="checkbox" id="filter-t2-2" checked>
+                                                            <label for="filter-t2-2">Rock</label>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="checkbox">
+                                                            <input type="checkbox" id="filter-t2-3">
+                                                            <label for="filter-t2-3">Pop</label>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="checkbox">
+                                                            <input type="checkbox" id="filter-t2-4">
+                                                            <label for="filter-t2-4">Dance</label>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- /.select-box -->
+                                        </div>
+                                        <!-- /.select-box -->
+                                    </div>
+                                    <!-- /.filter-item -->
+                                    <div class="filter-item">
+                                        <div class="select-block drop">
+                                            <a href="#" class="select-toggle drop-toggle">Country</a>
+                                            <div class="select-box drop-box">
+                                                <ul class="select-box-list">
+                                                    <li>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- /.select-box -->
+                                        </div>
+                                        <!-- /.select-box -->
+                                    </div>
+                                    <!-- /.filter-item -->
+                                    <div class="filter-item">
+                                        <div class="select-block drop">
+                                            <a href="#" class="select-toggle drop-toggle">Tags</a>
+                                            <div class="select-box drop-box">
+                                                <ul class="select-box-list">
+                                                    <li>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- /.select-box -->
+                                        </div>
+                                        <!-- /.select-box -->
+                                    </div>
+                                    <!-- /.filter-item -->
+                                    <div class="filter-item">
+                                        <div class="select-block drop">
+                                            <a href="#" class="select-toggle drop-toggle">Length</a>
+                                            <div class="select-box drop-box">
+                                                <ul class="select-box-list">
+                                                    <li>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- /.select-box -->
+                                        </div>
+                                        <!-- /.select-box -->
+                                    </div>
+                                    <!-- /.filter-item -->
+                                    <div class="filter-item">
+                                        <div class="select-block drop">
+                                            <a href="#" class="select-toggle drop-toggle">Popular</a>
+                                            <div class="select-box drop-box">
+                                                <ul class="select-box-list">
+                                                    <li>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- /.select-box -->
+                                        </div>
+                                        <!-- /.select-box -->
+                                    </div>
+                                    <!-- /.filter-item -->
+                                    <div class="filter-item">
+                                        <div class="select-block drop">
+                                            <a href="#" class="select-toggle drop-toggle">Method</a>
+                                            <div class="select-box drop-box">
+                                                <ul class="select-box-list">
+                                                    <li>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- /.select-box -->
+                                        </div>
+                                        <!-- /.select-box -->
+                                    </div>
+                                    <!-- /.filter-item -->
+                                </div>
+                                <!-- /.filter-list -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.container -->
+                </div>
+                <!-- /.stations-filter -->
+                <div class="stations-filter-result">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="filter-list-result">
+                                    <div class="filter-result-navigation">
+                                        <a href="#" class="filter-result-clear">Clear all</a>
+                                    </div>
+                                    <!-- /.filter-result-navigation -->
+                                </div>
+                                <!-- /.filter-list-result -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.container -->
+                </div>
+                <!-- /.stations-filter-result -->
+            </div>
+            <!-- /.filter-block -->
             <div class="stations-header">
                 <div class="container">
                     <div class="row">
@@ -333,8 +502,8 @@
                         <!-- /.col -->
                         <div class="col-12 col-lg-6">
                             <ul class="stations-filter">
-                                <li><a href="#" class="button button-ghost button-secondary">Filter</a></li>
-                                <li><a href="#" class="button">Show All</a></li>
+                                <li><a href="#" class="button button-ghost button-secondary button-toggle-filter">Filter</a></li>
+                                <li><a href="#" class="button button-all-filter">Show All</a></li>
                             </ul>
                             <!-- /.stations-filter -->
                         </div>

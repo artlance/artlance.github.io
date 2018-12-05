@@ -90,3 +90,20 @@ input.button,
 button.button {
     line-height: normal;
 }
+.drop {
+    position: relative;
+    &-box {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        z-index: 8080;
+    }
+    &.active {
+        .drop-box {
+            display: block;
+        }
+    }
+}
+.drop-toggle {
+}
