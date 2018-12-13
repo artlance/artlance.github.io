@@ -29,3 +29,9 @@
         }
     }
 }
+.player-active {
+    .footer-global {
+        margin-top: -$footer + 70px;
+        height: $footer + 70px;
+    }
+}
