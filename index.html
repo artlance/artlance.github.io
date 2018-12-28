@@ -979,21 +979,155 @@
         <!-- /.container -->
     </footer>
     <div class="player">
+        <div class="player-on-air">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="on-air-columns">
+                            <div class="on-air-col-1">
+                                <div class="on-air-title">ON AIR</div>
+                            </div>
+                            <!-- /.on-air-col-1 -->
+                            <div class="on-air-col-2">
+                                <div class="on-air-icon"></div>
+                            </div>
+                            <!-- /.on-air-col-2 -->
+                            <div class="on-air-col-3">
+                                <div class="on-air-duration">00:10</div>
+                            </div>
+                            <!-- /.on-air-col-3 -->
+                        </div>
+                        <!-- /.on-air-columns -->
+                        <a href="#" class="player-on-air-disconnect">Disconnect</a>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.player-on-air -->
         <div class="container-fluid">
             <div class="player-row">
                 <div class="player-col-info">
                     <div class="player-info">
                         <div class="player-info-block-nav">
-                            <a href="#" class="player-info-call">Call In</a>
+                            <a href="#" class="player-info-call">
+                                <svg height="38" width="38">
+                                    <circle class="player-circle" cx="19" cy="19" r="18" transform="rotate(-90, 19, 19)" fill="none" />
+                                </svg>
+                                <span class="player-info-call-text">Call In</span>
+                            </a>
+                            <div class="player-popup player-popup-call">
+                                <div class="player-popup-content player-popup-step-1">
+                                    <div class="player-popup-title">What would you like to say on the air?</div>
+                                    <div class="player-popup-form">
+                                        <div class="player-popup-form-row">
+                                            <div class="player-popup-form-cell">
+                                                <input type="text" class="player-input-text" placeholder="Type your name">
+                                            </div>
+                                            <!-- /.player-popup-form-cell -->
+                                        </div>
+                                        <!-- /.player-popup-form-row -->
+                                        <div class="player-popup-form-row">
+                                            <div class="player-popup-form-cell">
+                                                <textarea cols="30" rows="10" class="player-input-textarea" placeholder="Type your subject"></textarea>
+                                            </div>
+                                            <!-- /.player-popup-form-cell -->
+                                        </div>
+                                        <!-- /.player-popup-form-row -->
+                                    </div>
+                                    <!-- /.player-popup-form -->
+                                    <div class="player-popup-navigation">
+                                        <div class="player-popup-navigation-cell player-popup-navigation-cell-send">
+                                            <a href="#" class="button button-small button-player-popup-send">Send</a>
+                                        </div>
+                                        <!-- /.player-popup-navigation-cell -->
+                                        <div class="player-popup-navigation-cell">
+                                            <a href="#" class="button button-small button-secondary button-player-popup-cancel">Cancel</a>
+                                        </div>
+                                        <!-- /.player-popup-navigation-cell -->
+                                    </div>
+                                    <!-- /.player-popup-navigation -->
+                                </div>
+                                <!-- /.player-popup-content -->
+                                <div class="player-popup-content player-popup-step-2 hidden">
+                                    <div class="player-popup-title">Your call request has been submitted.</div>
+                                    <div class="player-popup-form-answer">
+                                        <p>
+                                            We will send you a confirmation and estimation of wait time shortly. Thank you!
+                                        </p>
+                                    </div>
+                                    <!-- /.player-popup-form-answer -->
+                                    <div class="player-popup-navigation">
+                                        <div class="player-popup-navigation-cell">
+                                            <a href="#" class="button button-small button-cancel button-player-popup-cancel-call">Cancell Call</a>
+                                        </div>
+                                        <!-- /.player-popup-navigation-cell -->
+                                    </div>
+                                    <!-- /.player-popup-navigation -->
+                                </div>
+                                <!-- /.player-popup-content -->
+                                <div class="player-popup-content player-popup-step-3 hidden">
+                                    <div class="player-popup-title">Your call has been accepted!</div>
+                                    <div class="player-popup-form-answer">
+                                        <p>
+                                            There are currently 2 callers ahead of you.<br>
+                                            Estimated wait time: 3 minutes
+                                        </p>
+                                    </div>
+                                    <!-- /.player-popup-form-answer -->
+                                    <div class="player-popup-navigation">
+                                        <div class="player-popup-navigation-cell">
+                                            <a href="#" class="button button-small button-cancel button-player-popup-cancel-call">Cancell Call</a>
+                                        </div>
+                                        <!-- /.player-popup-navigation-cell -->
+                                    </div>
+                                    <!-- /.player-popup-navigation -->
+                                </div>
+                                <!-- /.player-popup-content -->
+                                <div class="player-popup-content player-popup-step-4 hidden">
+                                    <div class="player-popup-title">You are the next caller!</div>
+                                    <div class="player-popup-form-answer">
+                                        <p>
+                                            Estimated wait time: 30 seconds
+                                        </p>
+                                    </div>
+                                    <!-- /.player-popup-form-answer -->
+                                    <div class="player-popup-navigation">
+                                        <div class="player-popup-navigation-cell">
+                                            <a href="#" class="button button-small button-cancel button-player-popup-cancel-call">Cancell Call</a>
+                                        </div>
+                                        <!-- /.player-popup-navigation-cell -->
+                                    </div>
+                                    <!-- /.player-popup-navigation -->
+                                </div>
+                                <!-- /.player-popup-content -->
+                            </div>
+                            <!-- /.player-popup -->
                         </div>
                         <!-- /.player-info-block-nav -->
                         <div class="player-info-block">
                             <div class="player-info-title">Electro Garten</div>
                             <div class="player-info-meta">
                                 <div class="player-info-time">13:48</div>
-                                <div class="player-info-phone"><a href="tel:+1 (605) 495 84 48">+1 (605) 495 84 48</a></div>
+                                <div class="player-info-phone">
+                                    <a href="tel:+1 (605) 495 84 48">+1 (605) 495 84 48</a>
+                                </div>
                             </div>
                             <!-- /.player-info-meta -->
+                            <div class="player-popup-default player-popup-phone">
+                                <div class="player-popup-content-default">
+                                    <div class="player-popup-title">Phone Number</div>
+                                    <div class="player-popup-text">
+                                        <p>
+                                            Use this number when you want to call this station.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- /.player-popup-content -->
+                            </div>
+                            <!-- /.player-popup-default -->
                         </div>
                         <!-- /.player-info-block -->
                     </div>

@@ -85,6 +85,18 @@ button.button {
         color: $text;
         background-color: $w;
     }
+    &-small {
+        font-size: 14px;
+        padding-top: 9px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    &-cancel {
+        color: $w;
+        background-color: #F51919;
+        border-color: #F51919;
+    }
 }
 input.button,
 button.button {

@@ -245,6 +245,114 @@ $(document).ready(function() {
         $('.filter-result-item').remove();
         checkEmptyFilter();
     });
+
+    //------------------------------------------------------------------------//
+
+    var player = false;
+
+    //player call
+    $('.player-info-call').on('click', function(event) {
+        event.preventDefault();
+        player = true;
+        $(this).addClass('active');
+        $('.player-popup-call').addClass('active');
+        setTimeout(function(){
+            $('.player-popup-call').addClass('popin');
+        }, 10);
+    });
+
+    function closePlayer() {
+        $('.player-info-call').removeClass('active active-50 active-75 active-100 active-online');
+        $('.player-popup-call').addClass('popout');
+        $('.player-popup-step-1').removeClass('hidden');
+        $('.player-popup-step-2, .player-popup-step-3, .player-popup-step-4').addClass('hidden');
+        player = false;
+    }
+
+    $('.button-player-popup-cancel, .button-player-popup-cancel-call').on('click', function(event) {
+        event.preventDefault();
+        closePlayer();
+    });
+
+    $('.player-popup').on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function() {
+            var thisEl = $(this);
+            if ( thisEl.hasClass('popout') ) {
+                thisEl.removeClass('active popout popin popfinish');
+                $('.player-popup-step-1').removeClass('hidden');
+                $('.player-popup-step-2, .player-popup-step-3').addClass('hidden');
+            } else if ( thisEl.hasClass('popin') && !thisEl.hasClass('popout')) {
+                thisEl.addClass('popfinish');
+            }
+        }
+    );
+
+    //player call form
+    $('.player-input-text, .player-input-textarea').on('keydown', function(event) {
+        if ( $('.player-input-text').val() != '' && $('.player-input-textarea').val() != '' ) {
+            $('.player-popup-navigation-cell-send').addClass('active-send');
+        } else {
+            $('.player-popup-navigation-cell-send').removeClass('active-send');
+        }
+    });
+
+    //player call steps
+    $('.button-player-popup-send').on('click', function(event) {
+        event.preventDefault();
+        $('.player-popup-step-1').addClass('hidden');
+        $('.player-popup-step-2').removeClass('hidden');
+        $('.player-info-call').addClass('active-50');
+        setTimeout(function(){
+            if ( !($('.player-popup-step-2').hasClass('hidden')) ) {
+                $('.player-popup-step-2').addClass('hidden');
+                $('.player-popup-step-3').removeClass('hidden');
+                $('.player-info-call').addClass('active-75');
+            }
+        }, 2000);
+        setTimeout(function(){
+            if ( !($('.player-popup-step-3').hasClass('hidden')) ) {
+                $('.player-popup-step-3').addClass('hidden');
+                $('.player-popup-step-4').removeClass('hidden');
+                $('.player-info-call').addClass('active-75');
+            }
+        }, 4000);
+        setTimeout(function(){
+            if ( player && !($('.player-popup-step-4').hasClass('hidden')) ) {
+                closePlayer();
+                $('.player-info-call').addClass('active active-100 active-online');
+                $('.player-on-air').addClass('active');
+            }
+        }, 6000);
+    });
+
+    //player disconect
+    $('.player-on-air-disconnect').on('click', function(event) {
+        event.preventDefault();
+        $('.player-info-call').removeClass('active active-100 active-online');
+        $('.player-on-air').removeClass('active');
+    });
+
+    //------------------------------------------------------------------------//
+
+    //phone
+    var playerPhone = false;
+    $('.player-info-phone a').hover(function() {
+        if (!playerPhone) {
+            playerPhone = true;
+            $('.player-popup-phone').addClass('popin');
+        }
+    }, function() {
+        if (playerPhone) {
+            $('.player-popup-phone').addClass('popout');
+        }
+    });
+
+    $('.player-popup-phone').on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function() {
+        if ( $(this).hasClass('popout') && playerPhone ) {
+            $('.player-popup-phone').removeClass('popin popout');
+            playerPhone = false;
+        }
+    });
+
     //------------------------------------------------------------------------//
 
 }); //document ready
