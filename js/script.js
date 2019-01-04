@@ -274,6 +274,10 @@ $(document).ready(function() {
         closePlayer();
     });
 
+    $('.volume-range').rangeslider({
+        polyfill: false
+    });
+
     $('.player-popup').on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function() {
             var thisEl = $(this);
             if ( thisEl.hasClass('popout') ) {
@@ -282,6 +286,7 @@ $(document).ready(function() {
                 $('.player-popup-step-2, .player-popup-step-3').addClass('hidden');
             } else if ( thisEl.hasClass('popin') && !thisEl.hasClass('popout')) {
                 thisEl.addClass('popfinish');
+                $('.volume-range').rangeslider('update', true);
             }
         }
     );
@@ -354,6 +359,75 @@ $(document).ready(function() {
     });
 
     //------------------------------------------------------------------------//
+
+    //share
+    var playerShare = false;
+    $('.player-tool-share').on('click', function(event) {
+        event.preventDefault();
+        var thisElement = $(this);
+        if ( !playerShare ) {
+            playerShare = true;
+            thisElement.toggleClass('active');
+            if (  thisElement.hasClass('active') && playerShare ) {
+                $('.player-popup-share').addClass('active');
+                setTimeout(function(){
+                    $('.player-popup-share').addClass('popin');
+                }, 10);
+                setTimeout(function() {
+                    playerShare = false;
+                }, 1000);
+            } else {
+                $('.player-popup-share').addClass('popout');
+                setTimeout(function() {
+                    playerShare = false;
+                }, 1000);
+            }
+            if ( $('.player-tool-volume').hasClass('active') ) {
+                $('.player-tool-volume').removeClass('active');
+                $('.player-popup-volume').addClass('popout');
+                setTimeout(function() {
+                    playerVolume = false;
+                }, 1000);
+            }
+        }
+    });
+
+    //------------------------------------------------------------------------//
+
+    //volume
+    var playerVolume = false;
+    $('.player-tool-volume').on('click', function(event) {
+        event.preventDefault();
+        var thisElement = $(this);
+        if ( !playerVolume ) {
+            playerVolume = true;
+            thisElement.toggleClass('active');
+            if (  thisElement.hasClass('active') && playerVolume ) {
+                $('.player-popup-volume').addClass('active');
+                setTimeout(function(){
+                    $('.player-popup-volume').addClass('popin');
+                }, 10);
+                setTimeout(function() {
+                    playerVolume = false;
+                }, 1000);
+            } else {
+                $('.player-popup-volume').addClass('popout');
+                setTimeout(function() {
+                    playerVolume = false;
+                }, 1000);
+            }
+            if ( $('.player-tool-share').hasClass('active') ) {
+                $('.player-tool-share').removeClass('active');
+                $('.player-popup-share').addClass('popout');
+                setTimeout(function() {
+                    playerShare = false;
+                }, 1000);
+            }
+        }
+    });
+
+    //------------------------------------------------------------------------//
+
 
 }); //document ready
 

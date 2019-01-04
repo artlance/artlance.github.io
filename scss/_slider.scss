@@ -120,3 +120,69 @@
 .slick-dots li.slick-active button {
     opacity: 1 !important;
 }
+
+//
+
+.rangeslider,
+.rangeslider__fill {
+  display: block;
+  border-radius: 2px;
+}
+
+.rangeslider {
+  background: $p;
+  position: relative;
+}
+
+.rangeslider--horizontal {
+  height: 4px;
+  width: 100%;
+}
+
+.rangeslider--vertical {
+  width: 20px;
+  min-height: 150px;
+  max-height: 100%;
+}
+
+.rangeslider--disabled {
+  opacity: 0.4;
+}
+
+.rangeslider__fill {
+  background: $p;
+  position: absolute;
+}
+.rangeslider--horizontal .rangeslider__fill {
+  top: 0;
+  height: 100%;
+}
+.rangeslider--vertical .rangeslider__fill {
+  bottom: 0;
+  width: 100%;
+}
+
+.rangeslider__handle {
+  background: white;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background: $w;
+  border-radius: 50%;
+}
+
+
+.rangeslider--horizontal .rangeslider__handle {
+  top: -19px;
+  touch-action: pan-y;
+
+}
+.rangeslider--vertical .rangeslider__handle {
+  left: -10px;
+  touch-action: pan-x;
+
+}
+

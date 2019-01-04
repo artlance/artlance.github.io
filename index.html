@@ -1161,10 +1161,29 @@
                         <!-- /.player-meta -->
                         <div class="player-tool">
                             <a class="player-tool-link player-tool-volume" href="#">volume</a>
+                            <div class="player-popup player-popup-volume">
+                                <div class="player-popup-content">
+                                    <input class="volume-range" type="range" value="50" min="10" max="100" step="1" data-rangeslider>
+                                </div>
+                                <!-- /.player-popup-content -->
+                            </div>
+                            <!-- /.player-popup -->
                         </div>
                         <!-- /.player-tool -->
                         <div class="player-tool">
                             <a class="player-tool-link player-tool-share" href="#">share</a>
+                            <div class="player-popup player-popup-share">
+                                <div class="player-popup-content">
+                                    <div class="player-popup-title">Share on Social Media</div>
+                                    <ul class="player-popup-share-list">
+                                        <li><a href="https://www.facebook.com/sharer/sharer.php?u=&amp;quote=" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&amp;quote=' + encodeURIComponent(document.URL)); return false;">Facebook</a></li>
+                                        <li><a href="https://twitter.com/intent/tweet?source=&amp;text=:%20" target="_blank" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;">Twitter</a></li>
+                                        <li><a href="https://plus.google.com/share?url=" target="_blank" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;">Google+</a></li>
+                                    </ul>
+                                </div>
+                                <!-- /.player-popup-content -->
+                            </div>
+                            <!-- /.player-popup -->
                         </div>
                         <!-- /.player-tool -->
                         <div class="player-tool player-tool-mobile-hide">

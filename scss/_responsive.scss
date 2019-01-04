@@ -330,6 +330,15 @@
     .player-control-forward {
         background-image: url('../upload/ic_forward-white.svg');
     }
+    .player-popup.player-popup-share {
+        right: 12px;
+        bottom: 57px;
+    }
+    .player-popup.player-popup-volume {
+        right: 12px;
+        max-width: 296px;
+        bottom: 57px;
+    }
 }
 @include media-breakpoint-down(sm) {
 }
