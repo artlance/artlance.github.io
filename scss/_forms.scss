@@ -97,6 +97,23 @@ button.button {
         background-color: #F51919;
         border-color: #F51919;
     }
+    &-connect-facebook {
+        display: block;
+        padding-left: 0;
+        padding-right: 0;
+        background-color: #4267B2;
+        border-color: #4267B2;
+    }
+    &-connect-google {
+        display: block;
+        padding-left: 0;
+        padding-right: 0;
+        background-color: #D34836;
+        border-color: #D34836;
+    }
+    &-login {
+        width: 165px;
+    }
 }
 input.button,
 button.button {

@@ -154,6 +154,14 @@ $(document).ready(function() {
 
     //------------------------------------------------------------------------//
 
+    //play toggle
+    $('.station-play').on('click', function(event) {
+        event.preventDefault();
+        $(this).toggleClass('active');
+    });
+
+    //------------------------------------------------------------------------//
+
     //filter select active
     function checkState(inputChild) {
         var inputParents = inputChild.parents('.filter-item');
@@ -427,6 +435,35 @@ $(document).ready(function() {
     });
 
     //------------------------------------------------------------------------//
+
+    //show password
+    $('.login-form-row-show-toggle').on('click', function(event) {
+        event.preventDefault();
+        if ( $(this).hasClass('active') ) {
+            $('#login-password-create').attr('type', 'password');
+            $(this).removeClass('active');
+        } else {
+            $('#login-password-create').attr('type', 'text');
+            $(this).addClass('active');
+        }
+    });
+
+    //------------------------------------------------------------------------//
+
+    //modal
+    MicroModal.init({
+        disableScroll: true,
+        awaitCloseAnimation: true
+    });
+
+    //------------------------------------------------------------------------//
+
+    $('[data-login-toggle="true"]').on('click', function(event) {
+        event.preventDefault();
+        var thisHref = $(this).attr('href');
+        if (!thisHref) { thisHref = $(this).data('href'); }
+        $(thisHref).removeClass('hidden').siblings('.login-block').addClass('hidden');
+    });
 
 
 }); //document ready

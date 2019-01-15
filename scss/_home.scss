@@ -199,6 +199,14 @@ a.hero-header-toggle {
             opacity: 1;
         }
     }
+    &.active {
+        .station-play-button {
+            background-image: none;
+            &:before {
+                opacity: 1;
+            }
+        }
+    }
 }
 .station-play-button {
     top: 0;
@@ -211,7 +219,20 @@ a.hero-header-toggle {
     border-radius: 50%;
     background: transparent url('../upload/ic_play.svg') 54% 50% no-repeat;
     background-size: 14px 16px;
-    transition: opacity $d $f;
+    transition: opacity $d $f, background-image $d $f;
+    &:before {
+        content: "";
+        transition: opacity $d $f;
+        width: 44px;
+        height: 44px;
+        position: absolute;
+        left: -2px;
+        top: -2px;
+        border-radius: 50%;
+        background: transparent url('../upload/ic_pause-white.svg') 50% 50% no-repeat;
+        background-size: 10px;
+        opacity: 0;
+    }
 }
 .hero-background {
     position: absolute;

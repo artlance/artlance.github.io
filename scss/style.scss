@@ -15,13 +15,15 @@
 @import "gallery";
 @import "header";
 @import "footer";
+
+//components
+@import "home";
+@import "player";
+@import "modal";
 @import "content";
 @import "sidebar";
 
-//pages
-@import "home";
-
-//components
+//extra layout
 @import "responsive";
 @import "retina";
 @import "animation";

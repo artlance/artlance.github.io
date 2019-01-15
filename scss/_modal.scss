@@ -1,0 +1,245 @@
+.modal {
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    position: fixed;
+    background: #101011;
+    z-index: 9090;
+    overflow: auto;
+}
+.modal {
+    display: none;
+}
+.modal.is-open {
+    display: block;
+}
+.login-form-navigation {
+    text-align: center;
+}
+.login-form-navigation-or {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    opacity: 0.4;
+    color: $w;
+    padding-top: 18px;
+    padding-bottom: 19px;
+}
+.login-form-navigation-social {
+    max-width: 255px;
+    margin: 0 auto;
+    button.button,
+    a.button {
+        margin-bottom: 20px;
+    }
+}
+.login-form-note {
+    padding-top: 50px;
+    font-size: 18px;
+    text-align: center;
+    color: #6A6A6C;
+    a {
+        text-decoration: underline;
+        color: #D0D0D4;
+    }
+}
+.login-form {
+    max-width: 370px;
+    margin: 0 auto;
+}
+.login-form-cell {
+    position: relative;
+    margin-bottom: 20px;
+    label {
+        display: none;
+    }
+}
+input.login-input-text {
+    border-radius: 4px;
+    width: 100%;
+    color: $text;
+    font-size: 18px;
+    border: 1px solid $w;
+    padding: 5px 19px;
+    height: 62px;
+    &::placeholder {
+        color: #B5B5BA;
+    }
+}
+.login-form-row-show,
+.login-form-row-forgot {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    font-size: 16px;
+    text-decoration: underline;
+    background: $w;
+    padding: 18px;
+    border-radius: 4px;
+    a {
+        color: #B5B5BA;
+        &:hover {
+            color: $text;
+        }
+        &.active {
+            .password-show-default {
+                display: none;
+            }
+            .password-show-active {
+                display: block;
+            }
+        }
+    }
+}
+.password-show-active {
+    display: none;
+}
+.login-title {
+    font-size: 40px;
+    color: $w;
+    text-align: center;
+    margin-bottom: 80px;
+}
+.modal-close {
+    width: 42px;
+    height: 42px;
+    margin-left: auto;
+    background: $p;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    transform: rotate(45deg);
+    &:before,
+    &:after {
+        width: 2px;
+        height: 16px;
+        background: $w;
+        border-radius: 2px;
+        left: 50%;
+        top: 50%;
+        content: "";
+        position: absolute;
+        transform: translate3d(-50%, -50%, 0);
+    }
+    &:before {
+        width: 16px;
+        height: 2px;
+    }
+}
+.header-modal {
+    height: 90px;
+    padding-top: 29px;
+    background: #101011;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+.header-modal-line {
+    height: 1px;
+    margin-top: 18px;
+    font-size: 0;
+    line-height: 0;
+    opacity: 0.1;
+    background: $w;
+}
+.login-form-message {
+    color: #B5B5BA;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.778;
+    margin-bottom: 40px;
+}
+.modal-content-row {
+    padding-top: 140px;
+    padding-bottom: 50px;
+    min-height: 100vh;
+}
+@keyframes mmfadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes mmfadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+@keyframes mmslideIn {
+    from { transform: translateY(0); }
+    to { transform: translateY(0); }
+}
+@keyframes mmslideOut {
+    from { transform: translateY(0); }
+    to { transform: translateY(0); }
+}
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+    animation: mmfadeIn .5s $f;
+}
+.micromodal-slide[aria-hidden="false"] .modal__container {
+    animation: mmslideIn .5s $f;
+}
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+    animation: mmfadeOut .5s $f;
+}
+.micromodal-slide[aria-hidden="true"] .modal__container {
+    animation: mmslideOut .5s $f;
+}
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+    will-change: transform;
+}
+@include media-breakpoint-down(md) {
+    .header-modal {
+        padding-top: 13px;
+        padding-bottom: 13px;
+        height: 57px;
+    }
+    .header-modal-line {
+        margin-top: 12px;
+    }
+    .modal-close {
+        width: 32px;
+        height: 32px;
+    }
+    .login-title {
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+    input.login-input-text {
+        font-size: 16px;
+        height: 50px;
+    }
+    .login-form-row-show,
+    .login-form-row-forgot {
+        background: $w;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    .modal-content-row {
+        padding-top: 80px;
+        padding-bottom: 20px;
+    }
+    .login-form-cell {
+        margin-bottom: 10px;
+    }
+    .login-form-navigation-or {
+        padding-top: 9px;
+        padding-bottom: 9px;
+    }
+    .login-form-navigation-social {
+        max-width: 232px;
+        button.button,
+        a.button {
+            margin-bottom: 10px;
+            &-big {
+                font-size: 16px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+    }
+    .login-form-navigation {
+        padding-top: 10px;
+    }
+}
