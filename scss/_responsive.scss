@@ -82,13 +82,58 @@
     .station-play-button {
         width: 36px;
         height: 36px;
-        background-size: 11px;
+        &:after,
+        &:before {
+            width: 36px;
+            height: 36px;
+            background-size: 11px;
+        }
+        &:before {
+            background-size: 8px;
+        }
     }
     .hero-stations {
         display: none;
     }
     .col-header-navigation {
+        padding-top: 40px;
+        padding-bottom: 40px;
         display: none;
+        position: absolute;
+        left: 0;
+        right: 0px;
+        top: -13px;
+        margin-left: -10px;
+        background: $w;
+        flex: 0 0 100%;
+        max-width: none;
+        width: auto;
+        box-shadow: 0 1px 2px 0 rgba(123, 122, 116, 0.1);
+    }
+    .col-header-left {
+        position: static;
+    }
+    .header-navigation-list {
+        flex-wrap: wrap;
+        a {
+            color: $text;
+        }
+        & > li {
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-left: 0;
+            padding-left: 44px;
+            padding-right: 20px;
+            &:first-child {
+                margin-left: 0;
+                padding-left: 20px;
+            }
+        }
+    }
+    .navigation-open {
+        .col-header-navigation {
+            display: block;
+        }
     }
     .hero-header-title {
         font-size: 30px;
@@ -322,7 +367,12 @@
         text-decoration: underline;
     }
     .player-control-pause {
-        background-image: url('../upload/ic_pause-white.svg');
+        &:after {
+            background-image: url('../upload/ic_play.svg');
+        }
+        &:before {
+            background-image: url('../upload/ic_pause-white.svg');
+        }
     }
     .player-control-backward {
         background-image: url('../upload/ic_backward-white.svg');

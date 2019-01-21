@@ -1,3 +1,11 @@
+/*
+Theme Name: Zeno
+Author: Alex Nevsky
+Author URI:
+Description:
+Version: 1.0
+Text Domain:
+*/
 /* reboot */
 html {
   -webkit-box-sizing: border-box;
@@ -3443,6 +3451,16 @@ a.hero-header-toggle:before {
 
 .station-play.active .station-play-button:before {
   opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.station-play.active .station-play-button:after {
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
 }
 
 .station-play-button {
@@ -3453,19 +3471,19 @@ a.hero-header-toggle:before {
   height: 44px;
   border: 2px solid #ffffff;
   opacity: 0.8;
-  border-radius: 50%;
-  background: transparent url("../upload/ic_play.svg") 54% 50% no-repeat;
-  background-size: 14px 16px;
-  -webkit-transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-image 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-image 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-image 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.station-play-button:before {
-  content: "";
   -webkit-transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   -o-transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50%;
+}
+
+.station-play-button:after, .station-play-button:before {
+  content: "";
+  -webkit-transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   width: 44px;
   height: 44px;
   position: absolute;
@@ -3475,6 +3493,19 @@ a.hero-header-toggle:before {
   background: transparent url("../upload/ic_pause-white.svg") 50% 50% no-repeat;
   background-size: 10px;
   opacity: 0;
+}
+
+.station-play-button:before {
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+}
+
+.station-play-button:after {
+  opacity: 1;
+  background-image: url("../upload/ic_play.svg");
+  background-position: 54% 50%;
+  background-size: 14px 16px;
 }
 
 .hero-background {
@@ -3848,6 +3879,12 @@ a.filter-result-clear {
   text-decoration: underline;
 }
 
+.player-active .player {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
 .player {
   height: 70px;
   background: #F6F6F6;
@@ -3856,6 +3893,14 @@ a.filter-result-clear {
   right: 0;
   bottom: 0;
   z-index: 6060;
+  -webkit-transform: translate3d(0, 101%, 0);
+  transform: translate3d(0, 101%, 0);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .player:before {
@@ -4099,8 +4144,51 @@ a.player-info-call.active-online:before {
 }
 
 .player-control-pause {
+  position: relative;
+}
+
+.player-control-pause:after, .player-control-pause:before {
+  content: "";
+  -webkit-transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: transparent url("../upload/ic_pause.svg") 50% 50% no-repeat;
   background-size: 14px 20px;
+  opacity: 0;
+}
+
+.player-control-pause:before {
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+}
+
+.player-control-pause:after {
+  opacity: 1;
+  background-image: url("../upload/ic_play-dark.svg");
+  background-position: 54% 50%;
+  background-size: 16px;
+}
+
+.player-control-pause.active:before {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.player-control-pause.active:after {
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+  opacity: 0;
 }
 
 .player-control-forward {
@@ -5894,13 +5982,61 @@ input.login-input-text::placeholder {
   .station-play-button {
     width: 36px;
     height: 36px;
+  }
+  .station-play-button:after, .station-play-button:before {
+    width: 36px;
+    height: 36px;
     background-size: 11px;
+  }
+  .station-play-button:before {
+    background-size: 8px;
   }
   .hero-stations {
     display: none;
   }
   .col-header-navigation {
+    padding-top: 40px;
+    padding-bottom: 40px;
     display: none;
+    position: absolute;
+    left: 0;
+    right: 0px;
+    top: -13px;
+    margin-left: -10px;
+    background: #ffffff;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: none;
+    width: auto;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(123, 122, 116, 0.1);
+    box-shadow: 0 1px 2px 0 rgba(123, 122, 116, 0.1);
+  }
+  .col-header-left {
+    position: static;
+  }
+  .header-navigation-list {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .header-navigation-list a {
+    color: #28282A;
+  }
+  .header-navigation-list > li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-left: 0;
+    padding-left: 44px;
+    padding-right: 20px;
+  }
+  .header-navigation-list > li:first-child {
+    margin-left: 0;
+    padding-left: 20px;
+  }
+  .navigation-open .col-header-navigation {
+    display: block;
   }
   .hero-header-title {
     font-size: 30px;
@@ -6140,7 +6276,10 @@ input.login-input-text::placeholder {
   .player-info-phone a {
     text-decoration: underline;
   }
-  .player-control-pause {
+  .player-control-pause:after {
+    background-image: url("../upload/ic_play.svg");
+  }
+  .player-control-pause:before {
     background-image: url("../upload/ic_pause-white.svg");
   }
   .player-control-backward {
@@ -6159,5 +6298,3 @@ input.login-input-text::placeholder {
     bottom: 57px;
   }
 }
-
-/* retina */

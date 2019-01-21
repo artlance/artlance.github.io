@@ -204,6 +204,11 @@ a.hero-header-toggle {
             background-image: none;
             &:before {
                 opacity: 1;
+                transform: scale(1);
+            }
+            &:after {
+                opacity: 0;
+                transform: scale(0.5);
             }
         }
     }
@@ -216,13 +221,12 @@ a.hero-header-toggle {
     height: 44px;
     border: 2px solid $w;
     opacity: 0.8;
+    transition: opacity $d $f;
     border-radius: 50%;
-    background: transparent url('../upload/ic_play.svg') 54% 50% no-repeat;
-    background-size: 14px 16px;
-    transition: opacity $d $f, background-image $d $f;
+    &:after,
     &:before {
         content: "";
-        transition: opacity $d $f;
+        transition: opacity $d $f, transform $d $f;
         width: 44px;
         height: 44px;
         position: absolute;
@@ -232,6 +236,15 @@ a.hero-header-toggle {
         background: transparent url('../upload/ic_pause-white.svg') 50% 50% no-repeat;
         background-size: 10px;
         opacity: 0;
+    }
+    &:before {
+        transform: scale(0.5);
+    }
+    &:after {
+        opacity: 1;
+        background-image: url('../upload/ic_play.svg');
+        background-position: 54% 50%;
+        background-size: 14px 16px;
     }
 }
 .hero-background {

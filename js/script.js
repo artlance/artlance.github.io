@@ -1,4 +1,4 @@
-$(document).ready(function() {
+jQuery( function($) {
 
     //ready
 
@@ -157,7 +157,32 @@ $(document).ready(function() {
     //play toggle
     $('.station-play').on('click', function(event) {
         event.preventDefault();
-        $(this).toggleClass('active');
+        var thisElement = $(this),
+            playerPause = $('.player-control-pause');
+        if ( thisElement.hasClass('active') ) {
+            thisElement.removeClass('active');
+            playerPause.removeClass('active');
+        } else {
+            $('.station-play').removeClass('active');
+            thisElement.addClass('active');
+            $('body').addClass('player-active');
+            playerPause.addClass('active');
+        }
+    });
+    var thisHeroRadio;
+    $('.player-control-pause').on('click', function(event) {
+        event.preventDefault();
+        var thisElement = $(this);
+        if ( $('.station-play.active').length ) {
+            thisHeroRadio = $('.station-play.active');
+        }
+        if ( thisElement.hasClass('active') ) {
+            thisElement.removeClass('active');
+            thisHeroRadio.removeClass('active');
+        } else {
+            thisElement.addClass('active');
+            thisHeroRadio.addClass('active');
+        }
     });
 
     //------------------------------------------------------------------------//

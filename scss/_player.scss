@@ -1,3 +1,9 @@
+.player-active {
+    .player {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
 .player {
     height: 70px;
     background: #F6F6F6;
@@ -6,6 +12,9 @@
     right: 0;
     bottom: 0;
     z-index: 6060;
+    transform: translate3d(0, 101%, 0);
+    opacity: 0;
+    transition: opacity $d*2 $f, transform $d*2 $f;
     &:before {
         content: "";
         position: absolute;
@@ -196,8 +205,39 @@ a.player-info-call {
     }
 }
 .player-control-pause {
-    background: transparent url('../upload/ic_pause.svg') 50% 50% no-repeat;
-    background-size: 14px 20px;
+    position: relative;
+    &:after,
+    &:before {
+        content: "";
+        transition: opacity $d $f, transform $d $f;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: transparent url('../upload/ic_pause.svg') 50% 50% no-repeat;
+        background-size: 14px 20px;
+        opacity: 0;
+    }
+    &:before {
+        transform: scale(0.5);
+    }
+    &:after {
+        opacity: 1;
+        background-image: url('../upload/ic_play-dark.svg');
+        background-position: 54% 50%;
+        background-size: 16px;
+    }
+    &.active {
+        &:before {
+            opacity: 1;
+            transform: scale(1);
+        }
+        &:after {
+            transform: scale(0.5);
+            opacity: 0;
+        }
+    }
 }
 .player-control-forward {
     background: transparent url('../upload/ic_forward.svg') 50% 50% no-repeat;
