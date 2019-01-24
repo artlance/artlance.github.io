@@ -1,4 +1,4 @@
-jQuery( function($) {
+jQuery(document).ready(function($){
 
     //ready
 
@@ -492,19 +492,3 @@ jQuery( function($) {
 
 
 }); //document ready
-
-//*********************************************************************//
-
-$(window).load(function() {
-
-    //load
-
-});//window load
-
-//*********************************************************************//
-
-$(window).resize(function() {
-
-    //resize
-
-});//window resize
