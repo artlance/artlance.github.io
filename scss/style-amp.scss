@@ -1,0 +1,545 @@
+$primary: #F5AB19; $p: $primary;
+$secondary: #28282A; $s: $secondary;
+$white: #ffffff; $w: $white;
+$black: #000000; $b: $black;
+
+$duration: 0.15s;                                                 $d: $duration;
+$function: cubic-bezier(0.4, 0.0, 0.2, 1);                        $f: $function;
+$function-reverse: cubic-bezier(0.2, 0.0, 0.4, 1);                $fr: $function-reverse;
+
+
+@font-face {
+  font-family: 'Larsseit';
+  font-display: swap;
+  src: url("https://artlance.github.io/fonts/Larsseit.eot");
+  src: url("https://artlance.github.io/fonts/Larsseit.eot?#iefix") format("embedded-opentype"), url("https://artlance.github.io/fonts/Larsseit.woff2") format("woff2"), url("https://artlance.github.io/fonts/Larsseit.woff") format("woff"), url("https://artlance.github.io/fonts/Larsseit.ttf") format("truetype"), url("https://artlance.github.io/fonts/Larsseit.svg#Larsseit") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Larsseit';
+  font-display: swap;
+  src: url("https://artlance.github.io/fonts/Larsseit-Medium.eot");
+  src: url("https://artlance.github.io/fonts/Larsseit-Medium.eot?#iefix") format("embedded-opentype"), url("https://artlance.github.io/fonts/Larsseit-Medium.woff2") format("woff2"), url("https://artlance.github.io/fonts/Larsseit-Medium.woff") format("woff"), url("https://artlance.github.io/fonts/Larsseit-Medium.ttf") format("truetype"), url("https://artlance.github.io/fonts/Larsseit-Medium.svg#Larsseit-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Larsseit';
+  font-display: swap;
+  src: url("https://artlance.github.io/fonts/Larsseit-Bold.eot");
+  src: url("https://artlance.github.io/fonts/Larsseit-Bold.eot?#iefix") format("embedded-opentype"), url("https://artlance.github.io/fonts/Larsseit-Bold.woff2") format("woff2"), url("https://artlance.github.io/fonts/Larsseit-Bold.woff") format("woff"), url("https://artlance.github.io/fonts/Larsseit-Bold.ttf") format("truetype"), url("https://artlance.github.io/fonts/Larsseit-Bold.svg#Larsseit-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+* {
+    margin: 0;
+    padding: 0;
+
+}
+:focus {
+    outline: none;
+}
+body {
+    color: $b;
+    font-family: "Larsseit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+ul, ol {
+    list-style: none;
+}
+a {
+    color: $b;
+    text-decoration: none;
+}
+a, button {
+    cursor: pointer;
+}
+.wrap {
+    margin: 0 auto;
+    max-width: 1460px;
+    padding: 0 15px;
+}
+.flex,
+.wrap {
+    display: flex;
+}
+.wrap,
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.flex-justify {
+    justify-content: center;
+}
+.flex-align {
+    align-items: center;
+}
+.flex-reverse {
+    flex-direction: row-reverse;
+}
+.col {
+    max-width: 100%;
+    padding: 0 15px;
+    &-full {
+        flex: 0 0 100%;
+    }
+    &-grow {
+        flex-grow: 1;
+    }
+    &-4 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
+.transition-opacity {
+    transition: opacity $d $f;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+.transition-color {
+    transition: color $d $f;
+}
+
+//header amp
+.header-amp {
+    color: $w;
+    position: absolute;
+    z-index: 5050;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding-top: 32px;
+}
+.logo {
+    display: inline-block;
+    margin-top: 2px;
+}
+.header-line {
+    margin-top: 20px;
+    height: 1px;
+    background: $w;
+    opacity: 0.1;
+}
+.header-account {
+    width: 38px;
+    height: 38px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-top: -1px;
+}
+.header-navigation-list {
+    a, button {
+        font-size: 16px;
+        background-color: transparent;
+        border: 0;
+        color: $w;
+        font-weight: 500;
+        line-height: 2;
+        display: inline-block;
+        &:hover {
+            color: $p;
+        }
+        &.header-navigation-add {
+            padding-left: 24px;
+            position: relative;
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                top: 8px;
+                left: 6px;
+                width: 2px;
+                height: 14px;
+                background: $p;
+            }
+            &:after {
+                left: 0;
+                top: 14px;
+                height: 2px;
+                width: 14px;
+            }
+        }
+    }
+    & > li {
+        margin-left: 40px;
+        &:first-child {
+            margin-left: 10px;
+        }
+    }
+}
+.search-form {
+    position: relative;
+}
+.search-icon {
+    position: absolute;
+    left: 2px;
+    top: 7px;
+    opacity: 0.2;
+}
+input.header-search {
+    border-radius: 0;
+    color: $w;
+    position: relative;
+    width: 320px;
+    background: transparent;
+    border: 0;
+    height: 32px;
+    border-radius: 0;
+    font-size: 16px;
+    padding-left: 32px;
+    font-family: "Larsseit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+//get app
+.get-app {
+    padding: 24px 0 15px;
+    background: #f3f3f3;
+    h3 {
+        text-align: center;
+        font-size: 18px;
+        font-weight: normal;
+        color: #6A6A6C;
+        margin-bottom: 8px;
+    }
+}
+.get-app-list {
+    li {
+        padding: 15px 5px;
+    }
+}
+.get-app-link {
+    display: block;
+    width: 182px;
+    height: 58px;
+    border-radius: 4px;
+    background: $black;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 0 0 60px;
+    position: relative;
+    color: $w;
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+    }
+}
+.get-app-note {
+    font-size: 12px;
+    display: block;
+    opacity: 0.4;
+}
+
+//footer amp
+.footer-amp {
+    padding: 30px 0 20px;
+}
+.footer-line {
+    height: 1px;
+    background: #28282A;
+    opacity: 0.1;
+    margin-bottom: 17px;
+}
+.copyright {
+    color: #B5B5BA;
+}
+.footer-navigation-list {
+    li {
+        padding: 0 0 0 19px;
+    }
+    a {
+        color: #6A6A6C;
+        &:hover {
+            color: #28282A;
+        }
+    }
+}
+
+//radio amp
+.radio {
+    text-align: center;
+    padding: 124px 0 40px;
+    min-height: 600px;
+    background: #101011;
+    color: $w;
+    position: relative;
+    a {
+        color: $w;
+    }
+    .wrap {
+        position: relative;
+    }
+}
+.radio-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    background: transparent 50% 50% no-repeat;
+    background-size: cover;
+}
+.raio-live {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 11px;
+    span {
+        display: inline-block;
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            margin-top: -3px;
+            left: -14px;
+            width: 6px;
+            height: 6px;
+            background: #D0021A;
+            border-radius: 50%;
+        }
+    }
+}
+.radio-title {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.radio-info-list {
+    margin-bottom: 46px;
+    li {
+        margin: 0 16px;
+    }
+}
+.radio-info-line {
+    width: 12px;
+    height: 1px;
+    background: $w;
+    display: block;
+    margin: 0 auto;
+}
+.radio-info-button {
+    background: transparent;
+    color: $w;
+    border: 0;
+    font-size: 18px;
+}
+.radio-artwork {
+    max-width: 380px;
+    margin: 0 auto 15px;
+}
+.radio-audio {
+    flex: 0 0 380px;
+    max-width: 380px;
+    padding: 0 60px;
+}
+.radio-toolbar-normal {
+    flex: 0 0 157px;
+    max-width: 157px;
+    padding: 0 4px;
+    svg {
+        display: inline-block;
+        margin-right: 5px;
+        vertical-align: top;
+    }
+}
+.radio-toolbar-small {
+    flex: 0 0 46px;
+    max-width: 46px;
+    padding: 0 4px;
+    .radio-button {
+        font-size: 0;
+        color: transparent;
+    }
+}
+.radio-button {
+    width: 100%;
+    background: transparent;
+    color: $w;
+    height: 38px;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 19px;
+    transition: background-color $d $f;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.08);
+    }
+}
+.radio-audio-info {
+    margin-bottom: 46px;
+}
+.radio-song {
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.radio-artist {
+    font-size: 12px;
+    opacity: 0.4;
+}
+.radio-audio-wrap {
+    min-height: 70px;
+    padding: 0 10px;
+    background: #E7E7E7;
+    border-radius: 35px;
+    audio::-webkit-media-controls-panel {
+        background: #E7E7E7;
+    }
+}
+
+//station
+.stations {
+    padding-top: 30px;
+    padding-bottom: 25px;
+    h4 {
+        font-size: 32px;
+        color: #28282A;
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+    .wrap {
+        max-width: 1230px;
+    }
+}
+.station {
+    display: block;
+    margin-bottom: 29px;
+}
+.station-link {
+    display: block;
+    color: $s;
+    &:hover {
+        color: $s;
+    }
+}
+.station-poster {
+    display: block;
+    position: relative;
+}
+.station-poster-image {
+    display: block;
+}
+.station-poster-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.station-labels {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.station-label {
+    background: $p;
+    color: $w;
+    margin: 0 10px 10px 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    border-radius: 14px;
+    padding: 3px 14px 4px;
+}
+.station-tags {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.station-tag {
+    color: $s;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 0 10px 10px 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    border-radius: 14px;
+    padding: 3px 14px 4px;
+}
+.station-title {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 13px 0 7px;
+}
+.station-meta {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #6A6A6C;
+}
+.station-location {
+    display: inline-block;
+    color: #6A6A6C;
+    position: relative;
+    padding-left: 23px;
+    font-weight: bold;
+    margin: 0 4px;
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-top: -1px;
+        transform: translate3d(0, -50%, 0);
+    }
+}
+.station-languages {
+    display: inline-block;
+    color: #B5B5BA;
+    margin: 0 2px;
+}
+.station-language {
+    &:after {
+        content: ", ";
+    }
+    &:last-child {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+
+//modal
+.lightbox {
+    color: $w;
+    background: rgba(0,0,0,.8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.amp-lightbox {
+    z-index: 9090;
+}

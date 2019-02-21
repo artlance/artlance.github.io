@@ -14,9 +14,12 @@
 }
 input.input-text {
     width: 100%;
-    float: left;
-    border-radius: 0;
-    transition: color $d $f, background-color $d $f, border-color $d $f, box-shadow $d $f;
+    border-radius: 4px;
+    height: 43px;
+    text-align: center;
+    padding: 5px 9px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: color $d $f, background-color $d $f, border-color $d $f;
 }
 textarea.textarea {
     @extend input.input-text;
@@ -45,11 +48,8 @@ select.select::-ms-expand {
         }
     }
     label {
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
+        position: relative;
+        display: inline-block;
         user-select: none;
         &:before {
             transition: box-shadow $d $f;
