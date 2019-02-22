@@ -3210,6 +3210,7 @@ input.header-search-button:hover {
 }
 
 /* home */
+.hero-inside,
 .hero {
   height: 727px;
   background: #101011;
@@ -3218,8 +3219,13 @@ input.header-search-button:hover {
   padding-top: 89px;
 }
 
+.hero-inside a,
 .hero a {
   color: #ffffff;
+}
+
+.hero-inside {
+  height: auto;
 }
 
 .hero-header {
@@ -3232,9 +3238,18 @@ input.header-search-button:hover {
   height: 133px;
 }
 
-.hero-header-title {
+.hero-header-title, .hero-inside-title {
   font-size: 40px;
   line-height: 1.2;
+}
+
+.hero-inside-title {
+  padding-top: 41px;
+  padding-bottom: 43px;
+}
+
+.hero-inside-line {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .hero-header-filter {
@@ -3514,6 +3529,7 @@ a.hero-header-toggle:before {
   background-size: 14px 16px;
 }
 
+.hero-inside-background,
 .hero-background {
   position: absolute;
   left: 0;
@@ -3523,6 +3539,8 @@ a.hero-header-toggle:before {
   opacity: 0.2;
 }
 
+.hero-inside-background .slick-list,
+.hero-inside-background .slick-track,
 .hero-background .slick-list,
 .hero-background .slick-track {
   height: 100%;
@@ -3532,6 +3550,7 @@ a.hero-header-toggle:before {
   height: 100%;
 }
 
+.hero-inside-background,
 .hero-background-slide {
   height: 100%;
   background: transparent no-repeat 50% 50%;
@@ -6012,6 +6031,13 @@ input.login-input-text::placeholder {
     opacity: 0.5;
     background-color: #ffffff;
   }
+  .hero-inside {
+    padding-top: 57px;
+  }
+  .hero-inside-title {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
   .hero-station-meta {
     margin-bottom: 6px;
   }
@@ -6093,7 +6119,7 @@ input.login-input-text::placeholder {
   .navigation-open .col-header-navigation {
     display: block;
   }
-  .hero-header-title {
+  .hero-header-title, .hero-inside-title {
     font-size: 30px;
     text-align: center;
     margin-bottom: 6px;

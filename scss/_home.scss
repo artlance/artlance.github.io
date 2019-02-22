@@ -1,4 +1,5 @@
 /* home */
+.hero-inside,
 .hero {
     height: 727px;
     background: #101011;
@@ -8,6 +9,9 @@
     a {
         color: $w;
     }
+}
+.hero-inside {
+    height: auto;
 }
 .hero-header {
     padding-bottom: 41px;
@@ -21,6 +25,14 @@
 .hero-header-title {
     font-size: 40px;
     line-height: 1.2;
+}
+.hero-inside-title {
+    padding-top: 41px;
+    padding-bottom: 43px;
+    @extend .hero-header-title;
+}
+.hero-inside-line {
+     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 .hero-header-filter {
     text-align: right;
@@ -247,6 +259,7 @@ a.hero-header-toggle {
         background-size: 14px 16px;
     }
 }
+.hero-inside-background,
 .hero-background {
     position: absolute;
     left: 0;
@@ -262,6 +275,7 @@ a.hero-header-toggle {
 .hero-background-slider {
     height: 100%;
 }
+.hero-inside-background,
 .hero-background-slide {
     height: 100%;
     background: $tr no-repeat 50% 50%;
