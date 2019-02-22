@@ -102,6 +102,10 @@ a, button {
         flex: 0 0 25%;
         max-width: 25%;
     }
+    &-2 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
 }
 .show {
     display: block;
@@ -210,47 +214,6 @@ input.header-search {
     &::placeholder {
         color: rgba(255, 255, 255, 0.6);
     }
-}
-
-//get app
-.get-app {
-    padding: 24px 0 15px;
-    background: #f3f3f3;
-    h3 {
-        text-align: center;
-        font-size: 18px;
-        font-weight: normal;
-        color: #6A6A6C;
-        margin-bottom: 8px;
-    }
-}
-.get-app-list {
-    li {
-        padding: 15px 5px;
-    }
-}
-.get-app-link {
-    display: block;
-    width: 182px;
-    height: 58px;
-    border-radius: 4px;
-    background: $black;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 8px 0 0 60px;
-    position: relative;
-    color: $w;
-    svg {
-        position: absolute;
-        top: 50%;
-        left: 20px;
-        transform: translateY(-50%);
-    }
-}
-.get-app-note {
-    font-size: 12px;
-    display: block;
-    opacity: 0.4;
 }
 
 //footer amp
@@ -412,6 +375,49 @@ input.header-search {
     }
 }
 
+//get app
+.get-app {
+    padding: 24px 0 15px;
+    background: #f3f3f3;
+    h3 {
+        text-align: center;
+        font-size: 18px;
+        font-weight: normal;
+        color: #6A6A6C;
+        margin-bottom: 8px;
+    }
+}
+.get-app-list {
+    margin-left: -5px;
+    margin-right: -5px;
+    li {
+        padding: 15px 5px;
+    }
+}
+.get-app-link {
+    display: block;
+    width: 182px;
+    height: 58px;
+    border-radius: 4px;
+    background: $black;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 0 0 60px;
+    position: relative;
+    color: $w;
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+    }
+}
+.get-app-note {
+    font-size: 12px;
+    display: block;
+    opacity: 0.4;
+}
+
 //station
 .stations {
     padding-top: 30px;
@@ -539,7 +545,248 @@ input.header-search {
     display: flex;
     align-items: center;
     justify-content: center;
+    button {
+        margin-left: 20px;
+        padding: 10px;
+        color: $w;
+        border: 1px solid $w;
+        background-color: transparent;
+        border-radius: 5px;
+    }
 }
 .amp-lightbox {
     z-index: 9090;
+}
+
+.navigation-sidebar {
+    background: $s;
+}
+.sidebar-close,
+.navigation-toggle {
+    font-size: 0;
+    line-height: 0;
+    display: none;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    z-index: 5050;
+    border: 0;
+    padding: 0;
+    background: transparent;
+}
+.sidebar-close {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.sidebar-close-icon,
+.navigation-toggle-icon {
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    right: 6px;
+    height: 2px;
+    background: $p;
+    transform: translate3d(0, -50%, 0);
+    transition: background-color $d $f;
+    border-radius: 1px;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background: $p;
+        transform: translate3d(0, -6px, 0);
+        transition: transform $d $f;
+        border-radius: 1px;
+    }
+    &:after {
+        transform: translate3d(0, 6px, 0);
+    }
+}
+.sidebar-close-icon {
+    background-color: transparent;
+    &:after {
+        transform: rotate(-45deg);
+    }
+    &:before {
+        transform: rotate(45deg);
+    }
+}
+
+.navigation-sidebar {
+    padding: 50px;
+    .header-navigation-list {
+        a, button {
+            &.header-navigation-add {
+                margin-left: -24px;
+            }
+        }
+        & > li {
+            margin-left: 0;
+        }
+    }
+    .search-form {
+        margin-left: -32px;
+    }
+    input.header-search {
+        width: 120px;
+    }
+}
+
+.demo-panel {
+    color: $w;
+    text-align: center;
+    background: #54D933;
+    padding: 50px;
+    button {
+        margin-left: 20px;
+        padding: 10px;
+        color: $w;
+        border: 1px solid $w;
+        background-color: transparent;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 991px) {
+    .wrap,
+    .col {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .m-order-st {
+        order: -1;
+    }
+    .col-m-full {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .col-m-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .col-m-grow {
+        flex-grow: 1;
+    }
+    .m-none,
+    .col-m-none {
+        display: none;
+    }
+
+    //header
+    .header-amp {
+        padding-top: 16px;
+    }
+    .header-line {
+        margin-top: 15px;
+    }
+    .navigation-toggle {
+        display: block;
+    }
+
+    //footer
+    .footer-amp {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .copyright {
+        margin-bottom: 18px;
+    }
+    .footer-navigation-list {
+        margin-left: -21px;
+        li {
+            padding-left: 21px;
+            margin-bottom: 10px;
+        }
+    }
+    .footer-line {
+        margin-bottom: 14px;
+    }
+
+    //radio amp
+    .radio {
+        padding-top: 92px;
+    }
+    .raio-live {
+        margin-bottom: 3px;
+    }
+    .radio-title {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .radio-artwork {
+        width: 52.238%;
+        margin-bottom: 10px;
+    }
+    .radio-info-list {
+        margin-bottom: 33px;
+    }
+    .radio-toolbar {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 320px;
+    }
+    .radio-audio {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+    .radio-audio-info {
+        margin-bottom: 32px;
+    }
+    .radio-toolbar-normal {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-bottom: 8px;
+    }
+    .radio-toolbar-small {
+        order: 1;
+    }
+
+    //get app
+    .get-app-link {
+        width: 160px;
+    }
+
+    //station
+    .stations {
+        padding-bottom: 8px;
+        h4 {
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 22px;
+        }
+    }
+    .station {
+        margin-bottom: 20px;
+    }
+    .station-title {
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .station-tags {
+        display: none;
+    }
+    .station-meta {
+        font-size: 13px;
+    }
+    .station-languages {
+        display: none;
+    }
+    .station-title {
+        padding-bottom: 4px;
+    }
+    .station-location {
+        margin-left: -10px;
+        svg {
+            left: 6px;
+            width: 10px;
+        }
+    }
+
 }

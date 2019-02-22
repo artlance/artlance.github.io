@@ -1,7 +1,6 @@
 importScripts('sw-toolbox.js');
 
 toolbox.precache([
-  '/style-amp.css',
   '/style.css',
   '/single.html',
   '/index.html',
