@@ -115,6 +115,7 @@ a, button {
 }
 .transition-opacity {
     transition: opacity $d $f;
+    will-change: opacity;
     &:hover {
         opacity: 0.8;
     }
@@ -819,23 +820,33 @@ input.header-search {
         border-radius: 5px;
     }
 }
-.chat-close {
-    flex: 0 0 22px;
-    max-width: 22px;
-    height: 22px;
-    margin-top: 1px;
+.panel {
     position: relative;
+    background: #1e1e1e;
+}
+.chat-iframe {
+    display: block;
+    width: 100% !important;
+    margin: 0;
+}
+.chat-close {
+    font-size: 0;
+    border: 0;
+    background: transparent;
+    right: 11px;
+    top: 19px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
     opacity: 0.2;
-    transition: opacity 0.15s cubic-bezier(0.4, 0.0, 0.2, 1);
-    will-change: opacity;
     &::before,
     &::after {
         content: "";
         position: absolute;
         top: 50%;
         margin-top: -1px;
-        left: 0;
-        right: 0;
+        left: 9px;
+        right: 9px;
         height: 2px;
         background: #C7C7C7;
         transform: rotate(45deg);
@@ -846,6 +857,30 @@ input.header-search {
     &:hover {
         opacity: 0.6;
     }
+}
+.iframe-overflow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    top: 0;
+    background: #1e1e1e;
+    span {
+        color: $w;
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        top: 50%;
+        margin-top: -10px;
+        font-size: 14px;
+        text-align: center;
+    }
+}
+#panels {
+    height: 0;
+    display: block;
+    font-size: 0;
+    line-height: 0;
 }
 
 @media (max-width: 991px) {
