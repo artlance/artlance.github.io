@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, shrink-to-fit=no">
+    <title>ZENO</title>
+    <meta name="description" content="zeno description">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <link rel="stylesheet" href="chat.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="apple-icon-512x512.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#F5AB19">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Zeno">
+    <meta name="apple-mobile-web-app-title" content="Zeno">
+    <meta name="theme-color" content="#F5AB19">
+    <meta name="msapplication-navbutton-color" content="#F5AB19">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="/">
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
+    </script>
+</head>
+<body>
+    <div class="chat">
+        <div class="chat-caption">
+            <div class="chat-title">Chat</div>
+            <div class="chat-users"><strong>1.314</strong> users</div>
+        </div>
+        <!-- /.chat-caption -->
+        <div class="chat-content">
+            <div class="chat-content-inside">
+                <div class="chat-message">
+                    <div class="chat-message-photo"><img src="upload/account.jpg" alt=""></div>
+                    <div class="chat-message-content">
+                        <div class="chat-message-user">scahmo</div>
+                        <div class="chat-message-text"><p>There can be no thought of finishing for ‘aiming for the stars.’</p></div>
+                    </div>
+                </div>
+                <!-- /.chat-message -->
+                <div class="chat-message">
+                    <div class="chat-message-photo"><img src="upload/account.jpg" alt=""></div>
+                    <div class="chat-message-content">
+                        <div class="chat-message-user">Jim S.</div>
+                        <div class="chat-message-text"><p>We’ll be doing it because the things</p></div>
+                    </div>
+                </div>
+                <!-- /.chat-message -->
+                <div class="chat-message">
+                    <div class="chat-message-photo"><img src="upload/account.jpg" alt=""></div>
+                    <div class="chat-message-content">
+                        <div class="chat-message-user">Eric B.</div>
+                        <div class="chat-message-text">
+                            <p>No.</p>
+                            <p>The regret on our side is, they used to say years ago, we are reading about you in science class.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.chat-message -->
+                <div class="chat-message">
+                    <div class="chat-message-photo"><img src="upload/account.jpg" alt=""></div>
+                    <div class="chat-message-content">
+                        <div class="chat-message-user">Eric B.</div>
+                        <div class="chat-message-text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in condimentum neque,</p></div>
+                    </div>
+                </div>
+                <!-- /.chat-message -->
+                <div class="chat-message">
+                    <div class="chat-message-photo"><img src="upload/account.jpg" alt=""></div>
+                    <div class="chat-message-content">
+                        <div class="chat-message-user">beegobe</div>
+                        <div class="chat-message-text"><p>Morbi vitae odio eget nisi egestas gravida</p></div>
+                    </div>
+                </div>
+                <!-- /.chat-message -->
+                <div class="chat-message">
+                    <div class="chat-message-photo"><img src="upload/account.jpg" alt=""></div>
+                    <div class="chat-message-content">
+                        <div class="chat-message-user">scahmo</div>
+                        <div class="chat-message-text"><p>There can be no <a href="#">thought</a> of finishing for ‘aiming for the stars.’</p></div>
+                    </div>
+                </div>
+                <!-- /.chat-message -->
+                <div class="chat-message">
+                    <div class="chat-message-photo"><img src="upload/account.jpg" alt=""></div>
+                    <div class="chat-message-content">
+                        <div class="chat-message-user">Jack M.</div>
+                        <div class="chat-message-text"><p>Yes!</p></div>
+                    </div>
+                </div>
+                <!-- /.chat-message -->
+            </div>
+            <!-- /.chat-content-inside -->
+        </div>
+        <!-- /.chat-content -->
+        <div class="chat-type">
+            <textarea class="chat-type-text" placeholder="Type here..." cols="30" rows="10"></textarea>
+        </div>
+    </div>
+    <!-- /.chat -->
+</body>
+</html>
