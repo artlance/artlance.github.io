@@ -490,5 +490,43 @@ jQuery(document).ready(function($){
         $(thisHref).removeClass('hidden').siblings('.login-block').addClass('hidden');
     });
 
+    //------------------------------------------------------------------------//
+
+    //call
+
+    var callState = false;
+
+    $('.call-go-step-2').on('click', function(event) {
+        event.preventDefault();
+
+        callState = true;
+
+        $('.call-step-1').addClass('hidden');
+        $('.call-step-2').removeClass('hidden');
+        setTimeout(function() {
+            $('.call-step-2').addClass('hidden');
+            $('.call-step-3').removeClass('hidden');
+        }, 1000);
+        setTimeout(function() {
+            $('.call-step-3').addClass('hidden');
+            $('.call-step-4').removeClass('hidden');
+        }, 2000);
+        setTimeout(function() {
+            callState = false;
+            $('.call-step-4').addClass('hidden');
+            $('.call-step-5').removeClass('hidden');
+        }, 3000);
+
+    });
+
+    $('.call-go-step-1').on('click', function(event) {
+        event.preventDefault();
+        console.log('click on go step 1');
+        if (!callState) {
+            $('.call-step-2, .call-step-3, .call-step-4, .call-step-5').addClass('hidden');
+            $('.call-step-1').removeClass('hidden');
+            $('.call').removeClass('call-onair');
+        }
+    });
 
 }); //document ready

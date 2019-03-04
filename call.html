@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, shrink-to-fit=no">
+    <title>ZENO</title>
+    <meta name="description" content="zeno description">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <link rel="stylesheet" href="call.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="apple-icon-512x512.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#F5AB19">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Zeno">
+    <meta name="apple-mobile-web-app-title" content="Zeno">
+    <meta name="theme-color" content="#F5AB19">
+    <meta name="msapplication-navbutton-color" content="#F5AB19">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="/">
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
+    </script>
+</head>
+<body>
+    <div class="call">
+        <div class="call-steps">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="call-step call-step-1 hidden">
+                            <div class="player-popup-title">What would you like to say on the air?</div>
+                            <div class="player-popup-form">
+                                <div class="player-popup-form-row">
+                                    <div class="player-popup-form-cell">
+                                        <input type="text" class="player-input-text" placeholder="Type your name">
+                                    </div>
+                                    <!-- /.player-popup-form-cell -->
+                                </div>
+                                <!-- /.player-popup-form-row -->
+                                <div class="player-popup-form-row">
+                                    <div class="player-popup-form-cell">
+                                        <textarea cols="30" rows="10" class="player-input-textarea" placeholder="Type your subject"></textarea>
+                                    </div>
+                                    <!-- /.player-popup-form-cell -->
+                                </div>
+                                <!-- /.player-popup-form-row -->
+                            </div>
+                            <!-- /.player-popup-form -->
+                            <div class="player-popup-navigation">
+                                <div class="player-popup-navigation-cell player-popup-navigation-cell-send">
+                                    <a href="#" class="button button-small call-go-step-2">Send</a>
+                                </div>
+                                <!-- /.player-popup-navigation-cell -->
+                            </div>
+                            <!-- /.player-popup-navigation -->
+                        </div>
+                        <!-- /.player-popup-content -->
+                        <div class="call-step call-step-2 hidden">
+                            <div class="player-popup-title">Your call request has been submitted.</div>
+                            <div class="player-popup-form-answer">
+                                <p>
+                                    We will send you a confirmation and estimation of wait time shortly. Thank you!
+                                </p>
+                            </div>
+                            <!-- /.player-popup-form-answer -->
+                            <div class="player-popup-navigation">
+                                <div class="player-popup-navigation-cell">
+                                    <a href="#" class="button button-small button-cancel call-go-step-1">Cancell Call</a>
+                                </div>
+                                <!-- /.player-popup-navigation-cell -->
+                            </div>
+                            <!-- /.player-popup-navigation -->
+                        </div>
+                        <!-- /.player-popup-content -->
+                        <div class="call-step call-step-3 hidden">
+                            <div class="player-popup-title">Your call has been accepted!</div>
+                            <div class="player-popup-form-answer">
+                                <p>
+                                    There are currently 2 callers ahead of you.<br>
+                                    Estimated wait time: 3 minutes
+                                </p>
+                            </div>
+                            <!-- /.player-popup-form-answer -->
+                            <div class="player-popup-navigation">
+                                <div class="player-popup-navigation-cell">
+                                    <a href="#" class="button button-small button-cancel call-go-step-1">Cancell Call</a>
+                                </div>
+                                <!-- /.player-popup-navigation-cell -->
+                            </div>
+                            <!-- /.player-popup-navigation -->
+                        </div>
+                        <!-- /.player-popup-content -->
+                        <div class="call-step call-step-4 hidden">
+                            <div class="player-popup-title">You are the next caller!</div>
+                            <div class="player-popup-form-answer">
+                                <p>
+                                    Estimated wait time: 30 seconds
+                                </p>
+                            </div>
+                            <!-- /.player-popup-form-answer -->
+                            <div class="player-popup-navigation">
+                                <div class="player-popup-navigation-cell">
+                                    <a href="#" class="button button-small button-cancel call-go-step-1">Cancell Call</a>
+                                </div>
+                                <!-- /.player-popup-navigation-cell -->
+                            </div>
+                            <!-- /.player-popup-navigation -->
+                        </div>
+                        <!-- /.player-popup-content -->
+                        <div class="call-step call-step-5">
+                            <div class="player-popup-title">ON AIR  <span class="player-popup-title-timer">00:10</span></div>
+                            <div class="dashboard-box__playing-onair-animation">
+                                <div class="dashboard-box__playing-onair-animation-element"></div>
+                                <div class="dashboard-box__playing-onair-animation-inner">
+                                    <div class="onair-icon"></div>
+                                </div>
+                            </div>
+                            <div class="player-popup-navigation">
+                                <div class="player-popup-navigation-cell">
+                                    <a href="#" class="button-disconnect call-go-step-1">Disconnect</a>
+                                </div>
+                                <!-- /.player-popup-navigation-cell -->
+                            </div>
+                            <!-- /.player-popup-navigation -->
+                        </div>
+                        <!-- /.player-popup-content -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.player-popup -->
+    </div>
+    <!-- /.call -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/migrate.min.js"></script>
+    <script src="js/library.min.js"></script>
+    <script src="js/script.min.js"></script>
+</body>
+</html>

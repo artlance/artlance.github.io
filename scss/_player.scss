@@ -698,6 +698,7 @@ textarea.player-input-textarea {
         display: block;
     }
 }
+.onair-icon,
 .on-air-icon {
     display: block;
     background: $tr url('../upload/ic_online.svg') 50% 50% no-repeat;
@@ -761,7 +762,7 @@ textarea.player-input-textarea {
         opacity: 1;
     }
 }
-@include media-breakpoint-down(md) {
+@media (max-width: 991px) {
     .player-popup-call {
         bottom: 113px;
         left: 0;

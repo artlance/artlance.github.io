@@ -5044,6 +5044,7 @@ textarea.player-input-textarea {
   display: block;
 }
 
+.onair-icon,
 .on-air-icon {
   display: block;
   background: transparent url("../upload/ic_online.svg") 50% 50% no-repeat;
