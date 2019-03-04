@@ -38,8 +38,12 @@ a {
 .player-popup-title-timer {
     opacity: 0.6;
 }
-.call-step-5 {
+.call-step {
     text-align: center;
+    input.player-input-text,
+    textarea.player-input-textarea {
+        text-align: center;
+    }
 }
 .player-popup-navigation {
     justify-content: center;
