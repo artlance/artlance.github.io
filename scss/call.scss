@@ -13,6 +13,11 @@
 //components
 @import "player";
 
+.container {
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+}
 body {
     color: rgba(255, 255, 255, 0.4);
 }
