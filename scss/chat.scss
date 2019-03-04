@@ -118,4 +118,11 @@ textarea.chat-type-text {
         padding-left: 18px;
         padding-right: 20px;
     }
+    .container,
+    .row,
+    .col-12,
+    .col {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
 }
