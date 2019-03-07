@@ -1,0 +1,1418 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, shrink-to-fit=no">
+    <title>ZENO</title>
+    <meta name="description" content="zeno description">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="apple-icon-512x512.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#F5AB19">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Zeno">
+    <meta name="apple-mobile-web-app-title" content="Zeno">
+    <meta name="theme-color" content="#F5AB19">
+    <meta name="msapplication-navbutton-color" content="#F5AB19">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="/">
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
+    </script>
+</head>
+<body class="no-js">
+    <div class="main">
+        <header class="header-global">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-9 col-header-left">
+                        <div class="row">
+                            <div class="col-auto">
+                                <div class="logo">
+                                    <a href="/" class="logo-link">Zeno</a>
+                                </div>
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-auto col-header-navigation">
+                                <div class="header-navigation">
+                                    <ul class="header-navigation-list">
+                                        <li><a class="header-navigation-add" href="#modal-1" data-micromodal-trigger="modal-1">Create Station</a></li>
+                                        <li><a href="#">Discover</a></li>
+                                        <li><a href="#">Genres</a></li>
+                                    </ul>
+                                </div>
+                                <!-- /.header-navigation -->
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-auto col-header-search">
+                                <div class="header-search">
+                                    <label for="search-input" class="hidden">header search input</label>
+                                    <input type="text" id="search-input" class="header-search-input" placeholder="Search by Genre, Location or Country">
+                                    <input type="submit" class="header-search-button" value="search">
+                                </div>
+                                <!-- /.header-search -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-3">
+                        <ul class="header-toolbar-list">
+                            <li class="header-toolbar-search d-xl-none"><a href="#" class="search-link">search link</a></li>
+                            <li class="header-toolbar-notification"><a href="#" class="notification-link">notification link</a></li>
+                            <li class="header-toolbar-navigation d-lg-none"><a href="#" class="navigation-toggle">navigation toggle<span class="navigation-toggle-icon"></span></a></li>
+                            <li class="header-toolbar-account d-none d-lg-block"><a href="#" class="account-link" style="background-image: url('upload/account.jpg');">account-link</a></li>
+                        </ul>
+                        <!-- /.header-toolbar-list -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </header>
+        <div class="hero">
+            <div class="hero-background">
+                <div class="hero-background-slider">
+                    <div class="hero-background-slide" style="background-image: url('upload/stations/station-background-1.jpg');"></div>
+                    <div class="hero-background-slide" style="background-image: url('upload/stations/station-background-2.jpg');"></div>
+                    <div class="hero-background-slide" style="background-image: url('upload/stations/station-10.jpg');"></div>
+                </div>
+                <!-- /.hero-background-slider -->
+            </div>
+            <!-- /.hero-background -->
+            <div class="hero-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <div class="hero-header-title">Popular Stations</div>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-12 col-lg-6">
+                            <div class="hero-header-filter drop">
+                                <a class="hero-header-toggle drop-toggle" href="#">Genres <span class="hero-header-toggle-value">All Genres</span></a>
+                                <div class="hero-filter-drop drop-box">
+                                    <ul class="hero-sort-list">
+                                        <li class="active"><a href="#">All Genres</a></li>
+                                        <li><a href="#">Electronic</a></li>
+                                        <li><a href="#">Jazz</a></li>
+                                        <li><a href="#">Pop</a></li>
+                                        <li><a href="#">Hip-Hop</a></li>
+                                        <li><a href="#">Comedy / Fun</a></li>
+                                        <li><a href="#">News</a></li>
+                                        <li><a href="#">Rock</a></li>
+                                    </ul>
+                                    <!-- /.hero-sort-list -->
+                                </div>
+                                <!-- /.drop-box -->
+                            </div>
+                            <!-- /.hero-header-filter -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.hero-header -->
+            <div class="hero-stations-mobile d-lg-none">
+                <div class="hero-stations-slider">
+                    <div class="hero-stations-slide">
+                        <div class="hero-station-content">
+                            <div class="hero-station-meta">
+                                <div class="hero-station-live">LIVE</div>
+                                <div class="hero-station-time">13:40</div>
+                            </div>
+                            <div class="hero-station-title">Electro Garten</div>
+                            <div class="hero-station-tags">
+                                <span class="station-tags">
+                                    <span class="station-tag">Electronic</span>
+                                    <span class="station-tag">House</span>
+                                </span>
+                                <!-- /.station-tags -->
+                            </div>
+                            <!-- /.hero-station-tags -->
+                            <div class="hero-station-play-navigation">
+                                <a href="#" class="station-play">
+                                    <span class="station-play-button"></span>
+                                    Play Now
+                                </a>
+                            </div>
+                            <!-- /.hero-station-play-navigation -->
+                        </div>
+                        <!-- /.hero-station-content -->
+                    </div>
+                    <!-- /.hero-stations-slide -->
+                    <div class="hero-stations-slide">
+                        <div class="hero-station-content">
+                            <div class="hero-station-meta">
+                                <div class="hero-station-live">LIVE</div>
+                                <div class="hero-station-time">13:40</div>
+                            </div>
+                            <div class="hero-station-title">Brooklyn Live</div>
+                            <div class="hero-station-tags">
+                                <span class="station-tags">
+                                    <span class="station-tag">News</span>
+                                    <span class="station-tag">Jazz</span>
+                                </span>
+                                <!-- /.station-tags -->
+                            </div>
+                            <!-- /.hero-station-tags -->
+                            <div class="hero-station-play-navigation">
+                                <a href="#" class="station-play">
+                                    <span class="station-play-button"></span>
+                                    Play Now
+                                </a>
+                            </div>
+                            <!-- /.hero-station-play-navigation -->
+                        </div>
+                        <!-- /.hero-station-content -->
+                    </div>
+                    <!-- /.hero-stations-slide -->
+                    <div class="hero-stations-slide">
+                        <div class="hero-station-content">
+                            <div class="hero-station-meta">
+                                <div class="hero-station-live">LIVE</div>
+                                <div class="hero-station-time">13:40</div>
+                            </div>
+                            <div class="hero-station-title">Flylo FM</div>
+                            <div class="hero-station-tags">
+                                <span class="station-tags">
+                                    <span class="station-tag">Electronic</span>
+                                    <span class="station-tag">House</span>
+                                </span>
+                                <!-- /.station-tags -->
+                            </div>
+                            <!-- /.hero-station-tags -->
+                            <div class="hero-station-play-navigation">
+                                <a href="#" class="station-play">
+                                    <span class="station-play-button"></span>
+                                    Play Now
+                                </a>
+                            </div>
+                            <!-- /.hero-station-play-navigation -->
+                        </div>
+                        <!-- /.hero-station-content -->
+                    </div>
+                    <!-- /.hero-stations-slide -->
+                </div>
+                <!-- /.hero-stations-slider -->
+            </div>
+            <!-- /.hero-stations-mobile -->
+            <div class="hero-stations">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="hero-stations-list">
+                                <div class="hero-station hero-station-active">
+                                    <div class="hero-station-content">
+                                        <div class="hero-station-meta">
+                                            <div class="hero-station-live">LIVE</div>
+                                            <div class="hero-station-time">13:40</div>
+                                        </div>
+                                        <div class="hero-station-title">Electro Garten</div>
+                                        <div class="hero-station-tags">
+                                            <span class="station-tags">
+                                                <span class="station-tag">Electronic</span>
+                                                <span class="station-tag">House</span>
+                                            </span>
+                                            <!-- /.station-tags -->
+                                        </div>
+                                        <!-- /.hero-station-tags -->
+                                        <div class="hero-station-play-navigation">
+                                            <a href="#" class="station-play">
+                                                <span class="station-play-button"></span>
+                                                Play Now
+                                            </a>
+                                        </div>
+                                        <!-- /.hero-station-play-navigation -->
+                                    </div>
+                                    <!-- /.hero-station-content -->
+                                </div>
+                                <!-- /.hero-station -->
+                                <div class="hero-station">
+                                    <div class="hero-station-content">
+                                        <div class="hero-station-meta">
+                                            <div class="hero-station-live">LIVE</div>
+                                            <div class="hero-station-time">13:40</div>
+                                        </div>
+                                        <div class="hero-station-title">Brooklyn Live</div>
+                                        <div class="hero-station-tags">
+                                            <span class="station-tags">
+                                                <span class="station-tag">News</span>
+                                                <span class="station-tag">Jazz</span>
+                                            </span>
+                                            <!-- /.station-tags -->
+                                        </div>
+                                        <!-- /.hero-station-tags -->
+                                        <div class="hero-station-play-navigation">
+                                            <a href="#" class="station-play">
+                                                <span class="station-play-button"></span>
+                                                Play Now
+                                            </a>
+                                        </div>
+                                        <!-- /.hero-station-play-navigation -->
+                                    </div>
+                                    <!-- /.hero-station-content -->
+                                </div>
+                                <!-- /.hero-station -->
+                                <div class="hero-station">
+                                    <div class="hero-station-content">
+                                        <div class="hero-station-meta">
+                                            <div class="hero-station-live">LIVE</div>
+                                            <div class="hero-station-time">13:40</div>
+                                        </div>
+                                        <div class="hero-station-title">Flylo FM</div>
+                                        <div class="hero-station-tags">
+                                            <span class="station-tags">
+                                                <span class="station-tag">Electronic</span>
+                                                <span class="station-tag">House</span>
+                                            </span>
+                                            <!-- /.station-tags -->
+                                        </div>
+                                        <!-- /.hero-station-tags -->
+                                        <div class="hero-station-play-navigation">
+                                            <a href="#" class="station-play">
+                                                <span class="station-play-button"></span>
+                                                Play Now
+                                            </a>
+                                        </div>
+                                        <!-- /.hero-station-play-navigation -->
+                                    </div>
+                                    <!-- /.hero-station-content -->
+                                </div>
+                                <!-- /.hero-station -->
+                            </div>
+                            <!-- /.hero-stations-list -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.hero-stations -->
+        </div>
+        <!-- /.hero -->
+        <div class="spanning">
+            <div class="filter-block" id="filter-block">
+                <div class="stations-filter-options">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="filter-block-title">Filter by</div>
+                                <div class="filter-list">
+                                    <div class="filter-item active">
+                                        <div class="select-block drop">
+                                            <a href="#" class="select-toggle drop-toggle">Language</a>
+                                            <div class="select-box drop-box">
+                                                <ul class="select-box-list">
+                                                    <li>
+                                                        <span class="checkbox">
+                                                            <input type="checkbox" id="filter-t1-1" checked>
+                                                            <label for="filter-t1-1">English</label>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="checkbox">
+                                                            <input type="checkbox" id="filter-t1-2">
+                                                            <label for="filter-t1-2">Deutsch</label>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- /.select-box -->
+                                        </div>
+                                        <!-- /.select-box -->
+                                    </div>
+                                    <!-- /.filter-item -->
+                                    <div class="filter-item active">
+                                        <div class="select-block drop">
+                                            <a href="#" class="select-toggle drop-toggle">Genre</a>
+                                            <div class="select-box drop-box">
+                                                <ul class="select-box-list">
+                                                    <li>
+                                                        <span class="checkbox">
+                                                            <input type="checkbox" id="filter-t2-1" checked>
+                                                            <label for="filter-t2-1">Electronic</label>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="checkbox">
+                                                            <input type="checkbox" id="filter-t2-2" checked>
+                                                            <label for="filter-t2-2">Rock</label>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="checkbox">
+                                                            <input type="checkbox" id="filter-t2-3">
+                                                            <label for="filter-t2-3">Pop</label>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="checkbox">
+                                                            <input type="checkbox" id="filter-t2-4">
+                                                            <label for="filter-t2-4">Dance</label>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- /.select-box -->
+                                        </div>
+                                        <!-- /.select-box -->
+                                    </div>
+                                    <!-- /.filter-item -->
+                                    <div class="filter-item">
+                                        <div class="select-block drop">
+                                            <a href="#" class="select-toggle drop-toggle">Country</a>
+                                            <div class="select-box drop-box">
+                                                <ul class="select-box-list">
+                                                    <li>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- /.select-box -->
+                                        </div>
+                                        <!-- /.select-box -->
+                                    </div>
+                                    <!-- /.filter-item -->
+                                    <div class="filter-item">
+                                        <div class="select-block drop">
+                                            <a href="#" class="select-toggle drop-toggle">Tags</a>
+                                            <div class="select-box drop-box">
+                                                <ul class="select-box-list">
+                                                    <li>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- /.select-box -->
+                                        </div>
+                                        <!-- /.select-box -->
+                                    </div>
+                                    <!-- /.filter-item -->
+                                    <div class="filter-item">
+                                        <div class="select-block drop">
+                                            <a href="#" class="select-toggle drop-toggle">Length</a>
+                                            <div class="select-box drop-box">
+                                                <ul class="select-box-list">
+                                                    <li>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- /.select-box -->
+                                        </div>
+                                        <!-- /.select-box -->
+                                    </div>
+                                    <!-- /.filter-item -->
+                                    <div class="filter-item">
+                                        <div class="select-block drop">
+                                            <a href="#" class="select-toggle drop-toggle">Popular</a>
+                                            <div class="select-box drop-box">
+                                                <ul class="select-box-list">
+                                                    <li>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- /.select-box -->
+                                        </div>
+                                        <!-- /.select-box -->
+                                    </div>
+                                    <!-- /.filter-item -->
+                                    <div class="filter-item">
+                                        <div class="select-block drop">
+                                            <a href="#" class="select-toggle drop-toggle">Method</a>
+                                            <div class="select-box drop-box">
+                                                <ul class="select-box-list">
+                                                    <li>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- /.select-box -->
+                                        </div>
+                                        <!-- /.select-box -->
+                                    </div>
+                                    <!-- /.filter-item -->
+                                </div>
+                                <!-- /.filter-list -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.container -->
+                </div>
+                <!-- /.stations-filter -->
+                <div class="stations-filter-result">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="filter-list-result">
+                                    <div class="filter-result-navigation">
+                                        <a href="#" class="filter-result-clear">Clear all</a>
+                                    </div>
+                                    <!-- /.filter-result-navigation -->
+                                </div>
+                                <!-- /.filter-list-result -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.container -->
+                </div>
+                <!-- /.stations-filter-result -->
+            </div>
+            <!-- /.filter-block -->
+            <div class="stations-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <div class="stations-header-title"><h1>Discover Stations</h1></div>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-12 col-lg-6">
+                            <ul class="stations-filter">
+                                <li><a href="#" class="button button-ghost button-secondary button-toggle-filter">Filter</a></li>
+                                <li><a href="#" class="button button-all-filter">Show All</a></li>
+                            </ul>
+                            <!-- /.stations-filter -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.stations-header -->
+            <div class="stations">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <div class="station">
+                                <a href="#" class="station-link">
+                                    <span class="station-poster">
+                                        <span class="station-poster-image" style="background-image: url('upload/stations/station-1.jpg');">
+                                        </span>
+                                        <!-- /.station-poster-image -->
+                                        <span class="station-labels">
+                                            <span class="station-label">Most Popular</span>
+                                        </span>
+                                        <!-- /.station-labels -->
+                                        <span class="station-tags">
+                                            <span class="station-tag">Electronic</span>
+                                            <span class="station-tag">House</span>
+                                        </span>
+                                        <!-- /.station-tags -->
+                                    </span>
+                                    <!-- /.station-poster -->
+                                    <span class="station-title">Electro Garten</span>
+                                    <span class="station-meta">
+                                        <span class="station-location">Berlin, DE</span>
+                                        <span class="station-languages">
+                                            <span class="station-language">English</span>
+                                            <span class="station-language">Deutsch</span>
+                                        </span>
+                                        <!-- /.station-languages -->
+                                    </span>
+                                    <!-- /.station-meta -->
+                                </a>
+                                <!-- /.station-link -->
+                            </div>
+                            <!-- /.station -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-6 col-lg-3">
+                            <div class="station">
+                                <a href="#" class="station-link">
+                                    <span class="station-poster">
+                                        <span class="station-poster-image" style="background-image: url('upload/stations/station-2.jpg');">
+                                        </span>
+                                        <!-- /.station-poster-image -->
+                                        <span class="station-tags">
+                                            <span class="station-tag">Talk</span>
+                                            <span class="station-tag">News</span>
+                                        </span>
+                                        <!-- /.station-tags -->
+                                    </span>
+                                    <!-- /.station-poster -->
+                                    <span class="station-title">Groove Station</span>
+                                    <span class="station-meta">
+                                        <span class="station-location">Berlin, DE</span>
+                                        <span class="station-languages">
+                                            <span class="station-language">English</span>
+                                            <span class="station-language">Deutsch</span>
+                                        </span>
+                                        <!-- /.station-languages -->
+                                    </span>
+                                    <!-- /.station-meta -->
+                                </a>
+                                <!-- /.station-link -->
+                            </div>
+                            <!-- /.station -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-6 col-lg-3">
+                            <div class="station">
+                                <a href="#" class="station-link">
+                                    <span class="station-poster">
+                                        <span class="station-poster-image" style="background-image: url('upload/stations/station-3.jpg');">
+                                        </span>
+                                        <!-- /.station-poster-image -->
+                                        <span class="station-tags">
+                                            <span class="station-tag">Jazz</span>
+                                            <span class="station-tag">Fusion</span>
+                                        </span>
+                                        <!-- /.station-tags -->
+                                    </span>
+                                    <!-- /.station-poster -->
+                                    <span class="station-title">Smooth Jazz Florida</span>
+                                    <span class="station-meta">
+                                        <span class="station-location">Florida, CA</span>
+                                        <span class="station-languages">
+                                            <span class="station-language">English</span>
+                                        </span>
+                                        <!-- /.station-languages -->
+                                    </span>
+                                    <!-- /.station-meta -->
+                                </a>
+                                <!-- /.station-link -->
+                            </div>
+                            <!-- /.station -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-6 col-lg-3">
+                            <div class="station">
+                                <a href="#" class="station-link">
+                                    <span class="station-poster">
+                                        <span class="station-poster-image" style="background-image: url('upload/stations/station-4.jpg');">
+                                        </span>
+                                        <!-- /.station-poster-image -->
+                                        <span class="station-tags">
+                                            <span class="station-tag">Classic</span>
+                                        </span>
+                                        <!-- /.station-tags -->
+                                    </span>
+                                    <!-- /.station-poster -->
+                                    <span class="station-title">Venice Classic</span>
+                                    <span class="station-meta">
+                                        <span class="station-location">Venice, IT</span>
+                                        <span class="station-languages">
+                                            <span class="station-language">English</span>
+                                        </span>
+                                        <!-- /.station-languages -->
+                                    </span>
+                                    <!-- /.station-meta -->
+                                </a>
+                                <!-- /.station-link -->
+                            </div>
+                            <!-- /.station -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-6 col-lg-3">
+                            <div class="station">
+                                <a href="#" class="station-link">
+                                    <span class="station-poster">
+                                        <span class="station-poster-image" style="background-image: url('upload/stations/station-5.jpg');">
+                                        </span>
+                                        <!-- /.station-poster-image -->
+                                        <span class="station-tags">
+                                            <span class="station-tag">Ambient</span>
+                                            <span class="station-tag">House</span>
+                                        </span>
+                                        <!-- /.station-tags -->
+                                    </span>
+                                    <!-- /.station-poster -->
+                                    <span class="station-title">Lounge FM</span>
+                                    <span class="station-meta">
+                                        <span class="station-location">Istanbul, TR</span>
+                                        <span class="station-languages">
+                                            <span class="station-language">English</span>
+                                        </span>
+                                        <!-- /.station-languages -->
+                                    </span>
+                                    <!-- /.station-meta -->
+                                </a>
+                                <!-- /.station-link -->
+                            </div>
+                            <!-- /.station -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-6 col-lg-3">
+                            <div class="station">
+                                <a href="#" class="station-link">
+                                    <span class="station-poster">
+                                        <span class="station-poster-image" style="background-image: url('upload/stations/station-6.jpg');">
+                                        </span>
+                                        <!-- /.station-poster-image -->
+                                        <span class="station-tags">
+                                            <span class="station-tag">Rock</span>
+                                            <span class="station-tag">Classic Rock</span>
+                                        </span>
+                                        <!-- /.station-tags -->
+                                    </span>
+                                    <!-- /.station-poster -->
+                                    <span class="station-title">Classic Rock HD</span>
+                                    <span class="station-meta">
+                                        <span class="station-location">New York, NY</span>
+                                        <span class="station-languages">
+                                            <span class="station-language">English</span>
+                                        </span>
+                                        <!-- /.station-languages -->
+                                    </span>
+                                    <!-- /.station-meta -->
+                                </a>
+                                <!-- /.station-link -->
+                            </div>
+                            <!-- /.station -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-6 col-lg-3">
+                            <div class="station">
+                                <a href="#" class="station-link">
+                                    <span class="station-poster">
+                                        <span class="station-poster-image" style="background-image: url('upload/stations/station-7.jpg');">
+                                        </span>
+                                        <!-- /.station-poster-image -->
+                                        <span class="station-tags">
+                                            <span class="station-tag">Electronic</span>
+                                        </span>
+                                        <!-- /.station-tags -->
+                                    </span>
+                                    <!-- /.station-poster -->
+                                    <span class="station-title">Box UK</span>
+                                    <span class="station-meta">
+                                        <span class="station-location">London, UK</span>
+                                        <span class="station-languages">
+                                            <span class="station-language">English</span>
+                                        </span>
+                                        <!-- /.station-languages -->
+                                    </span>
+                                    <!-- /.station-meta -->
+                                </a>
+                                <!-- /.station-link -->
+                            </div>
+                            <!-- /.station -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-12">
+                            <div class="collections">
+                                <div class="collections-title">Collections For You</div>
+                                <div class="collection-slider-wrap">
+                                    <div class="collection-slider">
+                                        <div class="collection-slide">
+                                            <a href="#" class="collection">
+                                                <span class="collection-photos">
+                                                    <span class="collection-photo-list">
+                                                        <span class="collection-photo" style="background-image: url('upload/stations/station-2.jpg');"></span>
+                                                        <span class="collection-photo" style="background-image: url('upload/stations/station-1.jpg');"></span>
+                                                        <span class="collection-photo" style="background-image: url('upload/stations/station-3.jpg');"></span>
+                                                    </span>
+                                                </span>
+                                                <!-- /.collection-photos -->
+                                                <span class="collection-title">Electronic / Dance</span>
+                                                <span class="collection-meta">60 Stations</span>
+                                            </a>
+                                            <!-- /.collection -->
+                                        </div>
+                                        <!-- /.collection-slide -->
+                                        <div class="collection-slide">
+                                            <a href="#" class="collection">
+                                                <span class="collection-photos">
+                                                    <span class="collection-photo-list">
+                                                        <span class="collection-photo" style="background-image: url('upload/stations/station-5.jpg');"></span>
+                                                        <span class="collection-photo" style="background-image: url('upload/stations/station-6.jpg');"></span>
+                                                        <span class="collection-photo" style="background-image: url('upload/stations/station-4.jpg');"></span>
+                                                    </span>
+                                                </span>
+                                                <!-- /.collection-photos -->
+                                                <span class="collection-title">Comedy / Fun</span>
+                                                <span class="collection-meta">60 Stations</span>
+                                            </a>
+                                            <!-- /.collection -->
+                                        </div>
+                                        <!-- /.collection-slide -->
+                                        <div class="collection-slide">
+                                            <a href="#" class="collection">
+                                                <span class="collection-photos">
+                                                    <span class="collection-photo-list">
+                                                        <span class="collection-photo" style="background-image: url('upload/stations/station-8.jpg');"></span>
+                                                        <span class="collection-photo" style="background-image: url('upload/stations/station-7.jpg');"></span>
+                                                        <span class="collection-photo" style="background-image: url('upload/stations/station-9.jpg');"></span>
+                                                    </span>
+                                                </span>
+                                                <!-- /.collection-photos -->
+                                                <span class="collection-title">Contemporary Hit</span>
+                                                <span class="collection-meta">60 Stations</span>
+                                            </a>
+                                            <!-- /.collection -->
+                                        </div>
+                                        <!-- /.collection-slide -->
+                                    </div>
+                                    <!-- /.collection-slider -->
+                                </div>
+                                <!-- /.collection-slider-wrap -->
+                            </div>
+                            <!-- /.collections -->
+                        </div>
+                        <!-- /.col-12 -->
+                        <div class="col-6 col-lg-3">
+                            <div class="station">
+                                <a href="#" class="station-link">
+                                    <span class="station-poster">
+                                        <span class="station-poster-image" style="background-image: url('upload/stations/station-8.jpg');">
+                                        </span>
+                                        <!-- /.station-poster-image -->
+                                        <span class="station-tags">
+                                            <span class="station-tag">Ambient</span>
+                                            <span class="station-tag">Deep House</span>
+                                        </span>
+                                        <!-- /.station-tags -->
+                                    </span>
+                                    <!-- /.station-poster -->
+                                    <span class="station-title">Ambient Radio</span>
+                                    <span class="station-meta">
+                                        <span class="station-location">Berlin, DE</span>
+                                        <span class="station-languages">
+                                            <span class="station-language">English</span>
+                                            <span class="station-language">Deutsch</span>
+                                        </span>
+                                        <!-- /.station-languages -->
+                                    </span>
+                                    <!-- /.station-meta -->
+                                </a>
+                                <!-- /.station-link -->
+                            </div>
+                            <!-- /.station -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-6 col-lg-3">
+                            <div class="station">
+                                <a href="#" class="station-link">
+                                    <span class="station-poster">
+                                        <span class="station-poster-image" style="background-image: url('upload/stations/station-9.jpg');">
+                                        </span>
+                                        <!-- /.station-poster-image -->
+                                        <span class="station-tags">
+                                            <span class="station-tag">Hits</span>
+                                        </span>
+                                        <!-- /.station-tags -->
+                                    </span>
+                                    <!-- /.station-poster -->
+                                    <span class="station-title">Easy Hits Florida</span>
+                                    <span class="station-meta">
+                                        <span class="station-location">Florida, CA</span>
+                                        <span class="station-languages">
+                                            <span class="station-language">English</span>
+                                        </span>
+                                        <!-- /.station-languages -->
+                                    </span>
+                                    <!-- /.station-meta -->
+                                </a>
+                                <!-- /.station-link -->
+                            </div>
+                            <!-- /.station -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-12 col-lg-6">
+                            <div class="station">
+                                <a href="#" class="station-link">
+                                    <span class="station-poster">
+                                        <span class="station-poster-image" style="background-image: url('upload/stations/station-10.jpg');">
+                                        </span>
+                                        <!-- /.station-poster-image -->
+                                        <span class="station-labels">
+                                            <span class="station-label">Most Popular</span>
+                                        </span>
+                                        <!-- /.station-labels -->
+                                        <span class="station-tags">
+                                            <span class="station-tag">Electronic</span>
+                                            <span class="station-tag">House</span>
+                                        </span>
+                                        <!-- /.station-tags -->
+                                    </span>
+                                    <!-- /.station-poster -->
+                                    <span class="station-title">Nashville FM</span>
+                                    <span class="station-meta">
+                                        <span class="station-location">Berlin, DE</span>
+                                        <span class="station-languages">
+                                            <span class="station-language">English</span>
+                                            <span class="station-language">Deutsch</span>
+                                        </span>
+                                        <!-- /.station-languages -->
+                                    </span>
+                                    <!-- /.station-meta -->
+                                </a>
+                                <!-- /.station-link -->
+                            </div>
+                            <!-- /.station -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.stations -->
+            <div class="devices">
+                <div class="container">
+                    <div class="devices-wrap">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-lg-8">
+                                <div class="devices-img">
+                                    <img src="upload/devices.svg" width="703" height="416" alt="Listen anywhere that you want!">
+                                </div>
+                                <!-- /.devices-img -->
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-12 col-lg-4 order-lg-first">
+                                <div class="devices-content">
+                                    <div class="devices-title">Listen anywhere that you want!</div>
+                                    <div class="devices-description">
+                                        <p>ZenoLive is available on Web, <a href="#">App&nbsp;Store</a>, <a href="#">Play&nbsp;Store</a> and <a href="#">Chromecast</a>.</p>
+                                    </div>
+                                </div>
+                                <!-- /.devices-content -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.devices-wrap -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.devices -->
+            <div class="add-station">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-8">
+                            <a href="#" class="add-station-link">
+                                <span class="add-station-icon">
+                                    <span class="add-station-plus"></span>
+                                </span>
+                                <span class="add-station-title">Create a Station in&nbsp;Seconds</span>
+                            </a>
+                            <div class="add-station-note">
+                                <p>Your station, your music and your community.<br> Just for free.</p>
+                            </div>
+                            <div class="add-station-navigation">
+                                <a href="#" class="button button-big">Get Started</a>
+                            </div>
+                            <!-- /.add-station-navigation -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.add-station -->
+        </div>
+        <!-- /.spanning-columns -->
+    </div>
+    <!-- /.main -->
+    <footer class="footer-global">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-line"></div>
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="copyright">
+                        <p>Copyright ZenoLive 2018. All rights reserved.</p>
+                    </div>
+                </div>
+                <!-- /.col -->
+                <div class="col-12 col-lg-6">
+                    <div class="footer-navigation">
+                        <ul class="footer-navigation-list">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Stations</a></li>
+                            <li><a href="#">Locations</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Legal</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Terms and Conditions</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.footer-navigation -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </footer>
+    <div class="player">
+        <div class="player-on-air">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="on-air-columns">
+                            <div class="on-air-col-1">
+                                <div class="on-air-title">ON AIR</div>
+                            </div>
+                            <!-- /.on-air-col-1 -->
+                            <div class="on-air-col-2">
+                                <div class="on-air-icon"></div>
+                            </div>
+                            <!-- /.on-air-col-2 -->
+                            <div class="on-air-col-3">
+                                <div class="on-air-duration">00:10</div>
+                            </div>
+                            <!-- /.on-air-col-3 -->
+                        </div>
+                        <!-- /.on-air-columns -->
+                        <a href="#" class="player-on-air-disconnect">Disconnect</a>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.player-on-air -->
+        <div class="container-fluid">
+            <div class="player-row">
+                <div class="player-col-info">
+                    <div class="player-info">
+                        <div class="player-info-block-nav">
+                            <a href="#" class="player-info-call">
+                                <svg height="38" width="38">
+                                    <circle class="player-circle" cx="19" cy="19" r="18" transform="rotate(-90, 19, 19)" fill="none" />
+                                </svg>
+                                <span class="player-info-call-text">Call In</span>
+                            </a>
+                            <div class="player-popup player-popup-call">
+                                <div class="player-popup-content player-popup-step-1">
+                                    <div class="player-popup-title">What would you like to say on the air?</div>
+                                    <div class="player-popup-form">
+                                        <div class="player-popup-form-row">
+                                            <div class="player-popup-form-cell">
+                                                <input type="text" class="player-input-text" placeholder="Type your name">
+                                            </div>
+                                            <!-- /.player-popup-form-cell -->
+                                        </div>
+                                        <!-- /.player-popup-form-row -->
+                                        <div class="player-popup-form-row">
+                                            <div class="player-popup-form-cell">
+                                                <textarea cols="30" rows="10" class="player-input-textarea" placeholder="Type your subject"></textarea>
+                                            </div>
+                                            <!-- /.player-popup-form-cell -->
+                                        </div>
+                                        <!-- /.player-popup-form-row -->
+                                    </div>
+                                    <!-- /.player-popup-form -->
+                                    <div class="player-popup-navigation">
+                                        <div class="player-popup-navigation-cell player-popup-navigation-cell-send">
+                                            <a href="#" class="button button-small button-player-popup-send">Send</a>
+                                        </div>
+                                        <!-- /.player-popup-navigation-cell -->
+                                        <div class="player-popup-navigation-cell">
+                                            <a href="#" class="button button-small button-secondary button-player-popup-cancel">Cancel</a>
+                                        </div>
+                                        <!-- /.player-popup-navigation-cell -->
+                                    </div>
+                                    <!-- /.player-popup-navigation -->
+                                </div>
+                                <!-- /.player-popup-content -->
+                                <div class="player-popup-content player-popup-step-2 hidden">
+                                    <div class="player-popup-title">Your call request has been submitted.</div>
+                                    <div class="player-popup-form-answer">
+                                        <p>
+                                            We will send you a confirmation and estimation of wait time shortly. Thank you!
+                                        </p>
+                                    </div>
+                                    <!-- /.player-popup-form-answer -->
+                                    <div class="player-popup-navigation">
+                                        <div class="player-popup-navigation-cell">
+                                            <a href="#" class="button button-small button-cancel button-player-popup-cancel-call">Cancell Call</a>
+                                        </div>
+                                        <!-- /.player-popup-navigation-cell -->
+                                    </div>
+                                    <!-- /.player-popup-navigation -->
+                                </div>
+                                <!-- /.player-popup-content -->
+                                <div class="player-popup-content player-popup-step-3 hidden">
+                                    <div class="player-popup-title">Your call has been accepted!</div>
+                                    <div class="player-popup-form-answer">
+                                        <p>
+                                            There are currently 2 callers ahead of you.<br>
+                                            Estimated wait time: 3 minutes
+                                        </p>
+                                    </div>
+                                    <!-- /.player-popup-form-answer -->
+                                    <div class="player-popup-navigation">
+                                        <div class="player-popup-navigation-cell">
+                                            <a href="#" class="button button-small button-cancel button-player-popup-cancel-call">Cancell Call</a>
+                                        </div>
+                                        <!-- /.player-popup-navigation-cell -->
+                                    </div>
+                                    <!-- /.player-popup-navigation -->
+                                </div>
+                                <!-- /.player-popup-content -->
+                                <div class="player-popup-content player-popup-step-4 hidden">
+                                    <div class="player-popup-title">You are the next caller!</div>
+                                    <div class="player-popup-form-answer">
+                                        <p>
+                                            Estimated wait time: 30 seconds
+                                        </p>
+                                    </div>
+                                    <!-- /.player-popup-form-answer -->
+                                    <div class="player-popup-navigation">
+                                        <div class="player-popup-navigation-cell">
+                                            <a href="#" class="button button-small button-cancel button-player-popup-cancel-call">Cancell Call</a>
+                                        </div>
+                                        <!-- /.player-popup-navigation-cell -->
+                                    </div>
+                                    <!-- /.player-popup-navigation -->
+                                </div>
+                                <!-- /.player-popup-content -->
+                            </div>
+                            <!-- /.player-popup -->
+                        </div>
+                        <!-- /.player-info-block-nav -->
+                        <div class="player-info-block">
+                            <div class="player-info-title">Electro Garten</div>
+                            <div class="player-info-meta">
+                                <div class="player-info-time">13:48</div>
+                                <div class="player-info-phone">
+                                    <a href="tel:+1 (605) 495 84 48">+1 (605) 495 84 48</a>
+                                </div>
+                            </div>
+                            <!-- /.player-info-meta -->
+                            <div class="player-popup-default player-popup-phone">
+                                <div class="player-popup-content-default">
+                                    <div class="player-popup-title">Phone Number</div>
+                                    <div class="player-popup-text">
+                                        <p>
+                                            Use this number when you want to call this station.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- /.player-popup-content -->
+                            </div>
+                            <!-- /.player-popup-default -->
+                        </div>
+                        <!-- /.player-info-block -->
+                    </div>
+                    <!-- /.player-info -->
+                </div>
+                <!-- /.col -->
+                <div class="player-col-controls">
+                    <div class="player-controls">
+                        <div class="player-control">
+                            <a class="player-control-link player-control-backward" href="#">backward</a>
+                        </div>
+                        <!-- /.player-control -->
+                        <div class="player-control">
+                            <a class="player-control-link player-control-pause" href="#">pause</a>
+                        </div>
+                        <!-- /.player-control -->
+                        <div class="player-control">
+                            <a class="player-control-link player-control-forward" href="#">forward</a>
+                        </div>
+                        <!-- /.player-control -->
+                    </div>
+                    <!-- /.player-controls -->
+                </div>
+                <!-- /.col -->
+                <div class="player-col-toolbar">
+                    <div class="player-toolbar">
+                        <div class="player-meta">
+                            <div class="player-meta-title">Because</div>
+                            <div class="player-meta-description">Rosemary Standley, Sylvain Griotto</div>
+                        </div>
+                        <!-- /.player-meta -->
+                        <div class="player-tool">
+                            <a class="player-tool-link player-tool-volume" href="#">volume</a>
+                            <div class="player-popup player-popup-volume">
+                                <div class="player-popup-content">
+                                    <input class="volume-range" type="range" value="50" min="10" max="100" step="1" data-rangeslider>
+                                </div>
+                                <!-- /.player-popup-content -->
+                            </div>
+                            <!-- /.player-popup -->
+                        </div>
+                        <!-- /.player-tool -->
+                        <div class="player-tool">
+                            <a class="player-tool-link player-tool-share" href="#">share</a>
+                            <div class="player-popup player-popup-share">
+                                <div class="player-popup-content">
+                                    <div class="player-popup-title">Share on Social Media</div>
+                                    <ul class="player-popup-share-list">
+                                        <li><a href="https://www.facebook.com/sharer/sharer.php?u=&amp;quote=" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&amp;quote=' + encodeURIComponent(document.URL)); return false;">Facebook</a></li>
+                                        <li><a href="https://twitter.com/intent/tweet?source=&amp;text=:%20" target="_blank" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;">Twitter</a></li>
+                                        <li><a href="https://plus.google.com/share?url=" target="_blank" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;">Google+</a></li>
+                                    </ul>
+                                </div>
+                                <!-- /.player-popup-content -->
+                            </div>
+                            <!-- /.player-popup -->
+                        </div>
+                        <!-- /.player-tool -->
+                        <div class="player-tool player-tool-mobile-hide">
+                            <a class="player-tool-link player-tool-fullscreen" href="#">fullscreen</a>
+                        </div>
+                        <!-- /.player-tool -->
+                    </div>
+                    <!-- /.player-toolbar -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.player -->
+    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                <div class="header-modal">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="col-9">
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <div class="logo">
+                                            <a href="/" class="logo-link">Zeno</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.col -->
+                                </div>
+                                <!-- /.row -->
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-3">
+                                <a href="#" class="modal-close" data-micromodal-close></a>
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-12">
+                                <div class="header-modal-line"></div>
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.container -->
+                </div>
+                <!-- /.header-modal -->
+                <div class="modal-content">
+                    <div class="container">
+                        <div class="row modal-content-row align-items-center">
+                            <div class="col-12">
+                                <div class="login-block login-block-default" id="login-block-default">
+                                    <div class="login-title">Good to see you!</div>
+                                    <div class="login-form">
+                                        <div class="login-form-row">
+                                            <div class="login-form-cell">
+                                                <label for="login-email">E-mail address</label>
+                                                <input type="email" placeholder="E-mail address" id="login-email" class="login-input-text">
+                                            </div>
+                                            <!-- /.login-form-cell -->
+                                        </div>
+                                        <!-- /.login-form-row -->
+                                        <div class="login-form-row">
+                                            <div class="login-form-cell">
+                                                <div class="login-form-row-forgot"><a href="#login-block-forgot" data-login-toggle="true">Forgot?</a></div>
+                                                <label for="login-password">Password</label>
+                                                <input type="password" placeholder="Password" id="login-password" class="login-input-text">
+                                            </div>
+                                            <!-- /.login-form-cell -->
+                                        </div>
+                                        <!-- /.login-form-row -->
+                                        <div class="login-form-navigation">
+                                            <input type="submit" class="button button-big button-login" value="Login">
+                                            <div class="login-form-navigation-or">Or</div>
+                                            <div class="login-form-navigation-social">
+                                                <a href="#" class="button button-big button-connect-facebook">Connect with Facebook</a>
+                                                <a href="#" class="button button-big button-connect-google">Connect with Google+</a>
+                                            </div>
+                                            <!-- /.login-form-navigation-social -->
+                                        </div>
+                                        <!-- /.login-form-navigation -->
+                                        <div class="login-form-note">Don’t have an account? <a href="#login-block-signup" data-login-toggle="true">Sign up</a> now.</div>
+                                    </div>
+                                    <!-- /.login-form -->
+                                </div>
+                                <!-- /.login-block -->
+                                <div class="login-block login-block-forgot hidden" id="login-block-forgot">
+                                    <div class="login-title">Forgot Password?</div>
+                                    <div class="login-form">
+                                        <div class="login-form-row">
+                                            <div class="login-form-cell">
+                                                <label for="login-email-forgot">E-mail address</label>
+                                                <input type="email" placeholder="E-mail address" id="login-email-forgot" class="login-input-text">
+                                            </div>
+                                            <!-- /.login-form-cell -->
+                                        </div>
+                                        <!-- /.login-form-row -->
+                                        <div class="login-form-navigation">
+                                            <input type="submit" class="button button-big button-login" value="Submit" data-href="#login-block-forgot-sent" data-login-toggle="true">
+                                        </div>
+                                        <!-- /.login-form-navigation -->
+                                        <div class="login-form-note">Remind yor password? <a href="#login-block-default" data-login-toggle="true">Login</a> now.</div>
+                                    </div>
+                                    <!-- /.login-form -->
+                                </div>
+                                <!-- /.login-block -->
+                                <div class="login-block login-block-forgot-sent hidden" id="login-block-forgot-sent">
+                                    <div class="login-title">Successfully Sent</div>
+                                    <div class="login-form">
+                                        <div class="login-form-message">
+                                            <p>Your password reset link was successfully sent.<br> Check your inbox.</p>
+                                        </div>
+                                        <!-- /.login-form-message -->
+                                        <div class="login-form-note"><a href="#login-block-reset" data-login-toggle="true">Done</a></div>
+                                    </div>
+                                    <!-- /.login-form -->
+                                </div>
+                                <!-- /.login-block -->
+                                <div class="login-block login-block-reset hidden" id="login-block-reset">
+                                    <div class="login-title">Reset Password</div>
+                                    <div class="login-form">
+                                        <div class="login-form-message">
+                                            <p>Your password must be 8-20 characters and include at least one lowercase letter, one uppercase letter and a number</p>
+                                        </div>
+                                        <!-- /.login-form-message -->
+                                        <div class="login-form-row">
+                                            <div class="login-form-cell">
+                                                <label for="login-password-new">New Password</label>
+                                                <input type="password" placeholder="New Password" id="#login-password-new" class="login-input-text">
+                                            </div>
+                                            <!-- /.login-form-cell -->
+                                        </div>
+                                        <!-- /.login-form-row -->
+                                        <div class="login-form-row">
+                                            <div class="login-form-cell">
+                                                <label for="login-password-new-re">Re-type New Password</label>
+                                                <input type="password" placeholder="Re-type New Password" id="login-password-new-re" class="login-input-text">
+                                            </div>
+                                            <!-- /.login-form-cell -->
+                                        </div>
+                                        <!-- /.login-form-row -->
+                                        <div class="login-form-navigation">
+                                            <input type="submit" class="button button-big button-login" value="Submit" data-micromodal-close>
+                                        </div>
+                                        <!-- /.login-form-navigation -->
+                                    </div>
+                                    <!-- /.login-form -->
+                                </div>
+                                <!-- /.login-block -->
+                                <div class="login-block login-block-signup hidden" id="login-block-signup">
+                                    <div class="login-title">Create an Account</div>
+                                    <div class="login-form">
+                                        <div class="login-form-row">
+                                            <div class="login-form-cell">
+                                                <label for="login-email-create">E-mail address</label>
+                                                <input type="email" placeholder="E-mail address" id="login-email-create" class="login-input-text">
+                                            </div>
+                                            <!-- /.login-form-cell -->
+                                        </div>
+                                        <!-- /.login-form-row -->
+                                        <div class="login-form-row">
+                                            <div class="login-form-cell">
+                                                <div class="login-form-row-show"><a class="login-form-row-show-toggle" href="#"><span class="password-show-default">Show</span><span class="password-show-active">Hide</span></a></div>
+                                                <label for="login-password-create">Password</label>
+                                                <input type="password" placeholder="Password" id="login-password-create" class="login-input-text">
+                                            </div>
+                                            <!-- /.login-form-cell -->
+                                        </div>
+                                        <!-- /.login-form-row -->
+                                        <div class="login-form-navigation">
+                                            <input type="submit" class="button button-big button-login" value="Create">
+                                        </div>
+                                        <!-- /.login-form-navigation -->
+                                        <div class="login-form-note">Already have an account? <a href="#login-block-default" data-login-toggle="true">Login</a> now.</div>
+                                    </div>
+                                    <!-- /.login-form -->
+                                </div>
+                                <!-- /.login-block -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.container -->
+                </div>
+                <!-- /.modal-content -->
+            </div>
+        </div>
+        <!-- /.modal__overlay -->
+    </div>
+    <!-- /.modal -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/migrate.min.js"></script>
+    <script src="js/library.min.js"></script>
+    <script src="js/script.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+    <script>
+        const client = algoliasearch('7WXAYYQW82', 'ed5c82e741ec988fd277e2778d22695b');
+        const index = client.initIndex('Stations');
+        let enterPressed = false;
+
+        autocomplete('#search-input', { hint: false }, [
+            {
+                source: autocomplete.sources.hits(index, { hitsPerPage: 5 }),
+                displayKey: 'station_name',
+                templates: {
+                    suggestion: function (suggestion) {
+
+                        return `
+                            <a href="http://zeno.fm/${suggestion.pretty_url}" class="autocomplete-item">
+                                <span class="autocomplete-item-thumb">
+                                    <span class="autocomplete-item-img" style="background-image: url(https://tools.zenoradio.com/content/stations/${suggestion.objectID}/image/);"></span>
+                                </span>
+                                <span class="autocomplete-item-content">
+                                    <span class="autocomplete-item-title">${suggestion._highlightResult.station_name.value}</span>
+                                    <span class="autocomplete-item-meta">${suggestion.city}, ${suggestion.country}</span>
+                                </span>
+                            </a>
+                        `
+                    }
+                }
+            }
+        ]).on('autocomplete:selected', function (event, suggestion, dataset, context) {
+            enterPressed = true;
+            window.location.assign('http://zeno.fm/' + suggestion.pretty_url);
+        }).on('keyup', function (event) { //additional event listener
+            if (event.keyCode == 13 && !enterPressed) { // listen for when enter is pressed
+                window.location.href = 'instantsearch.html?query=' + event.target.value; // go to your search results page
+            }
+        });;
+    </script>
+</body>
+</html>

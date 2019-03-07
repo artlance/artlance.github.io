@@ -396,6 +396,14 @@
         max-width: 296px;
         bottom: 57px;
     }
+    .ais-Pagination-item {
+        margin: 3px;
+    }
+    .ais-Pagination-link {
+        padding: 1px 5px;
+        min-width: 22px;
+        font-size: 14px;
+    }
 }
 @include media-breakpoint-down(sm) {
 }
