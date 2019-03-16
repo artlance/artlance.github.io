@@ -76,6 +76,8 @@ input.header-search-input {
     font-size: 16px;
     padding-left: 32px;
     transition: color $d $f;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     &::placeholder {
         color: rgba(255, 255, 255, 0.6);
     }
@@ -258,4 +260,8 @@ a.autocomplete-item {
     display: block;
     font-size: 12px;
     color: #B5B5BA;
+}
+.algolia-autocomplete {
+    display: block;
+    width: 100%;
 }

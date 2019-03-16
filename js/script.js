@@ -27,6 +27,21 @@ jQuery(document).ready(function($){
 
     //------------------------------------------------------------------------//
 
+    var headerSearchInput = $('.header-search-input, .ais-SearchBox-input');
+
+    function searchPlaceholder() {
+        if ( $('body').innerWidth() > 976 ) {
+            headerSearchInput.attr('placeholder', 'Search by Genre, Location or Country');
+        } else {
+            headerSearchInput.attr('placeholder', 'Search');
+        }
+    }
+
+    searchPlaceholder();
+    $(window).resize(function() { searchPlaceholder(); });
+
+    //------------------------------------------------------------------------//
+
     //slider collection
     $('.collection-slider').slick({
         dots: false,

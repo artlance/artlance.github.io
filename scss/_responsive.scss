@@ -2,11 +2,21 @@
 @include media-breakpoint-down(xl) {
 }
 @include media-breakpoint-down(lg) {
-    .col-header-search {
-        display: none;
+    .header-search {
+        width: 265px;
+    }
+    input.ais-SearchBox-input,
+    input.header-search-input {
+        font-size: 14px;
     }
 }
 @include media-breakpoint-down(md) {
+    .aa-dropdown-menu {
+        left: -100px !important;
+    }
+    .header-search {
+        width: 100px;
+    }
     .main {
         min-height: 0;
         padding-bottom: 0;
