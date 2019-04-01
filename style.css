@@ -3302,6 +3302,46 @@ a.autocomplete-item:hover {
   height: 132px;
 }
 
+.cookies {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10900;
+  background: rgba(0, 0, 0, 0.85);
+  color: #ffffff;
+  padding: 20px 0;
+}
+
+.cookies .link {
+  color: #F5AB19;
+}
+
+.cookies-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cookies-content {
+  padding: 10px 0;
+}
+
+.cookies-nav {
+  white-space: nowrap;
+  padding: 10px 0 10px 20px;
+}
+
 /* home */
 .hero-inside,
 .hero {

@@ -885,6 +885,47 @@ input.header-search {
     padding: 60px 30px 50px;
     text-align: center;
 }
+.cookies {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10900;
+    background: rgba(0, 0, 0, 0.85);
+    color: $w;
+    padding: 20px 0;
+    .link {
+        color: $p;
+    }
+}
+.cookies-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.cookies-content {
+    padding: 10px 0
+}
+.cookies-nav {
+    white-space: nowrap;
+    padding: 10px 0 10px 20px;
+}
+.cookies-nav .button {
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 21px;
+    border: 1px solid $p;
+    color: $w;
+    line-height: 1.25;
+    background-color: $p;
+    display: inline-block;
+    padding: 10px 29px;
+    transition: color $d $f, background-color $d $f, border-color $d $f;
+}
 
 @media (max-width: 991px) {
     .wrap,
