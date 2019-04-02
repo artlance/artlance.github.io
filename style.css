@@ -2325,6 +2325,15 @@ a.underline {
   padding-bottom: 30px;
 }
 
+.wysiwyg a {
+  color: #0079e8;
+  text-decoration: underline;
+}
+
+.wysiwyg a:hover {
+  color: #F5AB19;
+}
+
 .wysiwyg h1 {
   margin-top: 30px;
   margin-bottom: 30px;
