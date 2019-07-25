@@ -1,0 +1,460 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+        <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+        <title>Best games of June 2019: Fun race 3D, Jetpack Jump</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <link rel="canonical" href="https://amp.dev/documentation/examples/introduction/stories_in_amp/index.html">
+        <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+        <style amp-custom>
+            amp-story {
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI ", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji ", "Segoe UI Emoji ", "Segoe UI Symbol ";
+            }
+            amp-story-page {
+                background: #000000;
+            }
+            amp-story-page * {
+                color: white;
+                text-align: center;
+            }
+            .img-shadow {
+                border-radius: 8px;
+                box-shadow: 0 24px 32px -15px rgba(0, 0, 0, 0.5);
+            }
+            .intro-icon {
+                max-width: 140px;
+                margin: 0 auto 30px;
+            }
+            .intro-icon svg {
+                display: block;
+                width: 140px;
+                height: 140px;
+            }
+            .header-group {
+                padding-top: 10px;
+                position: relative;
+            }
+            .header-logo {
+                width: 50px;
+                height: 50px;
+                background: #2f353e;
+                position: absolute;
+                left: 0;
+                top: -7px;
+                border-radius: 50%;
+            }
+            .header-logo-img {
+                position: absolute;
+                margin: 0;
+                padding: 0;
+                width: 24px;
+                height: auto;
+                top: 50%;
+                left: 50%;
+                transform: translate3d(-50%, -50%, 0);
+            }
+            .header-group h2 {
+                margin-bottom: 20px;
+                font-weight: 600;
+            }
+            .header-group h4 {
+                font-size: 16px;
+                margin-bottom: 40px;
+                position: relative;
+                font-weight: bold;
+            }
+            .header-group h4::before {
+                content: "";
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                background: #ffffff;
+                bottom: -18px;
+                border-radius: 50%;
+                left: 50%;
+                margin-left: -2px;
+            }
+            .content-text {
+                text-align: left;
+                font-size: 15px;
+                line-height: 1.5;
+                background: #fff;
+                color: #000000;
+                border-radius: 8px;
+                box-shadow: 0 24px 32px -15px rgba(0, 0, 0, 0.5);
+                padding: 20px 15px 5px 20px;
+            }
+            .content-text * {
+                color: #232323;
+            }
+            .content-text ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+            .content-text li {
+                padding: 0 0 0 20px;
+                text-align: left;
+                margin: 0 0 15px;
+                position: relative;
+            }
+            .content-text li::before {
+                content: "";
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                background: #232323;
+                top: 10px;
+                left: 0;
+                border-radius: 50%;
+            }
+            .vingette-top::before {
+                content: '';
+                position: absolute;
+                top: -2px;
+                left: 0;
+                width: 100%;
+                height: 20%;
+                background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0.8));
+                z-index: 1;
+            }
+            .vingette-bottom::after {
+                content: '';
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                width: 100%;
+                height: 50%;
+                background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.7), rgba(0,0,0,1));
+                z-index: 1;
+            }
+            .h-content {
+                margin: 0 auto 20px;
+                max-width: 700px;
+            }
+            .button {
+                margin-top: 20px;
+                background: #31c750;
+                text-decoration: none;
+                display: inline-block;
+                padding: 14px 25px;
+                border-radius: 8px;
+            }
+            .button-red {
+                background-color: #ed1515;
+            }
+            .button-purple {
+                background-color: #794aee;
+            }
+            .button-blue {
+                background-color: #009ae0;
+            }
+            .button strong {
+                font-weight: 600;
+            }
+            .h-cta {
+                margin-top: 30px;
+            }
+            .layer-cta {
+                position: relative;
+            }
+            .t-logo {
+                margin: 0 auto;
+                max-width: 110px;
+            }
+            .t-logo-img {
+                display: block;
+                border-radius: 18px;
+            }
+            .intro-title h1 {
+                font-weight: 900;
+            }
+            .color-green {
+                color: #66fc7e;
+            }
+            .color-blue {
+                color: #36e8f0;
+            }
+            .color-yellow {
+                color: #efea36;
+            }
+        </style>
+    </head>
+    <body>
+        <amp-story standalone
+                   title="Best games of June 2019: Fun race 3D, Jetpack Jump"
+                   publisher="AndroidOut"
+                   publisher-logo-src="publisher.png"
+                   poster-portrait-src="poster.png"
+                   supports-landscape>
+
+            <amp-story-page id="how-to-intro">
+                <amp-story-grid-layer template="fill">
+                    <amp-img src="background.jpg"
+                    width="720" height="1280"
+                    layout="responsive">
+                    </amp-img>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="thirds">
+                    <div class="intro-title" grid-area="middle-third" animate-in="fade-in" animate-in-delay="0.5s">
+                        <h1 animate-in="fly-in-bottom" animate-in-delay="0.4s">
+                            <span class="color-green">Best Android</span><br>
+                            <span class="color-yellow">Games</span><br>
+                            <span class="color-blue">Of June 2019</span>
+                        </h1>
+                    </div>
+                </amp-story-grid-layer>
+            </amp-story-page>
+
+            <amp-story-page id="how-to-step-1" class="story-page">
+                <amp-story-grid-layer template="fill" class="layer-video vingette-top vingette-bottom">
+                    <amp-video autoplay
+                        loop
+                        grid-area="middle-third"
+                        width="1280"
+                        height="720"
+                        poster="upload/poster1.jpg"
+                        layout="responsive">
+                        <source src="upload/video1.mp4"
+                        type="video/mp4">
+                    </amp-video>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="thirds">
+                    <div class="top-group" grid-area="upper-third">
+                        <div class="t-logo" animate-in="fade-in" animate-in-delay="0.1s">
+                            <div class="t-logo-wrap" animate-in="fly-in-top">
+                                <a href="https://www.androidout.com/" target="_blank" role="link">
+                                    <amp-img class="t-logo-img" src="upload/androidout.jpg"
+                                          width="330"
+                                          height="104"
+                                          layout="responsive"></amp-img>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-group" grid-area="lower-third">
+                        <div class="h-wrap" animate-in="fade-in" animate-in-delay="0.3s">
+                            <h2 animate-in="fly-in-bottom" animate-in-delay="0.2s">
+                                Dota Underlords
+                            </h2>
+                        </div>
+                        <div class="h-content" animate-in="fade-in" animate-in-delay="0.4s">
+                            <p animate-in="fly-in-bottom" animate-in-delay="0.4s">
+                                Choose a team that has compartible worriors with exceptional skills to help you win over your enemies.
+                            </p>
+                        </div>
+                    </div>
+                </amp-story-grid-layer>
+                <amp-story-cta-layer class="layer-cta">
+                    <div class="h-cta" animate-in="fade-in" animate-in-delay="0.7s">
+                        <div class="h-cta-button" animate-in="fly-in-bottom" animate-in-delay="0.6s">
+                            <a href="https://www.androidout.com/item/android-apps/1058959/dota-underlords/" role="link" class="button cta" target="_blank">
+                                Get it on <strong>Google play</strong>
+                            </a>
+                        </div>
+                    </div>
+                </amp-story-cta-layer>
+            </amp-story-page>
+
+            <amp-story-page id="how-to-step-2" class="story-page">
+                <amp-story-grid-layer template="fill" class="layer-video vingette-top vingette-bottom">
+                    <amp-video autoplay
+                        loop
+                        grid-area="middle-third"
+                        width="1280"
+                        height="720"
+                        poster="upload/poster2.jpg"
+                        layout="responsive">
+                        <source src="upload/video2.mp4"
+                        type="video/mp4">
+                    </amp-video>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="thirds">
+                    <div class="top-group" grid-area="upper-third">
+                        <div class="t-logo" animate-in="fade-in" animate-in-delay="0.1s">
+                            <div class="t-logo-wrap" animate-in="fly-in-top">
+                                <a href="https://www.androidout.com/" target="_blank" role="link">
+                                    <amp-img class="t-logo-img" src="upload/androidout.jpg"
+                                          width="330"
+                                          height="104"
+                                          layout="responsive"></amp-img>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-group" grid-area="lower-third">
+                        <div class="h-wrap" animate-in="fade-in" animate-in-delay="0.3s">
+                            <h2 animate-in="fly-in-bottom" animate-in-delay="0.2s">
+                                Talking Tom Hero Dash
+                            </h2>
+                        </div>
+                        <div class="h-content" animate-in="fade-in" animate-in-delay="0.4s">
+                            <p animate-in="fly-in-bottom" animate-in-delay="0.4s">
+                                Talking Tom and his friends using their supernatural powers to run through levels full of obstacles and enemies.
+                            </p>
+                        </div>
+                    </div>
+                </amp-story-grid-layer>
+                <amp-story-cta-layer class="layer-cta">
+                    <div class="h-cta" animate-in="fade-in" animate-in-delay="0.7s">
+                        <div class="h-cta-button" animate-in="fly-in-bottom" animate-in-delay="0.6s">
+                            <a href="https://www.androidout.com/item/android-apps/1045111/talking-tom-hero-dash/" role="link" class="button button-red cta" target="_blank">
+                                Get it on <strong>Google play</strong>
+                            </a>
+                        </div>
+                    </div>
+                </amp-story-cta-layer>
+            </amp-story-page>
+
+            <amp-story-page id="how-to-step-3" class="story-page">
+                <amp-story-grid-layer template="fill" class="layer-video vingette-top vingette-bottom">
+                    <amp-video autoplay
+                        loop
+                        grid-area="middle-third"
+                        width="1280"
+                        height="720"
+                        poster="upload/poster3.jpg"
+                        layout="responsive">
+                        <source src="upload/video3.mp4"
+                        type="video/mp4">
+                    </amp-video>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="thirds">
+                    <div class="top-group" grid-area="upper-third">
+                        <div class="t-logo" animate-in="fade-in" animate-in-delay="0.1s">
+                            <div class="t-logo-wrap" animate-in="fly-in-top">
+                                <a href="https://www.androidout.com/" target="_blank" role="link">
+                                    <amp-img class="t-logo-img" src="upload/androidout.jpg"
+                                          width="330"
+                                          height="104"
+                                          layout="responsive"></amp-img>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-group" grid-area="lower-third">
+                        <div class="h-wrap" animate-in="fade-in" animate-in-delay="0.3s">
+                            <h2 animate-in="fly-in-bottom" animate-in-delay="0.2s">
+                                Harry Potter: Wizards Unite
+                            </h2>
+                        </div>
+                        <div class="h-content" animate-in="fade-in" animate-in-delay="0.4s">
+                            <p animate-in="fly-in-bottom" animate-in-delay="0.4s">
+                                You must select a profession and join a&nbsp;team whose mission is to keep the wizarding world secret.
+                            </p>
+                        </div>
+                    </div>
+                </amp-story-grid-layer>
+                <amp-story-cta-layer class="layer-cta">
+                    <div class="h-cta" animate-in="fade-in" animate-in-delay="0.7s">
+                        <div class="h-cta-button" animate-in="fly-in-bottom" animate-in-delay="0.6s">
+                            <a href="https://www.androidout.com/item/android-apps/1041177/harry-potter-wizards-unite/" role="link" class="button button-blue cta" target="_blank">
+                                Get it on <strong>Google play</strong>
+                            </a>
+                        </div>
+                    </div>
+                </amp-story-cta-layer>
+            </amp-story-page>
+
+            <amp-story-page id="how-to-step-5" class="story-page">
+                <amp-story-grid-layer template="fill" class="vingette-top vingette-bottom">
+                    <amp-img src="upload/poster5.jpg"
+                    width="1440" height="1280"
+                    layout="responsive" animate-in="pan-right" animate-in-duration="1.5s">
+                    </amp-img>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="thirds">
+                    <div class="top-group" grid-area="upper-third">
+                        <div class="t-logo" animate-in="fade-in" animate-in-delay="0.1s">
+                            <div class="t-logo-wrap" animate-in="fly-in-top">
+                                <a href="https://www.androidout.com/" target="_blank" role="link">
+                                    <amp-img class="t-logo-img" src="upload/androidout.jpg"
+                                          width="330"
+                                          height="104"
+                                          layout="responsive"></amp-img>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-group" grid-area="lower-third">
+                        <div class="h-wrap" animate-in="fade-in" animate-in-delay="0.3s">
+                            <h2 animate-in="fly-in-bottom" animate-in-delay="0.2s">
+                                SHADOWGUN
+                            </h2>
+                        </div>
+                        <div class="h-content" animate-in="fade-in" animate-in-delay="0.4s">
+                            <p animate-in="fly-in-bottom" animate-in-delay="0.4s">
+                                One of the most cared for franchises from Madfinger won’t disappoint anyone ready to stop mutants.
+                            </p>
+                        </div>
+                    </div>
+                </amp-story-grid-layer>
+                <amp-story-cta-layer class="layer-cta">
+                    <div class="h-cta" animate-in="fade-in" animate-in-delay="0.7s">
+                        <div class="h-cta-button" animate-in="fly-in-bottom" animate-in-delay="0.6s">
+                            <a href="https://www.androidout.com/item/android-apps/22166/shadowgun/" role="link" class="button button-red cta" target="_blank">
+                                Get it on <strong>Google play</strong>
+                            </a>
+                        </div>
+                    </div>
+                </amp-story-cta-layer>
+            </amp-story-page>
+
+            <amp-story-page id="how-to-step-4" class="story-page">
+                <amp-story-grid-layer template="fill" class="layer-video vingette-top vingette-bottom">
+                    <amp-video autoplay
+                        loop
+                        grid-area="middle-third"
+                        width="1280"
+                        height="720"
+                        poster="upload/poster4.jpg"
+                        layout="responsive">
+                        <source src="upload/video4.mp4"
+                        type="video/mp4">
+                    </amp-video>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="thirds">
+                    <div class="top-group" grid-area="upper-third">
+                        <div class="t-logo" animate-in="fade-in" animate-in-delay="0.1s">
+                            <div class="t-logo-wrap" animate-in="fly-in-top">
+                                <a href="https://www.androidout.com/" target="_blank" role="link">
+                                    <amp-img class="t-logo-img" src="upload/androidout.jpg"
+                                          width="330"
+                                          height="104"
+                                          layout="responsive"></amp-img>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-group" grid-area="lower-third">
+                        <div class="h-wrap" animate-in="fade-in" animate-in-delay="0.3s">
+                            <h2 animate-in="fly-in-bottom" animate-in-delay="0.2s">
+                                Auto Chess
+                            </h2>
+                        </div>
+                        <div class="h-content" animate-in="fade-in" animate-in-delay="0.4s">
+                            <p animate-in="fly-in-bottom" animate-in-delay="0.4s">
+                                Collect hero cards in different formations that will direct your characters on the battlefield to defeat your rivals.
+                            </p>
+                        </div>
+                    </div>
+                </amp-story-grid-layer>
+                <amp-story-cta-layer class="layer-cta">
+                    <div class="h-cta" animate-in="fade-in" animate-in-delay="0.7s">
+                        <div class="h-cta-button" animate-in="fly-in-bottom" animate-in-delay="0.6s">
+                            <a href="https://www.androidout.com/item/android-apps/1041177/harry-potter-wizards-unite/" role="link" class="button button-purple cta" target="_blank">
+                                Get it on <strong>Google play</strong>
+                            </a>
+                        </div>
+                    </div>
+                </amp-story-cta-layer>
+            </amp-story-page>
+
+            <amp-story-bookend src="json/bookend.json" layout="nodisplay"></amp-story-bookend>
+
+        </amp-story>
+    </body>
+</html>
