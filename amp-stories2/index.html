@@ -121,6 +121,16 @@
                 background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0.8));
                 z-index: 1;
             }
+            .vingette-top-big::before {
+                content: '';
+                position: absolute;
+                top: -2px;
+                left: 0;
+                width: 100%;
+                height: 70%;
+                background-image: linear-gradient(to top, rgba(0,0,0,0), 20%, rgba(0,0,0,1));
+                z-index: 1;
+            }
             .vingette-bottom::after {
                 content: '';
                 position: absolute;
@@ -171,6 +181,8 @@
             }
             .intro-title h1 {
                 font-weight: 900;
+                margin-top: 20px;
+                margin-bottom: 20px;
             }
             .color-green {
                 color: #66fc7e;
@@ -180,6 +192,66 @@
             }
             .color-yellow {
                 color: #efea36;
+            }
+            .desktop-only {
+                display: none;
+            }
+            .mobile-only {
+                display: block;
+            }
+            @media(min-width:750px) {
+                amp-story-grid-layer.desktop-top {
+                    -ms-flex-line-pack: start;
+                    align-content: start;
+                    -ms-flex-align: start;
+                    align-items: start;
+                }
+                amp-story-grid-layer.desktop-center {
+                    -ms-flex-line-pack: center;
+                    align-content: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                }
+                amp-story-grid-layer.desktop-bottom {
+                    -ms-flex-line-pack: end;
+                    align-content: end;
+                    -ms-flex-align: end;
+                    align-items: end;
+                }
+                [class*="amphtml-story-grid-template-fill"].right > amp-img img,
+                [class*="amphtml-story-grid-template-fill"].right > amp-video video {
+                    min-width: calc(50% - 60px);
+                    left: auto;
+                }
+                [class*="amphtml-story-grid-template-fill"].left > amp-img img,
+                [class*="amphtml-story-grid-template-fill"].left > amp-video video {
+                    min-width: calc(50% - 60px);
+                    right: auto;
+                }
+                [class*="amphtml-story-grid-template-fill"].centered > amp-img img,
+                [class*="amphtml-story-grid-template-fill"].centered > amp-video video {
+                    min-width: calc(50% - 60px);
+                    left: 0;
+                    right: 0;
+                }
+                [class*="amphtml-story-grid-template-fill"].contain > amp-img img,
+                [class*="amphtml-story-grid-template-fill"].contain > amp-video video {
+                    object-fit: contain;
+                }
+                amp-story-grid-layer[template="vertical"].right {
+                    padding-left: calc(50% + 30px);
+                    max-width: 92%;
+                    justify-self: center;
+                }
+                amp-story-grid-layer[template="vertical"].left {
+                    padding-right: calc(50% + 30px);
+                }
+                .desktop-only {
+                    display: block;
+                }
+                .mobile-only {
+                    display: none;
+                }
             }
         </style>
     </head>
@@ -191,25 +263,27 @@
                    poster-portrait-src="poster.png"
                    supports-landscape>
 
-            <amp-story-page id="how-to-intro">
-                <amp-story-grid-layer template="fill">
-                    <amp-img src="background.jpg"
-                    width="720" height="1280"
-                    layout="responsive">
-                    </amp-img>
+            <amp-story-page id="page_1" class="story-page">
+                <amp-story-grid-layer template="fill" class="contain left vingette-top-big">
+                    <amp-img src="upload/poster6.jpg" width="629" height="1080" animate-in="fade-in"></amp-img>
                 </amp-story-grid-layer>
-                <amp-story-grid-layer template="thirds">
-                    <div class="intro-title" grid-area="middle-third" animate-in="fade-in" animate-in-delay="0.5s">
-                        <h1 animate-in="fly-in-bottom" animate-in-delay="0.4s">
-                            <span class="color-green">Best Android</span><br>
-                            <span class="color-yellow">Games</span><br>
-                            <span class="color-blue">Of June 2019</span>
-                        </h1>
+                <amp-story-grid-layer template="vertical" class="right desktop-center">
+                    <div class="mobile-only intro-title" animate-in="fly-in-top" animate-in-delay="0.2s">
+                        <h1 animate-in="fade-in" animate-in-delay="0.3s"><span class="color-green">Best Android games of&nbsp;June&nbsp;2019</span></h1>
+                        <p animate-in="fade-in" animate-in-delay="0.4s">
+                            Wander the sleepy avenues of nearby Sark for a slower pace of life. Here you can pick up a horse and cart or hire bicycles to explore the car-free island further.
+                        </p>
+                    </div>
+                    <div class="desktop-only intro-title" animate-in="fly-in-right" animate-in-delay="0.2s">
+                        <h1 animate-in="fade-in" animate-in-delay="0.3s"><span class="color-green">Best Android games of&nbsp;June&nbsp;2019</span></h1>
+                        <p animate-in="fade-in" animate-in-delay="0.4s">
+                            Wander the sleepy avenues of nearby Sark for a slower pace of life. Here you can pick up a horse and cart or hire bicycles to explore the car-free island further.
+                        </p>
                     </div>
                 </amp-story-grid-layer>
             </amp-story-page>
 
-            <amp-story-page id="how-to-step-1" class="story-page">
+            <amp-story-page id="page_2" class="story-page">
                 <amp-story-grid-layer template="fill" class="layer-video vingette-top vingette-bottom">
                     <amp-video autoplay
                         loop
@@ -259,7 +333,7 @@
                 </amp-story-cta-layer>
             </amp-story-page>
 
-            <amp-story-page id="how-to-step-2" class="story-page">
+            <amp-story-page id="page_3" class="story-page">
                 <amp-story-grid-layer template="fill" class="layer-video vingette-top vingette-bottom">
                     <amp-video autoplay
                         loop
@@ -309,7 +383,7 @@
                 </amp-story-cta-layer>
             </amp-story-page>
 
-            <amp-story-page id="how-to-step-3" class="story-page">
+            <amp-story-page id="page_4" class="story-page">
                 <amp-story-grid-layer template="fill" class="layer-video vingette-top vingette-bottom">
                     <amp-video autoplay
                         loop
@@ -403,7 +477,7 @@
                 </amp-story-cta-layer>
             </amp-story-page>
 
-            <amp-story-page id="how-to-step-4" class="story-page">
+            <amp-story-page id="page_5" class="story-page">
                 <amp-story-grid-layer template="fill" class="layer-video vingette-top vingette-bottom">
                     <amp-video autoplay
                         loop
