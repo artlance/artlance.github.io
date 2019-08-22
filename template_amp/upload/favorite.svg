@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="510px" height="1531px" viewBox="0 0 510 1531" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.2 (81672) - https://sketch.com -->
+    <title>favorite</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="favorite" fill-rule="nonzero">
+            <path d="M255,469.6 L219.3,433.9 C86.7,316.6 0,237.55 0,140.65 C0,61.6 61.2,0.4 140.25,0.4 C183.6,0.4 226.95,20.8 255,53.95 C283.05,20.8 326.4,0.4 369.75,0.4 C448.8,0.4 510,61.6 510,140.65 C510,237.55 423.3,316.6 290.7,433.9 L255,469.6 Z" id="Path" fill="#ffffff"></path>
+            <path d="M255,1530.6 L219.3,1494.9 C86.7,1377.6 0,1298.55 0,1201.65 C0,1122.6 61.2,1061.4 140.25,1061.4 C183.6,1061.4 226.95,1081.8 255,1114.95 C283.05,1081.8 326.4,1061.4 369.75,1061.4 C448.8,1061.4 510,1122.6 510,1201.65 C510,1298.55 423.3,1377.6 290.7,1494.9 L255,1530.6 Z" id="Path" fill="#FD000A"></path>
+        </g>
+    </g>
+</svg>
