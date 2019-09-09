@@ -1,0 +1,726 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+        <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+        <title>Summarize of the ablo app</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <link rel="canonical" href="https://amp.dev/documentation/examples/introduction/stories_in_amp/index.html">
+        <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+        <style amp-custom>
+            amp-story{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI ",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji ","Segoe UI Emoji ","Segoe UI Symbol "}amp-story-page{background:#000000}amp-story-page *{color:#ffffff}
+            .story-layer-yes {
+                background: #34A853;
+            }
+            .story-layer-yes * {
+                color: #ffffff;
+            }
+            .story-layer-not {
+                background: #EA4335;
+            }
+            .story-layer-not * {
+                color: #ffffff;
+            }
+            .main-content {
+                line-height: 1.45;
+                font-weight: 600;
+            }
+            .main-content h2 {
+                font-size: 1.8rem;
+                line-height: 1.35;
+                font-weight: bold;
+                text-align: center;
+                padding: 0;
+                margin: 0 auto 2rem;
+                max-width: 95%;
+            }
+            .main-content ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            .main-content ul li {
+                margin: 0 0 1.5rem;
+                padding-left: 3rem;
+                position: relative;
+            }
+            .icon-wrap {
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 1.5rem;
+                /* max-width: 42px; */
+            }
+            .story-layer-who * {
+                color: #ffffff;
+            }
+            .layer-video {
+                position: relative;
+            }
+            .vingette-top:before {
+                left: -1px;
+                top: 0;
+                right: -1px;
+                position: absolute;
+                height: 100%;
+                content: "";
+                z-index: 2;
+                background: rgba(0, 0, 0, 0.7);
+            }
+            .vingette-bottom:after {
+                left: -1px;
+                bottom: 0;
+                right: -1px;
+                position: absolute;
+                height: 100%;
+                content: "";
+                z-index: 2;
+                background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.0) 50%, rgba(0, 0, 0, 0.0));
+            }
+            .text-bg {
+                background: rgba(0, 0, 0, 0.1);
+                box-shadow: 4px 0 0px 0px rgba(0, 0, 0, 0.1), -4px 0 0px 0px rgba(0, 0, 0, 0.1);
+                padding: 2px 0;
+            }
+            .container-logo {
+                max-width: 10rem;
+                margin: 3rem auto 1rem;
+                overflow: hidden;
+                border-radius: 1rem;
+                box-shadow: 0 30px 30px -20px rgba(0, 0, 0, 0.5);
+            }
+            .text-center {
+                text-align: center;
+            }
+            .publisher-logo {
+                position: absolute;
+                left: 1rem;
+                top: 1rem;
+                width: 3rem;
+                border-radius: 50%;
+                box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.5);
+            }
+            .publisher-logo .img-full {
+                border-radius: 50%;
+            }
+            .img-full {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            .stars-list {
+                display: flex;
+                margin-left: -0.1rem;
+                margin-right: -0.1rem;
+            }
+            .stars-item {
+                box-sizing: border-box;
+                padding: 0 0.1rem;
+                flex: 0 0 20%;
+                max-width: 20%;
+            }
+            .rating-row {
+                display: flex;
+                margin-top: 1.5rem;
+            }
+            .rating-content,
+            .rating-stars {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+            .rating-content-title {
+                font-weight: bold;
+                font-size: 1rem;
+                margin-bottom: 0.1rem;
+            }
+            .rating-content-note {
+                font-size: 0.8rem;
+                opacity: 0.6;
+            }
+            .rating-content-title a {
+                text-decoration: none;
+            }
+            .rating-content-num {
+                font-size: 0.6rem;
+                color: rgba(255, 255, 255, 0.6);
+            }
+            .rating-content-num span {
+                color: #F86834;
+                font-size: 1rem;
+            }
+            .button {
+                font-size: 1.2rem;
+                background:#31c750;
+                text-decoration:none;
+                display:inline-block;
+                font-weight: bold;
+                padding: 1rem 2.5rem 1rem 3rem;
+                border-radius:0.5rem;
+            }
+            .h-cta {
+                padding-top: 2rem;
+                text-align: center;
+            }
+            .img-icon-button {
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <amp-story standalone
+                   title="Summarize of the ablo app"
+                   publisher="AndroidOut"
+                   publisher-logo-src="publisher.jpg"
+                   poster-portrait-src="poster.jpg">
+
+            <amp-story-page id="page_1" class="story-page">
+                <amp-story-grid-layer template="fill" class="layer-video vingette-top vingette-bottom">
+                    <amp-video autoplay
+                        loop
+                        grid-area="middle-third"
+                        width="639"
+                        height="1136"
+                        poster="upload/poster.jpg"
+                        layout="responsive">
+                        <source src="upload/video.mp4"
+                        type="video/mp4">
+                    </amp-video>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="vertical">
+                    <div class="container">
+                        <a href="#" class="publisher-logo" animate-in="fly-in-top" animate-in-delay="0.1s">
+                            <amp-img class="img-full" alt="Summarize of the ablo app" animate-in="fade-in"
+                              src="upload/publisher.jpg"
+                              width="84"
+                              height="84"
+                              layout="responsive">
+                            </amp-img>
+                        </a>
+                        <div class="container-logo" animate-in="fly-in-top">
+                            <amp-img alt="Summarize of the ablo app" animate-in="fade-in"
+                              src="upload/app.jpg"
+                              width="480"
+                              height="480"
+                              layout="responsive">
+                            </amp-img>
+                        </div>
+                        <!-- /.container-logo -->
+                    </div>
+                    <!-- /.container -->
+                    <div class="container">
+                        <div class="main-content">
+                            <h2 animate-in="fly-in-bottom">Summarize of<br> the ablo app</h2>
+                            <p animate-in="fly-in-bottom" animate-in-delay="0.1s" class="text-center">
+                                <span class="text-bg">Крутое приложение для получения живой языковой практики с людьми из разных стран. В Ablo вы сможете прокачать свой скилл общения на иностранном языке и завести новых друзей из разных уголков мира.</span>
+                            </p>
+                        </div>
+                        <!-- /.main-content -->
+                    </div>
+                    <!-- /.container -->
+                </amp-story-grid-layer>
+            </amp-story-page>
+
+            <amp-story-page id="page_2" class="story-page">
+                <amp-story-grid-layer template="fill" class="layer-video vingette-top vingette-bottom">
+                    <div class="img-wrapper" animate-in="fade-in">
+                        <amp-img animate-in="pan-left" animate-in-duration="1.5s" alt="Why you should download it?"
+                          src="upload/photo1-1.jpg"
+                          width="1440"
+                          height="1280"
+                          layout="responsive">
+                        </amp-img>
+                    </div>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="vertical" class="story-layer">
+                    <div class="main-content">
+                        <h2 animate-in="fly-in-top">Why you should download it?</h2>
+                        <ul>
+                            <li animate-in="whoosh-in-right" animate-in-delay="0.1s">
+                                <span class="icon-wrap">
+                                    <amp-img class="img-icon" alt="Why you should download it?"
+                                      src="upload/smile.svg"
+                                      width="467"
+                                      height="467"
+                                      layout="responsive">
+                                    </amp-img>
+                                </span>
+                                <span class="text-bg">Возможность завести друзей из&nbsp;разных стран.</span>
+                            </li>
+                            <li animate-in="whoosh-in-right" animate-in-delay="0.2s">
+                                <span class="icon-wrap">
+                                    <amp-img class="img-icon" alt="Why you should download it?"
+                                      src="upload/smile.svg"
+                                      width="467"
+                                      height="467"
+                                      layout="responsive">
+                                    </amp-img>
+                                </span>
+                                <span class="text-bg">Получение языковой практики с&nbsp;носителями языка.</span>
+                            </li>
+                            <li animate-in="whoosh-in-right" animate-in-delay="0.3s">
+                                <span class="icon-wrap">
+                                    <amp-img class="img-icon" alt="Why you should download it?"
+                                      src="upload/smile.svg"
+                                      width="467"
+                                      height="467"
+                                      layout="responsive">
+                                    </amp-img>
+                                </span>
+                                <span class="text-bg">Автоматический перевод неизвестных вам языков.</span>
+                            </li>
+                            <li animate-in="whoosh-in-right" animate-in-delay="0.4s">
+                                <span class="icon-wrap">
+                                    <amp-img class="img-icon" alt="Why you should download it?"
+                                      src="upload/smile.svg"
+                                      width="467"
+                                      height="467"
+                                      layout="responsive">
+                                    </amp-img>
+                                </span>
+                                <span class="text-bg">Полостью рандомный выбор собеседников.</span>
+                            </li>
+                            <li animate-in="whoosh-in-right" animate-in-delay="0.5s">
+                                <span class="icon-wrap">
+                                    <amp-img class="img-icon" alt="Why you should download it?"
+                                      src="upload/smile.svg"
+                                      width="467"
+                                      height="467"
+                                      layout="responsive">
+                                    </amp-img>
+                                </span>
+                                <span class="text-bg">Возможность продолжить общение в&nbsp;чате в&nbsp;любой момент.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.main-content -->
+                </amp-story-grid-layer>
+            </amp-story-page>
+
+            <amp-story-page id="page_3" class="story-page">
+                <amp-story-grid-layer template="fill" class="layer-video vingette-top vingette-bottom">
+                    <amp-img animate-in="pan-right" animate-in-duration="1.5s" alt="Why you should download it?"
+                      src="upload/photo1-1.jpg"
+                      width="1440"
+                      height="1280"
+                      layout="responsive">
+                    </amp-img>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="vertical" class="story-layerr">
+                    <div class="main-content">
+                        <ul>
+                            <li animate-in="whoosh-in-right" animate-in-delay="0.1s">
+                                <span class="icon-wrap">
+                                    <amp-img class="img-icon" alt="Why you should download it?"
+                                      src="upload/smile.svg"
+                                      width="467"
+                                      height="467"
+                                      layout="responsive">
+                                    </amp-img>
+                                </span>
+                                <span class="text-bg">Аудиовызовы и видеозвонки для тех, кто предпочитает слышать или видеть собеседника.</span>
+                            </li>
+                            <li animate-in="whoosh-in-right" animate-in-delay="0.2s">
+                                <span class="icon-wrap">
+                                    <amp-img class="img-icon" alt="Why you should download it?"
+                                      src="upload/smile.svg"
+                                      width="467"
+                                      height="467"
+                                      layout="responsive">
+                                    </amp-img>
+                                </span>
+                                <span class="text-bg">Крутые бонусы за достижение целей. Чем больше вы летаете по миру и знакомитесь, тем больше наград получаете.</span>
+                            </li>
+                            <li animate-in="whoosh-in-right" animate-in-delay="0.3s">
+                                <span class="icon-wrap">
+                                    <amp-img class="img-icon" alt="Why you should download it?"
+                                      src="upload/smile.svg"
+                                      width="467"
+                                      height="467"
+                                      layout="responsive">
+                                    </amp-img>
+                                </span>
+                                <span class="text-bg">Автоматический перевод неизвестных вам языков.</span>
+                            </li>
+                            <li animate-in="whoosh-in-right" animate-in-delay="0.4s">
+                                <span class="icon-wrap">
+                                    <amp-img class="img-icon" alt="Why you should download it?"
+                                      src="upload/smile.svg"
+                                      width="467"
+                                      height="467"
+                                      layout="responsive">
+                                    </amp-img>
+                                </span>
+                                <span class="text-bg">Подсказки интересных тем для начала разговора.</span>
+                            </li>
+                            <li animate-in="whoosh-in-right" animate-in-delay="0.5s">
+                                <span class="icon-wrap">
+                                    <amp-img class="img-icon" alt="Why you should download it?"
+                                      src="upload/smile.svg"
+                                      width="467"
+                                      height="467"
+                                      layout="responsive">
+                                    </amp-img>
+                                </span>
+                                <span class="text-bg">Интересные и познавательные факты о странах.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.main-content -->
+                </amp-story-grid-layer>
+            </amp-story-page>
+
+            <amp-story-page id="page_4" class="story-page">
+                <amp-story-grid-layer template="fill" class="layer-video vingette-top vingette-bottom">
+                    <amp-img alt="Why you NOT should download it?" animate-in="fade-in"
+                      src="upload/photo2.jpg"
+                      width="720"
+                      height="1280"
+                      layout="responsive">
+                    </amp-img>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="vertical" class="story-layer">
+                    <div class="main-content">
+                        <h2 animate-in="fly-in-top">Why you NOT should&nbsp;download it?</h2>
+                        <ul>
+                            <li animate-in="whoosh-in-right" animate-in-delay="0.1s">
+                                <span class="icon-wrap">
+                                    <amp-img class="img-icon" alt="Why you NOT should download it?"
+                                      src="upload/sad.svg"
+                                      width="467"
+                                      height="467"
+                                      layout="responsive">
+                                    </amp-img>
+                                </span>
+                                <span class="text-bg">Невозможность выбрать пол людей, с которыми вы предпочитаете общаться.</span>
+                            </li>
+                            <li animate-in="whoosh-in-right" animate-in-delay="0.2s">
+                                <span class="icon-wrap">
+                                    <amp-img class="img-icon" alt="Why you NOT should download it?"
+                                      src="upload/sad.svg"
+                                      width="467"
+                                      height="467"
+                                      layout="responsive">
+                                    </amp-img>
+                                </span>
+                                <span class="text-bg">Если вы ищите флирт и отношения, то это приложение вам не подходит.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.main-content -->
+                </amp-story-grid-layer>
+            </amp-story-page>
+
+            <amp-story-page id="page_5" class="story-page">
+                <amp-story-grid-layer template="fill" class="layer-video vingette-top vingette-bottom">
+                    <amp-img alt="Who should donwload it?" animate-in="fade-in"
+                      src="upload/photo3.jpg"
+                      width="720"
+                      height="1280"
+                      layout="responsive">
+                    </amp-img>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="vertical" class="story-layer story-layer-who">
+                    <div class="main-content">
+                        <h2 animate-in="fly-in-top">Who should donwload&nbsp;it?</h2>
+                        <ul>
+                            <li animate-in="whoosh-in-right" animate-in-delay="0.1s">
+                                <span class="icon-wrap">
+                                    <amp-img class="img-icon" alt="Who should donwload it?"
+                                      src="upload/lightbulb.svg"
+                                      width="467"
+                                      height="467"
+                                      layout="responsive">
+                                    </amp-img>
+                                </span>
+                                <span class="text-bg">Любители иностранных языков, ищущие языковую практику.</span>
+                            </li>
+                            <li animate-in="whoosh-in-right" animate-in-delay="0.2s">
+                                <span class="icon-wrap">
+                                    <amp-img class="img-icon" alt="Who should donwload it?"
+                                      src="upload/lightbulb.svg"
+                                      width="467"
+                                      height="467"
+                                      layout="responsive">
+                                    </amp-img>
+                                </span>
+                                <span class="text-bg">Люди, которые обожают путешествовать и узнавать культуру и обычаи других стран.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.main-content -->
+                </amp-story-grid-layer>
+            </amp-story-page>
+
+            <amp-story-page id="page_6" class="story-page">
+                <amp-story-grid-layer template="fill" class="layer-video vingette-top vingette-bottom">
+                    <amp-img alt="Who develop the app?" animate-in="fade-in"
+                      src="upload/photo4.jpg"
+                      width="720"
+                      height="1280"
+                      layout="responsive">
+                    </amp-img>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="vertical" class="story-layer story-layer-who">
+                    <div class="container">
+                        <div class="container-logo" animate-in="fly-in-top">
+                            <amp-img alt="Who develop the app?" animate-in="fade-in"
+                              src="upload/logo.jpg"
+                              width="480"
+                              height="480"
+                              layout="responsive">
+                            </amp-img>
+                        </div>
+                        <!-- /.container-logo -->
+                    </div>
+                    <!-- /.container -->
+                    <div class="container">
+                        <div class="main-content">
+                            <h2 animate-in="fly-in-bottom">Who develop<br> the app?</h2>
+                            <p animate-in="fly-in-bottom" animate-in-delay="0.1s" class="text-center">
+                                <span class="text-bg">Massive Media &mdash; команда бельгийских разработчиков, приложения которых нацелены на знакомства, общение и исследование культурного многообразия.</span>
+                            </p>
+                        </div>
+                        <!-- /.main-content -->
+                    </div>
+                    <!-- /.container -->
+                </amp-story-grid-layer>
+            </amp-story-page>
+
+            <amp-story-page id="page_7" class="story-page">
+                <amp-story-grid-layer template="vertical">
+                    <h2 animate-in="fly-in-top">What Apps market user evaluate the app said about the app?</h2>
+                    <div class="rating-row" animate-in="whoosh-in-left" animate-in-delay="0.1s">
+                        <div class="rating-content">
+                            <div class="rating-content-title"><a href="https://play.google.com/store/apps/details?id=live.ablo&hl=pt_br" target="_blank" role="link">Google Play</a> <span class="rating-content-num"><span>3</span>/5</span></div>
+                            <div class="rating-content-note">НОРМАЛЬНО</div>
+                        </div>
+                        <div class="rating-stars">
+                            <div class="stars-list">
+                                <div class="stars-item" animate-in="fade-in" animate-in-delay="0.3s">
+                                    <amp-img class="img-full" alt="star"
+                                      src="upload/star-active.svg"
+                                      width="37"
+                                      height="36"
+                                      layout="responsive">
+                                    </amp-img>
+                                </div>
+                                <div class="stars-item" animate-in="fade-in" animate-in-delay="0.4s">
+                                    <amp-img class="img-full" alt="star"
+                                      src="upload/star-active.svg"
+                                      width="37"
+                                      height="36"
+                                      layout="responsive">
+                                    </amp-img>
+                                </div>
+                                <div class="stars-item" animate-in="fade-in" animate-in-delay="0.5s">
+                                    <amp-img class="img-full" alt="star"
+                                      src="upload/star-active.svg"
+                                      width="37"
+                                      height="36"
+                                      layout="responsive">
+                                    </amp-img>
+                                </div>
+                                <div class="stars-item" animate-in="fade-in" animate-in-delay="0.6s">
+                                    <amp-img class="img-full" alt="star"
+                                      src="upload/star-half.svg"
+                                      width="37"
+                                      height="36"
+                                      layout="responsive">
+                                    </amp-img>
+                                </div>
+                                <div class="stars-item" animate-in="fade-in" animate-in-delay="0.7s">
+                                    <amp-img class="img-full" alt="star"
+                                      src="upload/star-passive.svg"
+                                      width="37"
+                                      height="36"
+                                      layout="responsive">
+                                    </amp-img>
+                                </div>
+                            </div>
+                            <!-- /.stars-list -->
+                        </div>
+                    </div>
+                    <!-- /.rating-row -->
+                    <div class="rating-row" animate-in="whoosh-in-left" animate-in-delay="0.2s">
+                        <div class="rating-content">
+                            <div class="rating-content-title"><a href="https://www.androidlist-russia.com/item/android-apps/1032114/ablo/" target="_blank" role="link">Androidlist</a> <span class="rating-content-num"><span>4.5</span>/5</span></div>
+                            <div class="rating-content-note">ХОРОШО</div>
+                        </div>
+                        <div class="rating-stars">
+                            <div class="stars-list">
+                                <div class="stars-item" animate-in="fade-in" animate-in-delay="0.3s">
+                                    <amp-img class="img-full" alt="star"
+                                      src="upload/star-active.svg"
+                                      width="37"
+                                      height="36"
+                                      layout="responsive">
+                                    </amp-img>
+                                </div>
+                                <div class="stars-item" animate-in="fade-in" animate-in-delay="0.4s">
+                                    <amp-img class="img-full" alt="star"
+                                      src="upload/star-active.svg"
+                                      width="37"
+                                      height="36"
+                                      layout="responsive">
+                                    </amp-img>
+                                </div>
+                                <div class="stars-item" animate-in="fade-in" animate-in-delay="0.5s">
+                                    <amp-img class="img-full" alt="star"
+                                      src="upload/star-active.svg"
+                                      width="37"
+                                      height="36"
+                                      layout="responsive">
+                                    </amp-img>
+                                </div>
+                                <div class="stars-item" animate-in="fade-in" animate-in-delay="0.6s">
+                                    <amp-img class="img-full" alt="star"
+                                      src="upload/star-active.svg"
+                                      width="37"
+                                      height="36"
+                                      layout="responsive">
+                                    </amp-img>
+                                </div>
+                                <div class="stars-item" animate-in="fade-in" animate-in-delay="0.7s">
+                                    <amp-img class="img-full" alt="star"
+                                      src="upload/star-half.svg"
+                                      width="37"
+                                      height="36"
+                                      layout="responsive">
+                                    </amp-img>
+                                </div>
+                            </div>
+                            <!-- /.stars-list -->
+                        </div>
+                    </div>
+                    <!-- /.rating-row -->
+                    <div class="rating-row" animate-in="whoosh-in-left" animate-in-delay="0.3s">
+                        <div class="rating-content">
+                            <div class="rating-content-title"><a href="https://ablo.es.aptoide.com" target="_blank" role="link">Aptoide</a> <span class="rating-content-num"><span>2</span>/5</span></div>
+                            <div class="rating-content-note">ПЛОХО</div>
+                        </div>
+                        <div class="rating-stars">
+                            <div class="stars-list">
+                                <div class="stars-item" animate-in="fade-in" animate-in-delay="0.3s">
+                                    <amp-img class="img-full" alt="star"
+                                      src="upload/star-active.svg"
+                                      width="37"
+                                      height="36"
+                                      layout="responsive">
+                                    </amp-img>
+                                </div>
+                                <div class="stars-item" animate-in="fade-in" animate-in-delay="0.4s">
+                                    <amp-img class="img-full" alt="star"
+                                      src="upload/star-active.svg"
+                                      width="37"
+                                      height="36"
+                                      layout="responsive">
+                                    </amp-img>
+                                </div>
+                                <div class="stars-item" animate-in="fade-in" animate-in-delay="0.5s">
+                                    <amp-img class="img-full" alt="star"
+                                      src="upload/star-passive.svg"
+                                      width="37"
+                                      height="36"
+                                      layout="responsive">
+                                    </amp-img>
+                                </div>
+                                <div class="stars-item" animate-in="fade-in" animate-in-delay="0.6s">
+                                    <amp-img class="img-full" alt="star"
+                                      src="upload/star-passive.svg"
+                                      width="37"
+                                      height="36"
+                                      layout="responsive">
+                                    </amp-img>
+                                </div>
+                                <div class="stars-item" animate-in="fade-in" animate-in-delay="0.7s">
+                                    <amp-img class="img-full" alt="star"
+                                      src="upload/star-passive.svg"
+                                      width="37"
+                                      height="36"
+                                      layout="responsive">
+                                    </amp-img>
+                                </div>
+                            </div>
+                            <!-- /.stars-list -->
+                        </div>
+                    </div>
+                    <!-- /.rating-row -->
+                    <div class="rating-row" animate-in="whoosh-in-left" animate-in-delay="0.4s">
+                        <div class="rating-content">
+                            <div class="rating-content-title"><a href="https://ablo.en.softonic.com/android" target="_blank" role="link">Softonic</a> <span class="rating-content-num"><span>5</span>/5</span></div>
+                            <div class="rating-content-note">ОТЛИЧНО</div>
+                        </div>
+                        <div class="rating-stars">
+                            <div class="stars-list">
+                                <div class="stars-item" animate-in="fade-in" animate-in-delay="0.3s">
+                                    <amp-img class="img-full" alt="star"
+                                      src="upload/star-active.svg"
+                                      width="37"
+                                      height="36"
+                                      layout="responsive">
+                                    </amp-img>
+                                </div>
+                                <div class="stars-item" animate-in="fade-in" animate-in-delay="0.4s">
+                                    <amp-img class="img-full" alt="star"
+                                      src="upload/star-active.svg"
+                                      width="37"
+                                      height="36"
+                                      layout="responsive">
+                                    </amp-img>
+                                </div>
+                                <div class="stars-item" animate-in="fade-in" animate-in-delay="0.5s">
+                                    <amp-img class="img-full" alt="star"
+                                      src="upload/star-active.svg"
+                                      width="37"
+                                      height="36"
+                                      layout="responsive">
+                                    </amp-img>
+                                </div>
+                                <div class="stars-item" animate-in="fade-in" animate-in-delay="0.6s">
+                                    <amp-img class="img-full" alt="star"
+                                      src="upload/star-active.svg"
+                                      width="37"
+                                      height="36"
+                                      layout="responsive">
+                                    </amp-img>
+                                </div>
+                                <div class="stars-item" animate-in="fade-in" animate-in-delay="0.7s">
+                                    <amp-img class="img-full" alt="star"
+                                      src="upload/star-active.svg"
+                                      width="37"
+                                      height="36"
+                                      layout="responsive">
+                                    </amp-img>
+                                </div>
+                            </div>
+                            <!-- /.stars-list -->
+                        </div>
+                    </div>
+                    <!-- /.rating-row -->
+                </amp-story-grid-layer>
+                <amp-story-cta-layer class="layer-cta">
+                    <div class="h-cta" animate-in="fade-in" animate-in-delay="0.7s">
+                        <div class="h-cta-button" animate-in="fly-in-bottom" animate-in-delay="0.6s">
+                            <a href="https://www.androidlist-russia.com/item/android-apps/1032114/ablo/" class="button button-purple cta" target="_blank" role="link">
+                                Free download
+                                <amp-img class="img-icon-button" alt="download"
+                                  src="upload/download.svg"
+                                  width="23"
+                                  height="24">
+                                </amp-img>
+                            </a>
+                        </div>
+                    </div>
+                </amp-story-cta-layer>
+            </amp-story-page>
+
+            <amp-story-bookend src="json/bookend.json" layout="nodisplay"></amp-story-bookend>
+
+        </amp-story>
+    </body>
+</html>
