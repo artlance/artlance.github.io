@@ -132,28 +132,33 @@ a, button {
     left: 0;
     top: 0;
     width: 100%;
-    padding-top: 32px;
+    padding-top: 29px;
 }
 .logo {
     display: inline-block;
     margin-top: 2px;
+    svg {
+        display: block;
+        width: 61px;
+        height: 29px;
+    }
 }
 .header-line {
-    margin-top: 20px;
+    margin-top: 23px;
     height: 1px;
     background: $w;
     opacity: 0.1;
 }
 .header-account {
-    width: 38px;
-    height: 38px;
+    width: 34px;
+    height: 34px;
     overflow: hidden;
     border-radius: 50%;
     margin-top: -1px;
 }
 .header-navigation-list {
     a, button {
-        font-size: 16px;
+        font-size: 15px;
         background-color: transparent;
         border: 0;
         color: $w;
@@ -204,12 +209,12 @@ input.header-search {
     border-radius: 0;
     color: $w;
     position: relative;
-    width: 320px;
+    width: 300px;
     background: transparent;
     border: 0;
     height: 32px;
     border-radius: 0;
-    font-size: 16px;
+    font-size: 15px;
     padding-left: 32px;
     font-family: "Larsseit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     &::placeholder {
@@ -220,6 +225,7 @@ input.header-search {
 //footer amp
 .footer-amp {
     padding: 30px 0 20px;
+    font-size: 15px;
 }
 .footer-line {
     height: 1px;
@@ -231,6 +237,7 @@ input.header-search {
     color: #B5B5BA;
 }
 .footer-navigation-list {
+    justify-content: flex-end;
     li {
         padding: 0 0 0 19px;
     }
@@ -289,13 +296,56 @@ input.header-search {
     }
 }
 .radio-title {
-    font-size: 40px;
+    font-size: 36px;
     margin-bottom: 20px;
 }
 .radio-info-list {
     margin-bottom: 46px;
-    li {
+    & > li {
         margin: 0 16px;
+        position: relative;
+        &:hover {
+            .shows-lightbox {
+                visibility: visible;
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+    }
+}
+.shows-lightbox {
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+    overflow: auto;
+    text-align: center;
+    width: 260px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    background: #e7e7e7;
+    border-radius: 4px;
+    padding: 10px 0 15px;
+    white-space: nowrap;
+    .url-entry {
+        display: block;
+    }
+    a {
+        color: #6f6f6f;
+        display: block;
+        padding: 5px 20px;
+        &.active {
+            font-weight: 500;
+        }
+        &:hover,
+        &.active {
+            color: #2a2a2a;
+        }
     }
 }
 .radio-info-line {
@@ -424,7 +474,7 @@ input.header-search {
     padding-top: 30px;
     padding-bottom: 25px;
     h4 {
-        font-size: 32px;
+        font-size: 29px;
         color: #28282A;
         font-weight: normal;
         margin-bottom: 30px;
@@ -440,13 +490,53 @@ input.header-search {
 .station-link {
     display: block;
     color: $s;
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -15px;
+        background: $w;
+        border: 2px solid #f3f3f3;
+        border-radius: 12px;
+        opacity: 0;
+        transform: scale(0.98);
+        //box-shadow: 0 8px 10px -4px rgba(0, 0, 0, 0.15);
+        transition: transform $d*1.5 $f, opacity $d*1.5 $f;
+        will-change: opacity;
+    }
     &:hover {
         color: $s;
+        &:after {
+            opacity: 1;
+            transform: none;
+        }
+        .station-poster {
+            &:before {
+                opacity: 0.1;
+            }
+        }
     }
 }
 .station-poster {
     display: block;
     position: relative;
+    z-index: 2;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $w;
+        opacity: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        border-radius: 8px;
+        transition: opacity $d $f;
+    }
 }
 .station-poster-image {
     display: block;
@@ -494,15 +584,19 @@ input.header-search {
 .station-title {
     display: block;
     text-align: center;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 500;
     padding: 13px 0 7px;
+    z-index: 2;
+    position: relative;
 }
 .station-meta {
     display: block;
     text-align: center;
     font-size: 14px;
     color: #6A6A6C;
+    position: relative;
+    z-index: 2;
 }
 .station-location {
     display: inline-block;
@@ -582,9 +676,42 @@ input.header-search {
     padding-right: 30px;
 }
 .about-title {
+    position: relative;
     font-size: 40px;
     line-height: 1.1;
     margin-bottom: 23px;
+    .shows-lightbox {
+        // visibility: visible;
+        // opacity: 1;
+        // pointer-events: auto;
+        transform: none;
+        left: 0;
+        right: auto;
+        font-size: 16px;
+        .url-entry {
+            margin: 5px 0;
+        }
+    }
+    &:hover {
+        .shows-lightbox {
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+}
+.about-title-drop {
+    display: inline-block;
+    position: relative;
+    padding-right: 40px;
+    svg {
+        right: 0;
+        top: 50%;
+        margin-top: -10px;
+        width: 28px;
+        height: 28px;
+        position: absolute;
+    }
 }
 .about-info-row {
     align-items: flex-start;
@@ -652,7 +779,7 @@ input.header-search {
     height: 30px;
     margin: 7px -4px 20px;
     position: relative;
-    opacity: 0.2;
+    opacity: 0.4;
     transition: opacity 0.15s cubic-bezier(0.4, 0.0, 0.2, 1);
     will-change: opacity;
     background: transparent;
@@ -777,10 +904,15 @@ input.header-search {
     margin-left: -30px;
     margin-right: -30px;
     padding-bottom: 30px;
+    &::after {
+        clear: both;
+        content: "";
+        display: table;
+    }
 }
 .schedule-item {
-    flex: 0 0 50%;
-    max-width: 50%;
+    width: 50%;
+    float: left;
     padding: 0 30px 35px;
 }
 .schedule-item-info {
@@ -788,12 +920,22 @@ input.header-search {
     margin-bottom: 12px;
 }
 .schedule-item-meta {
-    flex-grow: 1;
+    flex: 0 0 calc(100% - 135px);
+    max-width: calc(100% - 135px);
+}
+.schedule-item-meta-nowrap {
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .schedule-item-duration {
     color: #6A6A6C;
     padding-left: 10px;
     text-align: right;
+    white-space: nowrap;
+    flex: 0 0 135px;
+    max-width: 135px;
     span {
         padding-left: 10px;
         color: $w;
@@ -954,10 +1096,10 @@ input.header-search {
 
     //header
     .header-amp {
-        padding-top: 16px;
+        padding-top: 10px;
     }
     .header-line {
-        margin-top: 15px;
+        margin-top: 10px;
     }
     .navigation-toggle {
         display: block;
@@ -973,6 +1115,7 @@ input.header-search {
     }
     .footer-navigation-list {
         margin-left: -21px;
+        justify-content: flex-start;
         li {
             padding-left: 21px;
             margin-bottom: 10px;
@@ -1128,8 +1271,8 @@ input.header-search {
         margin-right: 0;
     }
     .schedule-item {
-        flex: 0 0 100%;
-        max-width: 100%;
+        width: 100%;
+        float: none;
         padding-left: 0;
         padding-right: 0;
     }
@@ -1140,5 +1283,30 @@ input.header-search {
     .schedule-group-title {
         margin-bottom: 5px;
     }
-
+    .radio-info-list {
+        & li {
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+    }
+    .radio-info-line {
+        width: 10px;
+    }
+    .shows-lightbox {
+        left: auto;
+        right: 0;
+        transform: none;
+        a {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    .about-title-drop {
+        padding-right: 36px;
+        svg {
+            margin-top: -9px;
+            width: 22px;
+            height: 22px;
+        }
+    }
 }
