@@ -567,4 +567,12 @@ jQuery(document).ready(function($){
 
     //------------------------------------------------------------------------//
 
+    //stations or podcasts
+    $('.stations-header-choose a').on('click', function(event) {
+        event.preventDefault();
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+
+    //------------------------------------------------------------------------//
+
 }); //document ready

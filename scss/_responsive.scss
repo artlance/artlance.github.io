@@ -232,6 +232,9 @@
     .stations-header {
         padding-bottom: 0;
     }
+    .stations-header-choose {
+        justify-content: center;
+    }
     .stations {
         margin-bottom: 20px;
         .station {
@@ -466,6 +469,13 @@
         h2 {
             font-size: 32px;
         }
+    }
+    .home-podcast {
+        margin: 40px 0;
+    }
+    .home-podcast-title {
+        font-size: 32px;
+        line-height: 1.25;
     }
 }
 @include media-breakpoint-down(sm) {
