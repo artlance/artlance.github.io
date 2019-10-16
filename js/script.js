@@ -5,6 +5,8 @@ jQuery(document).ready(function($){
     //nojs
     $('body').removeClass('no-js');
 
+    console.log(1);
+
     //------------------------------------------------------------------------//
 
     //fakelink
@@ -543,5 +545,28 @@ jQuery(document).ready(function($){
             $('.call').removeClass('call-onair');
         }
     });
+
+    //------------------------------------------------------------------------//
+
+    //podcast videos
+    $('.podcast-videos-slider').slick({
+        dots: false,
+        arrows: false,
+        draggable: true,
+        infinite: true,
+        centerMode: false,
+        centerPadding: '0px',
+        autoplay: true,
+        autoplaySpeed: 5000,
+        speed: 500,
+        pauseOnHover: false,
+        pauseOnDotsHover: false,
+        slide: '.podcast-videos-slide',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true
+    });
+
+    //------------------------------------------------------------------------//
 
 }); //document ready

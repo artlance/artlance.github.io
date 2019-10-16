@@ -3,11 +3,17 @@
 }
 @include media-breakpoint-down(lg) {
     .header-search {
-        width: 265px;
+        width: 130px;
     }
     input.ais-SearchBox-input,
     input.header-search-input {
         font-size: 14px;
+    }
+    .podcast-hero-content {
+        h1 {
+            font-size: 50px;
+            line-height: 1.2;
+        }
     }
 }
 @include media-breakpoint-down(md) {
@@ -144,6 +150,11 @@
             &:first-child {
                 margin-left: 0;
                 padding-left: 20px;
+            }
+            span {
+                &.header-navigation-or {
+                    color: rgba($text, 0.6);
+                }
             }
         }
     }
@@ -284,6 +295,9 @@
         margin-right: 0;
         padding-left: 0;
     }
+    .devices-description {
+        margin: 0 auto;
+    }
     .add-station {
         margin-top: 40px;
         margin-bottom: 40px;
@@ -414,8 +428,66 @@
         min-width: 22px;
         font-size: 14px;
     }
+    .podcast-hero {
+        padding-top: 57px;
+        &:before {
+            top: 57px;
+            left: 20px;
+            right: 20px;
+        }
+        .row {
+            min-height: 443px;
+            padding-bottom: 20px;
+        }
+    }
+    .podcast-hero-content {
+        h1 {
+            font-size: 40px;
+            line-height: 1.25;
+        }
+    }
+    .podcast-about {
+        padding: 30px 0 0;
+    }
+    .podcast-about-info {
+        padding-bottom: 40px;
+    }
+    .podcast-videos-slider {
+        margin-bottom: 10px;
+    }
+    .podcast-publish {
+        .container {
+            & > .row {
+                min-height: 420px;
+            }
+        }
+    }
+    .podcast-publish-caption {
+        h2 {
+            font-size: 32px;
+        }
+    }
 }
 @include media-breakpoint-down(sm) {
+    .podcast-hero-content {
+        text-align: center;
+    }
+    .podcast-hero-info {
+        margin: 0 auto;
+    }
+    .podcast-about-info {
+        padding-top: 0;
+    }
+    .podcast-publish-caption {
+        padding-bottom: 0;
+        h2 {
+            margin-bottom: 25px;
+        }
+    }
+    .podcast-publish-info {
+        padding-top: 20px;
+        margin-bottom: 20px;
+    }
 }
 @include media-breakpoint-down(xs) {
 }
