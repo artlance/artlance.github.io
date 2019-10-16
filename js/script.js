@@ -5,8 +5,6 @@ jQuery(document).ready(function($){
     //nojs
     $('body').removeClass('no-js');
 
-    console.log(1);
-
     //------------------------------------------------------------------------//
 
     //fakelink
