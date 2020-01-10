@@ -1,0 +1,630 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, shrink-to-fit=no">
+    <title>ZENO</title>
+    <meta name="description" content="zeno description">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="apple-icon-512x512.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#F5AB19">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Zeno">
+    <meta name="apple-mobile-web-app-title" content="Zeno">
+    <meta name="theme-color" content="#F5AB19">
+    <meta name="msapplication-navbutton-color" content="#F5AB19">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="/">
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
+    </script>
+</head>
+<body class="no-js">
+    <div class="main">
+        <header class="header-global">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-9 col-header-left">
+                        <div class="row">
+                            <div class="col-auto">
+                                <div class="logo">
+                                    <a href="/" class="logo-link">Zeno</a>
+                                </div>
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-auto col-header-navigation">
+                                <div class="header-navigation">
+                                    <ul class="header-navigation-list">
+                                        <li>
+                                            <a class="header-navigation-add" href="#modal-1" data-micromodal-trigger="modal-1">Create Station</a>
+                                            <span class="header-navigation-or">or</span>
+                                            <a href="#">Podcast</a>
+                                        </li>
+                                        <li><a href="#">Discover</a></li>
+                                        <li><a href="#">Genres</a></li>
+                                    </ul>
+                                </div>
+                                <!-- /.header-navigation -->
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-auto col-header-search">
+                                <div class="header-search">
+                                    <form>
+                                        <label for="header-search-input" class="hidden">header search input</label>
+                                        <input type="text" id="header-search-input" class="header-search-input" placeholder="Search by Genre, Location or Country">
+                                        <input type="submit" class="header-search-button" value="search">
+                                    </form>
+                                </div>
+                                <!-- /.header-search -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-3">
+                        <ul class="header-toolbar-list">
+                            <li class="header-toolbar-notification"><a href="#" class="notification-link">notification link</a></li>
+                            <li class="header-toolbar-navigation d-lg-none"><a href="#" class="navigation-toggle">navigation toggle<span class="navigation-toggle-icon"></span></a></li>
+                            <li class="header-toolbar-account d-none d-lg-block"><a href="#" class="account-link" style="background-image: url('upload/account.jpg');">account-link</a></li>
+                        </ul>
+                        <!-- /.header-toolbar-list -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </header>
+        <div class="header-push-dark"></div>
+        <div class="spanning">
+            <article class="article-single">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="article-meta">
+                                <span class="article-meta-category"><a href="#">Podcast</a></span>
+                                <time datetime="2015-05-17 19:00">December 19, 2019</time>
+                            </div>
+                            <h1>Broadcast Top of Hour News from Your Radio Station</h1>
+                            <p>Broadcast a hosted news feed, on the hour, to all your listeners automatically without the need for scheduling events, replacing files, or going live yourself.</p>
+                            <figure>
+                                <img src="upload/article-1.jpg" alt="Broadcast Top of Hour News from Your Radio Station">
+                            </figure>
+                            <p>Keep your listeners informed about what's going on in the world with top of hour news. Broadcasting on the hour, every hour, you can now automatically set your favourite news source without the need of scheduling events or replacing files.</p>
+                            <p>Aenean hendrerit aliquam tempor. Ut nulla enim, pellentesque quis augue in, egestas pellentesque ante. Phasellus a quam vel turpis maximus accumsan. Phasellus non diam dictum, molestie nunc vel, vehicula mauris. Donec cursus eget sem a aliquam. In imperdiet ullamcorper odio, non auctor est lobortis vel. Vestibulum fringilla eleifend pellentesque. Suspendisse aliquet erat non luctus gravida. Mauris magna sem, venenatis ut dignissim at, feugiat semper eros.</p>
+                            <h2>Nullam pellentesque nibh nisi, in aliquam libero venenatis ac.</h2>
+                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis ut purus tristique, commodo dui ut, tincidunt ipsum. Donec tempor odio id magna viverra, ac sodales ligula congue. Pellentesque a facilisis nunc. Morbi quis commodo nibh. Proin maximus tempus porttitor.</p>
+                            <p>In venenatis erat id placerat varius. Integer imperdiet orci semper molestie ullamcorper. Maecenas venenatis mauris ut quam lacinia commodo luctus sit amet justo. Suspendisse at auctor arcu, ut tincidunt quam. Quisque malesuada suscipit nunc eget feugiat. Aenean vel purus elementum, dictum orci vitae, congue velit.</p>
+                            <h2>Interdum et malesuada fames ac ante ipsum primis in faucibus.</h2>
+                            <p>Donec semper fermentum dui, vitae tristique nunc ultrices vel. Aliquam scelerisque elit a eros venenatis, in lacinia lectus posuere. Praesent pretium urna sit amet arcu tincidunt, in faucibus felis tristique. Nunc tincidunt dolor quis libero tincidunt rutrum.</p>
+                            <blockquote>
+                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis ut purus tristique, commodo dui ut, tincidunt ipsum</p>
+                            </blockquote>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia, elit eu pharetra euismod, metus erat iaculis urna, eu molestie turpis metus et purus. Duis leo tellus, porttitor sed consectetur a, ultricies sed est. Morbi elit urna, pulvinar at augue consequat, pellentesque efficitur risus. Praesent vulputate consequat libero, eget commodo risus dapibus in. Praesent vitae molestie orci. Vivamus aliquet metus ut elementum consectetur. Nunc aliquet euismod dolor, sed hendrerit justo. Aliquam ac nunc id lacus porttitor auctor et vitae ante. Etiam lacus quam, mattis id est ac, gravida aliquet metus.</p>
+                            <div class="article-social">
+                                <div class="article-social-title">Share on</div>
+                                <div class="article-social-item">
+                                    <a href="#" title="facebook">
+                                        facebook
+                                        <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path class="change-fill" d="M0 15C0 6.716 6.716 0 15 0c8.284 0 15 6.716 15 15 0 8.284-6.716 15-15 15-8.284 0-15-6.716-15-15z" fill="#3B3B36"/><path d="M16.063 23.32v-8.161h2.253l.299-2.812h-2.552l.004-1.408c0-.733.07-1.126 1.123-1.126H18.6V7h-2.253c-2.707 0-3.66 1.364-3.66 3.658v1.689H11v2.812h1.687v8.16h3.376z" fill="#FFF"/></g></svg>
+                                    </a>
+                                </div>
+                                <div class="article-social-item">
+                                    <a href="#" title="linkedin">
+                                        linkedin
+                                        <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path class="change-fill" d="M0 15C0 6.716 6.716 0 15 0c8.284 0 15 6.716 15 15 0 8.284-6.716 15-15 15-8.284 0-15-6.716-15-15z" fill="#3B3B36"/><path d="M10.6 12.424v10.213H7.201V12.424h3.4zm.224-3.16c0 .98-.738 1.766-1.923 1.766h-.022C7.738 11.03 7 10.245 7 9.264 7 8.263 7.76 7.5 8.923 7.5s1.88.763 1.901 1.764zm12.036 7.517v5.856h-3.4v-5.464c0-1.373-.492-2.31-1.722-2.31-.94 0-1.499.632-1.744 1.242-.09.219-.112.523-.112.828v5.704h-3.4s.045-9.255 0-10.213h3.4v1.447c.45-.696 1.259-1.687 3.064-1.687 2.237 0 3.914 1.46 3.914 4.597z" fill="#FFF"/></g></svg>
+                                    </a>
+                                </div>
+                                <div class="article-social-item">
+                                    <a href="#" title="twitter">
+                                        twitter
+                                        <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 15C0 6.716 6.716 0 15 0c8.284 0 15 6.716 15 15 0 8.284-6.716 15-15 15-8.284 0-15-6.716-15-15z" fill="#3B3B36"/><path d="M14.55 12.192l.032.52-.524-.064c-1.91-.244-3.578-1.07-4.995-2.458l-.692-.688-.179.508c-.377 1.134-.136 2.33.651 3.136.42.444.325.508-.399.243-.252-.085-.472-.148-.493-.116-.073.074.179 1.038.378 1.419.273.53.829 1.049 1.437 1.356l.514.243-.608.011c-.588 0-.609.01-.546.233.21.689 1.039 1.42 1.962 1.737l.65.223-.566.339a5.907 5.907 0 01-2.812.784c-.472.01-.86.053-.86.084 0 .106 1.28.7 2.025.932 2.235.689 4.89.392 6.883-.783 1.416-.837 2.833-2.5 3.494-4.11.357-.858.713-2.426.713-3.178 0-.487.032-.55.62-1.133.346-.34.67-.71.734-.816.105-.201.094-.201-.44-.021-.893.317-1.019.275-.578-.202.325-.339.713-.953.713-1.133 0-.032-.157.021-.335.117-.19.106-.609.264-.924.36l-.566.18-.514-.35c-.284-.19-.682-.402-.892-.466-.535-.148-1.354-.127-1.836.043-1.312.476-2.14 1.705-2.046 3.05z" fill="#FFF"/></g></svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="article-end"></div>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </article>
+            <div class="add-station">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-8">
+                            <a href="#" class="add-station-link">
+                                <span class="add-station-icon">
+                                    <span class="add-station-plus"></span>
+                                </span>
+                                <span class="add-station-title">Create Your Podcast in Seconds</span>
+                            </a>
+                            <div class="add-station-note">
+                                <p>Your podcast, your music and your community.<br> Just for free.</p>
+                            </div>
+                            <div class="add-station-navigation">
+                                <a href="#" class="button button-big">Get Started</a>
+                            </div>
+                            <!-- /.add-station-navigation -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.add-station -->
+        </div>
+        <!-- /.spanning-columns -->
+    </div>
+    <!-- /.main -->
+    <footer class="footer-global">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-line"></div>
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="copyright">
+                        <p>Copyright ZenoLive 2018. All rights reserved.</p>
+                    </div>
+                </div>
+                <!-- /.col -->
+                <div class="col-12 col-lg-6">
+                    <div class="footer-navigation">
+                        <ul class="footer-navigation-list">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Stations</a></li>
+                            <li><a href="#">Locations</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Legal</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Terms and Conditions</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.footer-navigation -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </footer>
+    <div class="player">
+        <div class="player-on-air">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="on-air-columns">
+                            <div class="on-air-col-1">
+                                <div class="on-air-title">ON AIR</div>
+                            </div>
+                            <!-- /.on-air-col-1 -->
+                            <div class="on-air-col-2">
+                                <div class="on-air-icon"></div>
+                            </div>
+                            <!-- /.on-air-col-2 -->
+                            <div class="on-air-col-3">
+                                <div class="on-air-duration">00:10</div>
+                            </div>
+                            <!-- /.on-air-col-3 -->
+                        </div>
+                        <!-- /.on-air-columns -->
+                        <a href="#" class="player-on-air-disconnect">Disconnect</a>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.player-on-air -->
+        <div class="container-fluid">
+            <div class="player-row">
+                <div class="player-col-info">
+                    <div class="player-info">
+                        <div class="player-info-block-nav">
+                            <a href="#" class="player-info-call">
+                                <svg height="38" width="38">
+                                    <circle class="player-circle" cx="19" cy="19" r="18" transform="rotate(-90, 19, 19)" fill="none" />
+                                </svg>
+                                <span class="player-info-call-text">Call In</span>
+                            </a>
+                            <div class="player-popup player-popup-call">
+                                <div class="player-popup-content player-popup-step-1">
+                                    <div class="player-popup-title">What would you like to say on the air?</div>
+                                    <div class="player-popup-form">
+                                        <div class="player-popup-form-row">
+                                            <div class="player-popup-form-cell">
+                                                <input type="text" class="player-input-text" placeholder="Type your name">
+                                            </div>
+                                            <!-- /.player-popup-form-cell -->
+                                        </div>
+                                        <!-- /.player-popup-form-row -->
+                                        <div class="player-popup-form-row">
+                                            <div class="player-popup-form-cell">
+                                                <textarea cols="30" rows="10" class="player-input-textarea" placeholder="Type your subject"></textarea>
+                                            </div>
+                                            <!-- /.player-popup-form-cell -->
+                                        </div>
+                                        <!-- /.player-popup-form-row -->
+                                    </div>
+                                    <!-- /.player-popup-form -->
+                                    <div class="player-popup-navigation">
+                                        <div class="player-popup-navigation-cell player-popup-navigation-cell-send">
+                                            <a href="#" class="button button-small button-player-popup-send">Send</a>
+                                        </div>
+                                        <!-- /.player-popup-navigation-cell -->
+                                        <div class="player-popup-navigation-cell">
+                                            <a href="#" class="button button-small button-secondary button-player-popup-cancel">Cancel</a>
+                                        </div>
+                                        <!-- /.player-popup-navigation-cell -->
+                                    </div>
+                                    <!-- /.player-popup-navigation -->
+                                </div>
+                                <!-- /.player-popup-content -->
+                                <div class="player-popup-content player-popup-step-2 hidden">
+                                    <div class="player-popup-title">Your call request has been submitted.</div>
+                                    <div class="player-popup-form-answer">
+                                        <p>
+                                            We will send you a confirmation and estimation of wait time shortly. Thank you!
+                                        </p>
+                                    </div>
+                                    <!-- /.player-popup-form-answer -->
+                                    <div class="player-popup-navigation">
+                                        <div class="player-popup-navigation-cell">
+                                            <a href="#" class="button button-small button-cancel button-player-popup-cancel-call">Cancell Call</a>
+                                        </div>
+                                        <!-- /.player-popup-navigation-cell -->
+                                    </div>
+                                    <!-- /.player-popup-navigation -->
+                                </div>
+                                <!-- /.player-popup-content -->
+                                <div class="player-popup-content player-popup-step-3 hidden">
+                                    <div class="player-popup-title">Your call has been accepted!</div>
+                                    <div class="player-popup-form-answer">
+                                        <p>
+                                            There are currently 2 callers ahead of you.<br>
+                                            Estimated wait time: 3 minutes
+                                        </p>
+                                    </div>
+                                    <!-- /.player-popup-form-answer -->
+                                    <div class="player-popup-navigation">
+                                        <div class="player-popup-navigation-cell">
+                                            <a href="#" class="button button-small button-cancel button-player-popup-cancel-call">Cancell Call</a>
+                                        </div>
+                                        <!-- /.player-popup-navigation-cell -->
+                                    </div>
+                                    <!-- /.player-popup-navigation -->
+                                </div>
+                                <!-- /.player-popup-content -->
+                                <div class="player-popup-content player-popup-step-4 hidden">
+                                    <div class="player-popup-title">You are the next caller!</div>
+                                    <div class="player-popup-form-answer">
+                                        <p>
+                                            Estimated wait time: 30 seconds
+                                        </p>
+                                    </div>
+                                    <!-- /.player-popup-form-answer -->
+                                    <div class="player-popup-navigation">
+                                        <div class="player-popup-navigation-cell">
+                                            <a href="#" class="button button-small button-cancel button-player-popup-cancel-call">Cancell Call</a>
+                                        </div>
+                                        <!-- /.player-popup-navigation-cell -->
+                                    </div>
+                                    <!-- /.player-popup-navigation -->
+                                </div>
+                                <!-- /.player-popup-content -->
+                            </div>
+                            <!-- /.player-popup -->
+                        </div>
+                        <!-- /.player-info-block-nav -->
+                        <div class="player-info-block">
+                            <div class="player-info-title">Electro Garten</div>
+                            <div class="player-info-meta">
+                                <div class="player-info-time">13:48</div>
+                                <div class="player-info-phone">
+                                    <a href="tel:+1 (605) 495 84 48">+1 (605) 495 84 48</a>
+                                </div>
+                            </div>
+                            <!-- /.player-info-meta -->
+                            <div class="player-popup-default player-popup-phone">
+                                <div class="player-popup-content-default">
+                                    <div class="player-popup-title">Phone Number</div>
+                                    <div class="player-popup-text">
+                                        <p>
+                                            Use this number when you want to call this station.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- /.player-popup-content -->
+                            </div>
+                            <!-- /.player-popup-default -->
+                        </div>
+                        <!-- /.player-info-block -->
+                    </div>
+                    <!-- /.player-info -->
+                </div>
+                <!-- /.col -->
+                <div class="player-col-controls">
+                    <div class="player-controls">
+                        <div class="player-control">
+                            <a class="player-control-link player-control-backward" href="#">backward</a>
+                        </div>
+                        <!-- /.player-control -->
+                        <div class="player-control">
+                            <a class="player-control-link player-control-pause" href="#">pause</a>
+                        </div>
+                        <!-- /.player-control -->
+                        <div class="player-control">
+                            <a class="player-control-link player-control-forward" href="#">forward</a>
+                        </div>
+                        <!-- /.player-control -->
+                    </div>
+                    <!-- /.player-controls -->
+                </div>
+                <!-- /.col -->
+                <div class="player-col-toolbar">
+                    <div class="player-toolbar">
+                        <div class="player-meta">
+                            <div class="player-meta-title">Because</div>
+                            <div class="player-meta-description">Rosemary Standley, Sylvain Griotto</div>
+                        </div>
+                        <!-- /.player-meta -->
+                        <div class="player-tool">
+                            <a class="player-tool-link player-tool-volume" href="#">volume</a>
+                            <div class="player-popup player-popup-volume">
+                                <div class="player-popup-content">
+                                    <input class="volume-range" type="range" value="50" min="10" max="100" step="1" data-rangeslider>
+                                </div>
+                                <!-- /.player-popup-content -->
+                            </div>
+                            <!-- /.player-popup -->
+                        </div>
+                        <!-- /.player-tool -->
+                        <div class="player-tool">
+                            <a class="player-tool-link player-tool-share" href="#">share</a>
+                            <div class="player-popup player-popup-share">
+                                <div class="player-popup-content">
+                                    <div class="player-popup-title">Share on Social Media</div>
+                                    <ul class="player-popup-share-list">
+                                        <li><a href="https://www.facebook.com/sharer/sharer.php?u=&amp;quote=" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&amp;quote=' + encodeURIComponent(document.URL)); return false;">Facebook</a></li>
+                                        <li><a href="https://twitter.com/intent/tweet?source=&amp;text=:%20" target="_blank" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;">Twitter</a></li>
+                                        <li><a href="https://plus.google.com/share?url=" target="_blank" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;">Google+</a></li>
+                                    </ul>
+                                </div>
+                                <!-- /.player-popup-content -->
+                            </div>
+                            <!-- /.player-popup -->
+                        </div>
+                        <!-- /.player-tool -->
+                        <div class="player-tool player-tool-mobile-hide">
+                            <a class="player-tool-link player-tool-fullscreen" href="#">fullscreen</a>
+                        </div>
+                        <!-- /.player-tool -->
+                    </div>
+                    <!-- /.player-toolbar -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.player -->
+    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                <div class="header-modal">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="col-9">
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <div class="logo">
+                                            <a href="/" class="logo-link">Zeno</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.col -->
+                                </div>
+                                <!-- /.row -->
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-3">
+                                <a href="#" class="modal-close" data-micromodal-close></a>
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-12">
+                                <div class="header-modal-line"></div>
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.container -->
+                </div>
+                <!-- /.header-modal -->
+                <div class="modal-content">
+                    <div class="container">
+                        <div class="row modal-content-row align-items-center">
+                            <div class="col-12">
+                                <div class="login-block login-block-default" id="login-block-default">
+                                    <div class="login-title">Good to see you!</div>
+                                    <div class="login-form">
+                                        <div class="login-form-row">
+                                            <div class="login-form-cell">
+                                                <label for="login-email">E-mail address</label>
+                                                <input type="email" placeholder="E-mail address" id="login-email" class="login-input-text">
+                                            </div>
+                                            <!-- /.login-form-cell -->
+                                        </div>
+                                        <!-- /.login-form-row -->
+                                        <div class="login-form-row">
+                                            <div class="login-form-cell">
+                                                <div class="login-form-row-forgot"><a href="#login-block-forgot" data-login-toggle="true">Forgot?</a></div>
+                                                <label for="login-password">Password</label>
+                                                <input type="password" placeholder="Password" id="login-password" class="login-input-text">
+                                            </div>
+                                            <!-- /.login-form-cell -->
+                                        </div>
+                                        <!-- /.login-form-row -->
+                                        <div class="login-form-navigation">
+                                            <input type="submit" class="button button-big button-login" value="Login">
+                                            <div class="login-form-navigation-or">Or</div>
+                                            <div class="login-form-navigation-social">
+                                                <a href="#" class="button button-big button-connect-facebook">Connect with Facebook</a>
+                                                <a href="#" class="button button-big button-connect-google">Connect with Google+</a>
+                                            </div>
+                                            <!-- /.login-form-navigation-social -->
+                                        </div>
+                                        <!-- /.login-form-navigation -->
+                                        <div class="login-form-note">Don’t have an account? <a href="#login-block-signup" data-login-toggle="true">Sign up</a> now.</div>
+                                    </div>
+                                    <!-- /.login-form -->
+                                </div>
+                                <!-- /.login-block -->
+                                <div class="login-block login-block-forgot hidden" id="login-block-forgot">
+                                    <div class="login-title">Forgot Password?</div>
+                                    <div class="login-form">
+                                        <div class="login-form-row">
+                                            <div class="login-form-cell">
+                                                <label for="login-email-forgot">E-mail address</label>
+                                                <input type="email" placeholder="E-mail address" id="login-email-forgot" class="login-input-text">
+                                            </div>
+                                            <!-- /.login-form-cell -->
+                                        </div>
+                                        <!-- /.login-form-row -->
+                                        <div class="login-form-navigation">
+                                            <input type="submit" class="button button-big button-login" value="Submit" data-href="#login-block-forgot-sent" data-login-toggle="true">
+                                        </div>
+                                        <!-- /.login-form-navigation -->
+                                        <div class="login-form-note">Remind yor password? <a href="#login-block-default" data-login-toggle="true">Login</a> now.</div>
+                                    </div>
+                                    <!-- /.login-form -->
+                                </div>
+                                <!-- /.login-block -->
+                                <div class="login-block login-block-forgot-sent hidden" id="login-block-forgot-sent">
+                                    <div class="login-title">Successfully Sent</div>
+                                    <div class="login-form">
+                                        <div class="login-form-message">
+                                            <p>Your password reset link was successfully sent.<br> Check your inbox.</p>
+                                        </div>
+                                        <!-- /.login-form-message -->
+                                        <div class="login-form-note"><a href="#login-block-reset" data-login-toggle="true">Done</a></div>
+                                    </div>
+                                    <!-- /.login-form -->
+                                </div>
+                                <!-- /.login-block -->
+                                <div class="login-block login-block-reset hidden" id="login-block-reset">
+                                    <div class="login-title">Reset Password</div>
+                                    <div class="login-form">
+                                        <div class="login-form-message">
+                                            <p>Your password must be 8-20 characters and include at least one lowercase letter, one uppercase letter and a number</p>
+                                        </div>
+                                        <!-- /.login-form-message -->
+                                        <div class="login-form-row">
+                                            <div class="login-form-cell">
+                                                <label for="login-password-new">New Password</label>
+                                                <input type="password" placeholder="New Password" id="#login-password-new" class="login-input-text">
+                                            </div>
+                                            <!-- /.login-form-cell -->
+                                        </div>
+                                        <!-- /.login-form-row -->
+                                        <div class="login-form-row">
+                                            <div class="login-form-cell">
+                                                <label for="login-password-new-re">Re-type New Password</label>
+                                                <input type="password" placeholder="Re-type New Password" id="login-password-new-re" class="login-input-text">
+                                            </div>
+                                            <!-- /.login-form-cell -->
+                                        </div>
+                                        <!-- /.login-form-row -->
+                                        <div class="login-form-navigation">
+                                            <input type="submit" class="button button-big button-login" value="Submit" data-micromodal-close>
+                                        </div>
+                                        <!-- /.login-form-navigation -->
+                                    </div>
+                                    <!-- /.login-form -->
+                                </div>
+                                <!-- /.login-block -->
+                                <div class="login-block login-block-signup hidden" id="login-block-signup">
+                                    <div class="login-title">Create an Account</div>
+                                    <div class="login-form">
+                                        <div class="login-form-row">
+                                            <div class="login-form-cell">
+                                                <label for="login-email-create">E-mail address</label>
+                                                <input type="email" placeholder="E-mail address" id="login-email-create" class="login-input-text">
+                                            </div>
+                                            <!-- /.login-form-cell -->
+                                        </div>
+                                        <!-- /.login-form-row -->
+                                        <div class="login-form-row">
+                                            <div class="login-form-cell">
+                                                <div class="login-form-row-show"><a class="login-form-row-show-toggle" href="#"><span class="password-show-default">Show</span><span class="password-show-active">Hide</span></a></div>
+                                                <label for="login-password-create">Password</label>
+                                                <input type="password" placeholder="Password" id="login-password-create" class="login-input-text">
+                                            </div>
+                                            <!-- /.login-form-cell -->
+                                        </div>
+                                        <!-- /.login-form-row -->
+                                        <div class="login-form-navigation">
+                                            <input type="submit" class="button button-big button-login" value="Create">
+                                        </div>
+                                        <!-- /.login-form-navigation -->
+                                        <div class="login-form-note">Already have an account? <a href="#login-block-default" data-login-toggle="true">Login</a> now.</div>
+                                    </div>
+                                    <!-- /.login-form -->
+                                </div>
+                                <!-- /.login-block -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.container -->
+                </div>
+                <!-- /.modal-content -->
+            </div>
+        </div>
+        <!-- /.modal__overlay -->
+    </div>
+    <!-- /.modal -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/migrate.min.js"></script>
+    <script src="js/library.min.js"></script>
+    <script src="js/script.min.js"></script>
+</body>
+</html>

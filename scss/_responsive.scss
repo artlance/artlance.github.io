@@ -477,6 +477,139 @@
         font-size: 32px;
         line-height: 1.25;
     }
+    //
+    .header-push-dark {
+        height: 56px;
+    }
+    .article-single {
+        padding-top: 0;
+        margin-top: -12px;
+        h1 {
+            font-size: 34px;
+            padding-right: 0;
+            & + p {
+                margin-top: -17px;
+            }
+        }
+        figure {
+            margin-left: -170px;
+            margin-right: -170px;
+        }
+        img {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            margin-top: 30px;
+            line-height: 1.25;
+            & + p {
+                margin-top: -10px;
+            }
+        }
+        blockquote {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding-left: 23px;
+            padding-right: 0;
+            &:before {
+                left: 0;
+            }
+        }
+    }
+    .article-end {
+        margin-top: 28px;
+        margin-bottom: -58px;
+    }
+    .blog {
+        padding-top: 18px;
+        padding-bottom: 29px;
+        &-search {
+            &-wrap {
+                margin: 0 auto 15px;
+            }
+            &-line {
+                height: 1px;
+                background: #28282A;
+                opacity: 0.1;
+                display: block;
+                margin-bottom: 14px;
+            }
+        }
+        &-hero {
+            text-align: center;
+            height: 550px;
+            &-line {
+                top: 56px;
+            }
+            &-content {
+                bottom: 174px;
+            }
+            &-item {
+                &-meta {
+                    margin-bottom: 8px;
+                }
+                &-title {
+                    font-size: 30px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 18px;
+                }
+            }
+        }
+        &-categories {
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-bottom: 12px;
+            padding-right: 0;
+            &-wrap {
+                margin-right: -20px;
+                margin-left: -20px;
+            }
+            ul {
+                padding-left: 20px;
+                li:last-child {
+                    padding-right: 20px;
+                }
+                &::-webkit-scrollbar {
+                    width: 0;
+                    height: 0;
+                }
+            }
+        }
+        &-search {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        &-content {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding-right: 0;
+            &-list-title {
+                display: none;
+            }
+            &-item {
+                margin-bottom: 29px;
+                margin-left: auto;
+                margin-right: auto;
+                &-thumb {
+                    margin-left: -69px;
+                    margin-right: -69px;
+                }
+                &-title {
+                    font-size: 28px;
+                    line-height: 1.34;
+                }
+            }
+            &-more {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        &-sidebar {
+            display: none;
+        }
+    }
+
 }
 @include media-breakpoint-down(sm) {
     .podcast-hero-content {
