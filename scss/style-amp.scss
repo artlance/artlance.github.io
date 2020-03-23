@@ -102,6 +102,10 @@ a, button {
         flex: 0 0 25%;
         max-width: 25%;
     }
+    &-3 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
     &-2 {
         flex: 0 0 50%;
         max-width: 50%;
@@ -420,10 +424,10 @@ input.header-search {
     opacity: 0.4;
 }
 .radio-audio-wrap {
-    min-height: 70px;
-    padding: 0 10px;
-    background: #E7E7E7;
-    border-radius: 35px;
+    // min-height: 70px;
+    // padding: 0 10px;
+    // background: #E7E7E7;
+    // border-radius: 35px;
     audio::-webkit-media-controls-panel {
         background: #E7E7E7;
     }
@@ -473,9 +477,23 @@ input.header-search {
 }
 
 //station
+.past-episode {
+    margin-bottom: 30px;
+    &-title {
+        color: #6A6A6C;
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+}
 .stations {
     padding-top: 30px;
     padding-bottom: 25px;
+    h6 {
+        color: #B5B5BA;
+        font-size: 13px;
+        font-weight: normal;
+        margin: 0;
+    }
     h4 {
         font-size: 29px;
         color: #28282A;
@@ -1069,6 +1087,7 @@ input.header-search {
     background-color: $p;
     display: inline-block;
     padding: 10px 29px;
+    height: auto;
     transition: color $d $f, background-color $d $f, border-color $d $f;
 }
 
@@ -1179,6 +1198,9 @@ input.header-search {
     //station
     .stations {
         padding-bottom: 8px;
+        h6 {
+            text-align: center;
+        }
         h4 {
             font-size: 30px;
             text-align: center;
@@ -1454,6 +1476,33 @@ input.header-search {
     display: block;
     border-radius: 6px;
 }
+.features-shop {
+    margin-bottom: 20px;
+}
+.features-shop-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.features-shop-title a {
+    color: $w;
+}
+.features-shop-image {
+    display: block;
+    width: 100%;
+    max-width: 150px;
+    border-radius: 6px;
+    border: 0;
+    background: $w;
+    padding: 8px;
+    margin: 0 0 10px;
+}
+.shop-img {
+    display: block;
+    border-radius: 6px;
+}
+.features-shop-note {
+    font-size: 14px;
+}
 .close-lightbox {
     position: absolute;
     right: 20px;
@@ -1541,5 +1590,13 @@ input.header-search {
     }
     .features-get-title {
         margin-bottom: 0px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .col-xs-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 }

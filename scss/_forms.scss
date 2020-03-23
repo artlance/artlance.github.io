@@ -74,6 +74,10 @@ button.button {
     display: inline-block;
     padding: 10px 29px;
     transition: color $d $f, background-color $d $f, border-color $d $f;
+    &:disabled {
+        opacity: 0.3;
+        cursor: default;
+    }
     &-big {
         padding-top: 14px;
         padding-bottom: 14px;

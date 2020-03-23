@@ -627,7 +627,7 @@
     font-size: 18px;
     line-height: 1.67;
     color: rgba($s, 0.8);
-    .article-meta, h1, h2, h3, h4, h5, h6, p, ul, ol, li, table, blockquote, hr {
+    .article-meta, h1, h2, h3, h4, h5, h6, p, ul, ol, table, blockquote, hr {
         margin: 30px auto;
         max-width: 770px;
     }
@@ -750,11 +750,13 @@
     transition: all $d $f;
 }
 .blog {
-    display: flex;
-    flex-wrap: wrap;
-    border-bottom: 1px solid $light-gray;
-    padding-bottom: 80px;
-    padding-top: 38px;
+    &-section {
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: 1px solid $light-gray;
+        padding-bottom: 80px;
+        padding-top: 38px;
+    }
     &-hero {
         background: #101011;
         height: 727px;
@@ -860,7 +862,8 @@
                         display: none;
                     }
                 }
-                &.active {
+                &.active,
+                &.current-menu-item {
                     a {
                         opacity: 1;
                         text-decoration: none;
@@ -962,6 +965,10 @@
             margin-bottom: 29px;
         }
     }
+}
+.alm-btn-wrap {
+    max-width: 570px;
+    text-align: center;
 }
 .popular-article {
     margin-bottom: 29px;

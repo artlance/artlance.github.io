@@ -521,8 +521,10 @@
         margin-bottom: -58px;
     }
     .blog {
-        padding-top: 18px;
-        padding-bottom: 29px;
+        &-section {
+            padding-top: 18px;
+            padding-bottom: 29px;
+        }
         &-search {
             &-wrap {
                 margin: 0 auto 15px;
@@ -608,6 +610,10 @@
         &-sidebar {
             display: none;
         }
+    }
+    .alm-btn-wrap {
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
