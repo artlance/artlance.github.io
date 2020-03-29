@@ -568,9 +568,15 @@ jQuery(document).ready(function($){
     //------------------------------------------------------------------------//
 
     //stations or podcasts
-    $('.stations-header-choose a').on('click', function(event) {
+    $(document).on('click', '.stations-header-choose a', function(event) {
         event.preventDefault();
         $(this).addClass('active').siblings().removeClass('active');
+
+        var thisId = $(this).attr('href');
+        thisId = thisId.replace('#', '');
+        $('#section-'+thisId).fadeIn(300).siblings('.stations').fadeOut(0);
+        $('.collection-slider').slick('setPosition');
+
     });
 
     //------------------------------------------------------------------------//

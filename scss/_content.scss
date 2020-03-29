@@ -39,7 +39,11 @@
     }
 }
 .stations {
+    display: none;
     margin-bottom: 50px;
+    &.visible {
+        display: block;
+    }
 }
 .station {
     display: block;
