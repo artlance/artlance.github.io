@@ -1,4 +1,24 @@
 /* header */
+.header-alert {
+    background: $p;
+    color: $w;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 10px 9px;
+    text-align: center;
+    overflow: hidden;
+    line-height: 1.4;
+    a {
+        color: $w;
+        text-decoration: underline;
+        &:hover {
+            color: rgba($w, 0.8);
+        }
+    }
+    p {
+        margin: 0;
+    }
+}
 .header-global {
     padding: 32px 0 27px;
     position: absolute;
