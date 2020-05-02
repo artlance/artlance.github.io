@@ -1,0 +1,343 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, shrink-to-fit=no">
+    <title>ZENO</title>
+    <meta name="description" content="zeno description">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="apple-icon-512x512.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#F5AB19">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Zeno">
+    <meta name="apple-mobile-web-app-title" content="Zeno">
+    <meta name="theme-color" content="#F5AB19">
+    <meta name="msapplication-navbutton-color" content="#F5AB19">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="/">
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
+    </script>
+</head>
+<body class="no-js">
+    <div class="main">
+        <header class="header-global">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-9 col-header-left">
+                        <div class="row">
+                            <div class="col-auto">
+                                <div class="logo">
+                                    <a href="/" class="logo-link">Zeno</a>
+                                </div>
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-auto col-header-navigation">
+                                <div class="header-navigation">
+                                    <ul class="header-navigation-list">
+                                        <li>
+                                            <a class="header-navigation-add" href="#modal-1" data-micromodal-trigger="modal-1">Create Station</a>
+                                            <span class="header-navigation-or">or</span>
+                                            <a href="#">Podcast</a>
+                                        </li>
+                                        <li><a href="#">Discover</a></li>
+                                        <li><a href="#">Genres</a></li>
+                                    </ul>
+                                </div>
+                                <!-- /.header-navigation -->
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-auto col-header-search">
+                                <div class="header-search">
+                                    <form>
+                                        <label for="header-search-input" class="hidden">header search input</label>
+                                        <input type="text" id="header-search-input" class="header-search-input" placeholder="Search by Genre, Location or Country">
+                                        <input type="submit" class="header-search-button" value="search">
+                                    </form>
+                                </div>
+                                <!-- /.header-search -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-3">
+                        <ul class="header-toolbar-list">
+                            <li class="header-toolbar-notification"><a href="#" class="notification-link">notification link</a></li>
+                            <li class="header-toolbar-navigation d-lg-none"><a href="#" class="navigation-toggle">navigation toggle<span class="navigation-toggle-icon"></span></a></li>
+                            <li class="header-toolbar-account d-none d-lg-block"><a href="#" class="account-link" style="background-image: url('upload/account.jpg');">account-link</a></li>
+                        </ul>
+                        <!-- /.header-toolbar-list -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </header>
+        <div class="spanning">
+
+            <div class="no-amp-single">
+
+            <section class="radio">
+                <div class="radio-background" style="background-image: url('upload/hero.jpg');"></div>
+                <div class="blog-hero-line">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="blog-hero-line-bg"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrap">
+                    <div class="col col-full">
+                        <div class="raio-live"><span>live</span></div>
+                        <div class="radio-title">Electro Garten</div>
+                        <ul class="radio-info-list flex flex-wrap flex-justify flex-align">
+                            <li><button class="radio-info-button transition-opacity">About</button></li>
+                            <li><span class="radio-info-line"></span></li>
+                            <li><button class="radio-info-button transition-opacity">Station</button></li>
+                            <li><span class="radio-info-line"></span></li>
+                            <li><button class="radio-info-button transition-opacity">Shows</button>
+                                <div class="shows-lightbox">
+                                </div>
+                                <!-- /.shows-lightbox -->
+                            </li>
+                        </ul>
+                        <div class="radio-artwork">
+                            <img src="upload/single.jpg" width="380" height="380" alt="Electro Garten" alt="">
+                        </div>
+                        <div class="radio-audio-info">
+                            <div class="radio-song">I’m Into You</div>
+                            <div class="radio-artist">Chet Faker</div>
+                        </div>
+                        <div class="radio-toolbar flex flex-wrap flex-justify flex-align">
+                            <div class="radio-toolbar-small">
+                                <button class="radio-button">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><title>Share</title><path d="M14.002 3.402L14 6a1 1 0 1 0 2 0V1.993A1.995 1.995 0 0 0 14.003 0H10a1 1 0 1 0 0 2h2.563L7.297 7.27a.988.988 0 0 0 0 1.41c.395.39 1.034.39 1.43 0l5.275-5.278zM14 14.007L2.002 14C2 14 2 1.993 2 1.993 2 2.001 5.99 2 5.99 2a1 1 0 1 0 0-2H1.996A1.999 1.999 0 0 0 0 1.993v12.014C0 15.109.899 16 2.002 16h11.996A1.992 1.992 0 0 0 16 14.007V10a1 1 0 1 0-2 0v4.007z" fill="#FFF" fill-rule="nonzero" opacity=".6"/></svg>
+                                    Share
+                                </button>
+                            </div>
+                            <div class="radio-toolbar-normal">
+                                <button class="radio-button">
+                                    <svg width="12" height="16" viewBox="0 0 12 16" xmlns="http://www.w3.org/2000/svg"><title>Call In</title><path d="M7 13.925V15a1 1 0 1 1-2 0v-1.075a6.004 6.004 0 0 1-5-5.923 1 1 0 1 1 2 0 4.002 4.002 0 0 0 4 4.004c2.21 0 4-1.793 4-4.004a1 1 0 1 1 2 0 6.004 6.004 0 0 1-5 5.923zm-1-2.92a2.998 2.998 0 0 1-3-3.009V3.003A3.002 3.002 0 0 1 6 0c1.657 0 3 1.344 3 3.003v4.993a3.008 3.008 0 0 1-3 3.009z" fill="#F5AB19" fill-rule="evenodd"/></svg>
+                                    Call In
+                                </button>
+                            </div>
+                            <div class="radio-audio m-order-st col-m-full">
+                                <div class="radio-audio-wrap flex flex-align">
+                                    <div class="radio-audio-tag col-grow">
+                                        <audio controls>
+                                            <source src="https://storage.googleapis.com/media-session/sintel/snow-fight.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="radio-toolbar-normal">
+                                <button class="radio-button">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><title>Join Chat</title><path d="M13.743 13.742a.877.877 0 0 0 .223-.86c-.087-.307-.758-2.65-.757-2.657a7 7 0 0 0-2.077-8.873 6.997 6.997 0 0 0-9.083.699 7 7 0 0 0-.696 9.086 6.997 6.997 0 0 0 8.871 2.074l2.659.754a.876.876 0 0 0 .86-.223z" fill="#F5AB19" fill-rule="evenodd"/></svg>
+                                    Join Chat
+                                </button>
+                            </div>
+                            <div class="radio-toolbar-small">
+                                <button class="radio-button">
+                                    <svg width="16" height="15" viewBox="0 0 16 15" xmlns="http://www.w3.org/2000/svg"><title>Like</title><path d="M10.283 13.654c-.447.407-.8.71-1.01.885a2 2 0 0 1-2.552 0A36.878 36.878 0 0 1 3.53 11.5a22.242 22.242 0 0 1-1.993-2.443A7.234 7.234 0 0 1 .003 5.043a4.853 4.853 0 0 1 1.44-3.635A4.929 4.929 0 0 1 8 1.108a4.924 4.924 0 0 1 6.558.3 4.853 4.853 0 0 1 1.436 3.62 7.2 7.2 0 0 1-1.532 4.023 22.039 22.039 0 0 1-2 2.449 37.782 37.782 0 0 1-2.179 2.154z" fill="#F51919" fill-rule="evenodd"/></svg>
+                                    Like
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /.radio -->
+
+            <section class="get-app">
+                <div class="wrap">
+                    <div class="col col-full">
+                        <h3>Get the App for Free</h3>
+                        <ul class="get-app-list flex flex-wrap flex-justify flex-align">
+                            <li>
+                                <a class="get-app-link transition-opacity" href="#" target="_blank">
+                                    <svg width="25" height="30" viewBox="0 0 25 30" xmlns="http://www.w3.org/2000/svg"><title>Apple</title><g fill="#FFF" fill-rule="evenodd"><path d="M23.619 10.228c-1.73-2.536-4.412-2.882-5.354-2.91-2.252-.238-4.437 1.355-5.584 1.355-1.17 0-2.937-1.332-4.84-1.293-2.45.038-4.743 1.464-6 3.679-2.594 4.516-.66 11.152 1.826 14.802 1.244 1.789 2.696 3.784 4.598 3.714 1.86-.076 2.556-1.193 4.8-1.193 2.225 0 2.878 1.193 4.818 1.147 1.996-.03 3.253-1.795 4.453-3.6 1.437-2.047 2.014-4.067 2.037-4.17-.046-.015-3.877-1.485-3.916-5.932-.033-3.71 3.022-5.515 3.162-5.6zM16.794 4.917c1-1.258 1.685-2.97 1.495-4.707-1.448.064-3.26 1.007-4.303 2.238-.922 1.084-1.747 2.861-1.534 4.533 1.627.122 3.298-.826 4.342-2.064"/></g></svg>
+                                    <span class="get-app-note">Available on the</span>
+                                    App Store
+                                </a>
+                            </li>
+                            <li>
+                                <a class="get-app-link transition-opacity" href="#" target="_blank">
+                                    <svg width="24" height="26" viewBox="0 0 24 26" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Android</title><defs><linearGradient x1="58.917%" y1="9.59%" x2="90.81%" y2="60.851%" id="a"><stop stop-color="#FF177B" offset="0%"/><stop stop-color="#FFEC73" offset="100%"/></linearGradient><linearGradient x1="37.103%" y1="-44.035%" x2="0%" y2="101.06%" id="c"><stop stop-color="#064AA2" offset="0%"/><stop stop-color="#63FFD4" offset="100%"/></linearGradient><path d="M14.22 13.114L.949.689c-.31.07-.495.3-.495.685v23.773c0 .327.133.521.297.587l13.47-12.62z" id="b"/><path d="M1.297 12.665l7.671-4.163 3.389-1.854 5.578-2.968L14.221.115.751 12.737c.15.048.415.022.621-.079" id="e"/><linearGradient x1="78.645%" y1="50%" x2="2.495%" y2="100%" id="f"><stop stop-color="#FF4521" offset="0%"/><stop stop-color="#8A33DB" offset="100%"/></linearGradient><linearGradient x1="0%" y1="-24.186%" x2="64.224%" y2="100%" id="i"><stop stop-color="#00A3B5" offset="0%"/><stop stop-color="#D6FFA1" offset="100%"/></linearGradient><path d="M.878.801C.623.666.368.627.164.681l13.283 12.444 3.675-3.435-5.54-3.031L3.21 2.076.879.801z" id="h"/></defs><g fill="none" fill-rule="evenodd"><path d="M12.357 6.659L1.67.81C1.077.486.486.683.486 1.36V25.185c0 .508.422.728.938.446l10.933-5.983 2.123-1.161 3.416-1.87s4.7-2.572 5.326-2.913c.624-.342.564-.81.037-1.08-.528-.27-5.363-2.934-5.363-2.934l-5.54-3.031z" fill="url(#a)"/><g><mask id="d" fill="#fff"><use xlink:href="#b"/></mask><use fill="url(#c)" xlink:href="#b"/><path d="M17.886 9.69l-5.547-3.033c-.02.044-10.11-5.49-10.697-5.773C1.044.517.453.714.453 1.374v23.871c0 .525.422.745.892.49.56-.309 10.974-6.022 10.994-6.066l5.547-3.033c-.03.042 4.669-2.536 5.25-2.837.668-.383.608-.853.098-1.077-.544-.315-5.377-2.985-5.348-3.032" mask="url(#d)"/></g><g transform="translate(0 13)"><mask id="g" fill="#fff"><use xlink:href="#e"/></mask><path d="M12.339-6.343c-.02.044-10.11-5.49-10.697-5.773-.598-.367-1.189-.17-1.189.49v23.871c0 .525.422.745.892.49.56-.309 10.974-6.022 10.994-6.066l5.547-3.033c-.03.042 4.669-2.536 5.25-2.837.668-.383.608-.853.098-1.077-.544-.315-5.377-2.985-5.348-3.032l-5.547-3.033z" fill="url(#f)" mask="url(#g)"/></g><g transform="translate(.774)"><mask id="j" fill="#fff"><use xlink:href="#h"/></mask><use fill="url(#i)" xlink:href="#h"/><path d="M17.111 9.69l-5.546-3.033C11.545 6.7 1.455 1.167.868.884.27.517-.321.714-.321 1.374v23.871c0 .525.422.745.891.49.561-.309 10.975-6.022 10.995-6.066l5.546-3.033c-.028.042 4.67-2.536 5.25-2.837.669-.383.609-.853.099-1.077-.544-.315-5.377-2.985-5.349-3.032" mask="url(#j)"/></g></g></svg>
+                                    <span class="get-app-note">Get It On</span>
+                                    Google Play
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.col -->
+                </div>
+            </section>
+            <!-- /.get-app -->
+
+            <section class="stations visible">
+                <div class="wrap">
+                    <div class="col col-full">
+                        <h6>Past Episodes</h6>
+                        <h4>Down the Westcoast</h4>
+                    </div>
+                </div>
+                <div class="wrap">
+                    <div class="col col-3 col-m-6 col-xs-12">
+                        <div class="audio-custom">
+                            <div class="audio-custom-navigation">
+                                <a href="#" class="audio-custom-toggle"></a>
+                            </div>
+                            <div class="audio-custom-content">
+                                <div class="audio-custom-title">Road Stories: Jennie's Story</div>
+                                <div class="audio-custom-duration">48:39</div>
+                            </div>
+                        </div>
+                        <!-- /.audio-custom -->
+                    </div>
+                    <div class="col col-3 col-m-6 col-xs-12">
+                        <div class="audio-custom">
+                            <div class="audio-custom-navigation">
+                                <a href="#" class="audio-custom-toggle"></a>
+                            </div>
+                            <div class="audio-custom-content">
+                                <div class="audio-custom-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, soluta.</div>
+                                <div class="audio-custom-duration">48:39</div>
+                            </div>
+                        </div>
+                        <!-- /.audio-custom -->
+                    </div>
+                    <div class="col col-3 col-m-6 col-xs-12">
+                        <div class="audio-custom">
+                            <div class="audio-custom-navigation">
+                                <a href="#" class="audio-custom-toggle"></a>
+                            </div>
+                            <div class="audio-custom-content">
+                                <div class="audio-custom-title">Road Stories: Jennie's Story</div>
+                                <div class="audio-custom-duration">48:39</div>
+                            </div>
+                        </div>
+                        <!-- /.audio-custom -->
+                    </div>
+                    <div class="col col-3 col-m-6 col-xs-12">
+                        <div class="audio-custom">
+                            <div class="audio-custom-navigation">
+                                <a href="#" class="audio-custom-toggle"></a>
+                            </div>
+                            <div class="audio-custom-content">
+                                <div class="audio-custom-title">Road Stories: Jennie's Story</div>
+                                <div class="audio-custom-duration">48:39</div>
+                            </div>
+                        </div>
+                        <!-- /.audio-custom -->
+                    </div>
+                    <div class="col col-3 col-m-6 col-xs-12">
+                        <div class="audio-custom">
+                            <div class="audio-custom-navigation">
+                                <a href="#" class="audio-custom-toggle"></a>
+                            </div>
+                            <div class="audio-custom-content">
+                                <div class="audio-custom-title">Road Stories: Jennie's Story</div>
+                                <div class="audio-custom-duration">48:39</div>
+                            </div>
+                        </div>
+                        <!-- /.audio-custom -->
+                    </div>
+                    <div class="col col-3 col-m-6 col-xs-12">
+                        <div class="audio-custom">
+                            <div class="audio-custom-navigation">
+                                <a href="#" class="audio-custom-toggle"></a>
+                            </div>
+                            <div class="audio-custom-content">
+                                <div class="audio-custom-title">Road Stories: Jennie's Story</div>
+                                <div class="audio-custom-duration">48:39</div>
+                            </div>
+                        </div>
+                        <!-- /.audio-custom -->
+                    </div>
+                </div>
+            </section>
+            <!-- /.stations -->
+
+            </div>
+            <!-- /.no-amp -->
+
+        </div>
+        <!-- /.spanning-columns -->
+    </div>
+    <!-- /.main -->
+    <footer class="footer-global">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-line"></div>
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="copyright">
+                        <p>Copyright ZenoLive 2018. All rights reserved.</p>
+                    </div>
+                </div>
+                <!-- /.col -->
+                <div class="col-12 col-lg-6">
+                    <div class="footer-navigation">
+                        <ul class="footer-navigation-list">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Stations</a></li>
+                            <li><a href="#">Locations</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Legal</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Terms and Conditions</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.footer-navigation -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/migrate.min.js"></script>
+    <script src="js/library.min.js"></script>
+    <script src="js/script.min.js"></script>
+</body>
+</html>

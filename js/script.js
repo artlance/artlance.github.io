@@ -581,4 +581,9 @@ jQuery(document).ready(function($){
 
     //------------------------------------------------------------------------//
 
+    $(document).on('click', '.audio-custom-toggle', function(event) {
+        event.preventDefault();
+        $(this).parents('.audio-custom').toggleClass('active');
+    });
+
 }); //document ready
