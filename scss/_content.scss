@@ -18,7 +18,7 @@
     flex-wrap: wrap;
     align-items: center;
     a {
-        color: #B5B5BA;
+        color: #888888;
         &.active {
             color: $s;
         }
@@ -114,7 +114,7 @@
 }
 .station-label {
     background: $p;
-    color: $w;
+    color: $text;
     margin: 0 10px 10px 0;
     font-size: 14px;
     font-weight: 500;
@@ -177,7 +177,7 @@
 }
 .station-languages {
     display: inline-block;
-    color: #B5B5BA;
+    color: #6f6f6f;
     margin: 0 2px;
 }
 .station-language {
@@ -270,7 +270,7 @@
 .collection-meta {
     font-size: 14px;
     display: block;
-    color: #B5B5BA;
+    color: #6f6f6f;
 }
 .ais-Hits {
     flex: 0 0 100%;
@@ -2060,7 +2060,7 @@ input.blog-search-button {
         font-weight: bold;
         border-radius: 21px;
         border: 1px solid $p;
-        color: $w;
+        color: $text;
         line-height: 1.25;
         background-color: $p;
         display: inline-block;

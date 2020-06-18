@@ -1,7 +1,7 @@
 /* header */
 .header-alert {
     background: $p;
-    color: $w;
+    color: $text;
     font-size: 15px;
     font-weight: 500;
     padding: 8px 10px 9px;
@@ -9,10 +9,11 @@
     overflow: hidden;
     line-height: 1.4;
     a {
-        color: $w;
-        text-decoration: underline;
+        color: $text;
+        text-decoration: none;
+        border-bottom: 1px solid rgba($text, 0.5);
         &:hover {
-            color: rgba($w, 0.8);
+            color: rgba($text, 0.8);
         }
     }
     p {

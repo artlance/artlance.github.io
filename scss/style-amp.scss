@@ -2,6 +2,7 @@ $primary: #F5AB19; $p: $primary;
 $secondary: #28282A; $s: $secondary;
 $white: #ffffff; $w: $white;
 $black: #000000; $b: $black;
+$text: #28282A; $txt: $text;
 
 $duration: 0.15s;                                                 $d: $duration;
 $function: cubic-bezier(0.4, 0.0, 0.2, 1);                        $f: $function;
@@ -241,7 +242,7 @@ input.header-search {
     margin-bottom: 17px;
 }
 .copyright {
-    color: #B5B5BA;
+    color: #6A6A6C;
 }
 .footer-navigation-list {
     justify-content: flex-end;
@@ -266,6 +267,9 @@ input.header-search {
     position: relative;
     a {
         color: $w;
+    }
+    a.button {
+        color: $text;
     }
     .wrap {
         //position: relative;
@@ -480,7 +484,7 @@ input.header-search {
 .get-app-note {
     font-size: 12px;
     display: block;
-    opacity: 0.4;
+    opacity: 0.6;
 }
 
 //station
@@ -643,7 +647,7 @@ input.header-search {
 }
 .station-languages {
     display: inline-block;
-    color: #B5B5BA;
+    color: #6f6f6f;
     margin: 0 2px;
 }
 .station-language {
@@ -1089,7 +1093,7 @@ input.header-search {
     font-weight: bold;
     border-radius: 21px;
     border: 1px solid $p;
-    color: $w;
+    color: $text;
     line-height: 1.25;
     background-color: $p;
     display: inline-block;
@@ -1412,7 +1416,7 @@ input.header-search {
     margin-bottom: 20px;
 }
 .button {
-    color: $w;
+    color: $text;
     font-weight: bold;
     display: block;
     width: 100%;
@@ -1571,7 +1575,7 @@ input.header-search {
         margin-bottom: 18px;
         .button {
             border: 0;
-            color: $w;
+            color: $text;
             border-radius: 0;
             line-height: 1.2;
             padding-top: 14px;
