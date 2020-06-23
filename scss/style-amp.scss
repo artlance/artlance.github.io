@@ -1615,3 +1615,63 @@ input.header-search {
         max-width: 100%;
     }
 }
+
+.radio-single {
+    height: auto;
+    min-height: 0;
+    .about-social li a {
+        opacity: 0.6;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    .about-social li {
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+    &-artwork {
+        max-width: 280px;
+        margin: 15px auto 20px;
+    }
+    &-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: $w;
+        h1 {
+            margin: 0;
+            font-weight: normal;
+            font-size: 100%;
+        }
+    }
+    &-content {
+        margin: 60px auto 40px;
+        max-width: 800px;
+        font-size: 16px;
+        line-height: 1.6;
+        p {
+            margin: 0 0 24px;
+            color: #333;
+        }
+        h2 {
+            font-weight: 500;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+    }
+}
+@media (max-width: 991px) {
+    .radio-single {
+        &-artwork {
+            max-width: 220px;
+        }
+        &-content {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            h2 {
+                font-size: 18px;
+                margin-bottom: 24px;
+            }
+        }
+    }
+}
