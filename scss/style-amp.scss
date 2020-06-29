@@ -1675,3 +1675,72 @@ input.header-search {
         }
     }
 }
+
+.prayer {
+    margin: 0 auto;
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+    padding: 80px 0;
+    h1 {
+        margin: 0 0 36px;
+        font-size: 36px;
+        line-height: 1.2;
+        font-weight: normal;
+    }
+}
+.prayer-input {
+    width: 100%;
+    height: 56px;
+    border-radius: 28px;
+    border: 1px solid transparent;
+    font-size: 20px;
+    padding: 0 45px;
+    text-align: center;
+    background: rgba($w, 0.3);
+    color: $w;
+    &-wrap {
+        position: relative;
+        .search-icon {
+            width: 20px;
+            height: 20px;
+            left: 20px;
+            top: 18px;
+        }
+    }
+    &::placeholder {
+        color: rgba($w, 0.7);
+    }
+    &:focus {
+        border-color: rgba($w, 0.3);
+        &::placeholder {
+            color: rgba($w, 0.3);
+        }
+    }
+}
+@media (max-width: 991px) {
+    .prayer {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        h1 {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+    }
+    .prayer-input {
+        text-align: left;
+        padding-left: 35px;
+        padding-right: 10px;
+        font-size: 16px;
+        height: 50px;
+        border-radius: 25px;
+        &-wrap {
+            .search-icon {
+                width: 16px;
+                height: 16px;
+                left: 15px;
+                top: 17px;
+            }
+        }
+    }
+}
