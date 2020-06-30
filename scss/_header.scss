@@ -20,6 +20,33 @@
         margin: 0;
     }
 }
+.top-navbar {
+    display: none;
+    background: #F3F3F3;
+    font-size: 20px;
+    color: #6A6A6C;
+    overflow: hidden;
+    a {
+        display: block;
+        padding: 5px 15px;
+        color: #6A6A6C;
+        border-radius: 20px;
+        &:hover {
+            color: $text;
+            background-color: rgba($black, 0.05);
+        }
+    }
+    &-list {
+        margin: 0 -30px;
+        padding: 15px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        li {
+            margin: 10px 15px;
+        }
+    }
+}
 .header-global {
     padding: 32px 0 27px;
     position: absolute;
@@ -174,6 +201,10 @@ input.header-search-button {
         margin-left: 33px;
     }
 }
+.top-toggle {
+    display: block;
+}
+.top-toggle,
 .navigation-toggle {
     font-size: 0;
     line-height: 0;
@@ -193,6 +224,7 @@ input.header-search-button {
         opacity: 1;
     }
 }
+.top-toggle,
 .navigation-toggle {
     display: block;
     position: relative;
@@ -200,6 +232,7 @@ input.header-search-button {
     height: 32px;
     z-index: 5050;
 }
+.top-toggle-icon,
 .navigation-toggle-icon {
     position: absolute;
     top: 50%;
@@ -229,6 +262,17 @@ input.header-search-button {
 }
 .navigation-open {
     .navigation-toggle-icon {
+        background-color: $tr;
+        &:after {
+            transform: rotate(-45deg);
+        }
+        &:before {
+            transform: rotate(45deg);
+        }
+    }
+}
+.top-open {
+    .top-toggle-icon {
         background-color: $tr;
         &:after {
             transform: rotate(-45deg);

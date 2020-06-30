@@ -615,7 +615,20 @@
         margin-left: auto;
         margin-right: auto;
     }
-
+    .top-navbar {
+        font-size: 16px;
+        a {
+            padding: 3px 5px;
+            &:hover {
+                background-color: $tr;
+            }
+        }
+        &-list {
+            li {
+                margin: 5px;
+            }
+        }
+    }
 }
 @include media-breakpoint-down(sm) {
     .podcast-hero-content {

@@ -25,6 +25,13 @@ jQuery(document).ready(function($){
         $('body').toggleClass('navigation-open');
     });
 
+    $('.top-toggle').on('click', function(event) {
+        event.preventDefault();
+        $('body').toggleClass('top-open');
+        $('.top-navbar').slideToggle(300);
+        $('body, html').animate({scrollTop:0}, 0, 'swing', function() {});
+    });
+
     //------------------------------------------------------------------------//
 
     var headerSearchInput = $('.header-search-input, .ais-SearchBox-input');
