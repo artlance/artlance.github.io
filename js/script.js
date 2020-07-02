@@ -52,7 +52,7 @@ jQuery(document).ready(function($){
     //slider collection
     $('.collection-slider').slick({
         dots: false,
-        arrows: false,
+        arrows: true,
         draggable: true,
         infinite: true,
         centerMode: false,
@@ -64,13 +64,15 @@ jQuery(document).ready(function($){
         pauseOnDotsHover: false,
         slide: '.collection-slide',
         slidesToShow: 3,
-        slidesToScroll: 1,
+        slidesToScroll: 3,
         responsive: [
             {
               breakpoint: 991,
               settings: {
                 slidesToShow: 1,
-                dots: true
+                slidesToScroll: 1,
+                dots: true,
+                arrows: false
               }
             }
           ]
