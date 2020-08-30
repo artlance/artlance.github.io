@@ -1,0 +1,515 @@
+<div class="radio-main relative">
+    <div class="radio-background"></div>
+    <div class="radio-tab relative d-block radio1" [hidden]="(hideRadio == null) ? ampState.hideRadio : hideRadio">
+        <div class="wrap">
+            <div class="col col-full">
+                <div class="raio-section">
+                    <div class="raio-live"><span>live</span></div>
+                    <div class="radio-title">Red FM</div>
+                    <div class="radio-artwork">
+                        <amp-img src="upload/single.jpg" width="380" height="380" layout="responsive" alt="Electro Garten"></amp-img>
+                    </div>
+                    <div class="radio-audio-info">
+                        <div class="radio-song">I’m Into You</div>
+                        <div class="radio-artist">Chet Faker</div>
+                    </div>
+                    <div class="radio-toolbar flex flex-wrap flex-justify flex-align">
+                        <div class="radio-toolbar-small">
+                            &nbsp;
+                        </div>
+                        <div class="radio-toolbar-normal">
+                            <button class="radio-button" on="tap:AMP.setState({visibleCall: !visibleCall, visibleChat: false, visibleShare: false}),panels.scrollTo(duration=500)">
+                                <svg width="12" height="16" viewBox="0 0 12 16" xmlns="http://www.w3.org/2000/svg"><title>Call In</title><path d="M7 13.925V15a1 1 0 1 1-2 0v-1.075a6.004 6.004 0 0 1-5-5.923 1 1 0 1 1 2 0 4.002 4.002 0 0 0 4 4.004c2.21 0 4-1.793 4-4.004a1 1 0 1 1 2 0 6.004 6.004 0 0 1-5 5.923zm-1-2.92a2.998 2.998 0 0 1-3-3.009V3.003A3.002 3.002 0 0 1 6 0c1.657 0 3 1.344 3 3.003v4.993a3.008 3.008 0 0 1-3 3.009z" fill="#F5AB19" fill-rule="evenodd"/></svg>
+                                Call In
+                            </button>
+                        </div>
+                        <div class="radio-audio m-order-st col-m-full">
+                            <div class="radio-audio-wrap flex flex-align">
+                                <div class="radio-audio-player flex flex-align flex-justify">
+                                    <div class="radio-audio-control">
+                                        <button class="button-reboot transition-opacity">
+                                            <svg width="16" height="14" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg"><path d="M8 4c5.2 0 8 3.8 8 10-1.5-2.4-2.7-4-8-4v4L0 7l8-7v4z" fill="#28282A" fill-rule="nonzero"/></svg>
+                                        </button>
+                                    </div>
+                                    <div class="radio-audio-control">
+                                        <button class="button-reboot transition-opacity">
+                                            <svg width="14" height="20" viewBox="0 0 14 20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0v20H0V0h4zm10 0v20h-4V0h4z" fill="#28282A" fill-rule="evenodd"/></svg>
+                                        </button>
+                                    </div>
+                                    <div class="radio-audio-control">
+                                        <button class="button-reboot transition-opacity">
+                                            <svg width="16" height="14" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg"><path d="M8 4C2.8 4 0 7.8 0 14c1.5-2.4 2.7-4 8-4v4l8-7-8-7v4z" fill="#28282A" fill-rule="nonzero"/></svg>
+                                        </button>
+                                    </div>
+                                    <div class="radio-audio-control">
+                                        <div class="radio-audio-separator"></div>
+                                    </div>
+                                    <div class="radio-audio-control relative tooltip-hover">
+                                        <div class="tooltip">
+                                            <div class="tooltip-title">Share on Social Media</div>
+                                            <p>
+                                                <a class="transition-color" href="#">Facebook</a>
+                                                <a class="transition-color" href="#">Twitter</a>
+                                                <a class="transition-color" href="#">Google+</a>
+                                            </p>
+                                        </div>
+                                        <button class="button-reboot transition-opacity">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 1v2H2v11h11v-3h2v4c0 .6-.4 1-1 1H1c-.6 0-1-.4-1-1V2c0-.6.4-1 1-1h4zm10-1c.6 0 1 .4 1 1v7h-2V3.4L7.7 9.7 6.3 8.3 12.6 2H8V0z" fill="#28282A" fill-rule="nonzero"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="radio-toolbar-normal">
+                            <button class="radio-button" on="tap:AMP.setState({visibleChat: !visibleChat, visibleCall: false, visibleShare: false}),panels.scrollTo(duration=500)">
+                                <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><title>Join Chat</title><path d="M13.743 13.742a.877.877 0 0 0 .223-.86c-.087-.307-.758-2.65-.757-2.657a7 7 0 0 0-2.077-8.873 6.997 6.997 0 0 0-9.083.699 7 7 0 0 0-.696 9.086 6.997 6.997 0 0 0 8.871 2.074l2.659.754a.876.876 0 0 0 .86-.223z" fill="#F5AB19" fill-rule="evenodd"/></svg>
+                                Join Chat
+                            </button>
+                        </div>
+                        <div class="radio-toolbar-small">
+                            <button class="radio-button">
+                                <svg width="16" height="15" viewBox="0 0 16 15" xmlns="http://www.w3.org/2000/svg"><title>Like</title><path d="M10.283 13.654c-.447.407-.8.71-1.01.885a2 2 0 0 1-2.552 0A36.878 36.878 0 0 1 3.53 11.5a22.242 22.242 0 0 1-1.993-2.443A7.234 7.234 0 0 1 .003 5.043a4.853 4.853 0 0 1 1.44-3.635A4.929 4.929 0 0 1 8 1.108a4.924 4.924 0 0 1 6.558.3 4.853 4.853 0 0 1 1.436 3.62 7.2 7.2 0 0 1-1.532 4.023 22.039 22.039 0 0 1-2 2.449 37.782 37.782 0 0 1-2.179 2.154z" fill="#F51919" fill-rule="evenodd"/></svg>
+                                Like
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.wrap -->
+    </div>
+    <!-- /.radio -->
+    <div class="radio-tab relative radio2" hidden [hidden]="(hideVideo == null) ? ampState.hideVideo : hideVideo">
+        <div class="wrap">
+            <div class="col col-full">
+                <div class="video-columns flex flex-wrap">
+                    <div class="radio-title">Red FM</div>
+                    <div class="video-col-1">
+                        <div class="video-tag">
+                            <amp-video controls
+                            width="670"
+                            height="376"
+                            layout="responsive"
+                            poster="/upload/video.jpg">
+                            <source src="upload/kitten-playing.mp4"
+                                type="video/mp4" />
+                            <div fallback>
+                                <p>This browser does not support the video element.</p>
+                            </div>
+                            </amp-video>
+                        </div>
+                        <div class="raio-live"><span>LIVE</span></div>
+                        <div class="video-title">Broken Record with Rick and Malcolm #16</div>
+                        <div class="video-meta flex">
+                            <div class="video-meta-start">started 2 hours ago</div>
+                            <div class="video-meta-nav relative tooltip-hover">
+                                <div class="tooltip">
+                                    <div class="tooltip-title">Share on Social Media</div>
+                                    <p>
+                                        <a class="transition-color" href="#">Facebook</a>
+                                        <a class="transition-color" href="#">Twitter</a>
+                                        <a class="transition-color" href="#">Google+</a>
+                                    </p>
+                                </div>
+                                <button class="button-reboot">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g stroke="#fff" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5.5l-8 8M8.5.5h7v7M4.5.5h-3a1 1 0 00-1 1v13a1 1 0 001 1h13a1 1 0 001-1v-3"/></g></svg>
+                                    Share
+                                </button>
+                            </div>
+                        </div>
+                        <!-- /.video-meta -->
+                    </div>
+                    <!-- /.video-col-1 -->
+                    <div class="video-col-2">
+                        <div class="video-panel">
+                            <div class="video-lits">
+                                <a href="#" class="video-list-item flex">
+                                    <span class="video-list-item-thumb relative">
+                                        <amp-img src="upload/video-thumb2.jpg" width="170" height="96" layout="responsive" alt="Title here"></amp-img>
+                                        <div class="video-list-item-duration">45:16</div>
+                                    </span>
+                                    <span class="video-list-item-description">
+                                        <span class="video-list-item-title">Nobody’ll ever change</span>
+                                        <span class="video-list-item-date">20 July 2020</span>
+                                    </span>
+                                </a>
+                                <!-- /.video-list-item -->
+                                <a href="#" class="video-list-item flex">
+                                    <span class="video-list-item-thumb relative">
+                                        <amp-img src="upload/video-thumb2.jpg" width="170" height="96" layout="responsive" alt="Title here"></amp-img>
+                                        <div class="video-list-item-duration">45:16</div>
+                                    </span>
+                                    <span class="video-list-item-description">
+                                        <span class="video-list-item-title">Inside the Studio: Episode #12</span>
+                                        <span class="video-list-item-date">20 July 2020</span>
+                                    </span>
+                                </a>
+                                <!-- /.video-list-item -->
+                                <a href="#" class="video-list-item flex">
+                                    <span class="video-list-item-thumb relative">
+                                        <amp-img src="upload/video-thumb2.jpg" width="170" height="96" layout="responsive" alt="Title here"></amp-img>
+                                        <div class="video-list-item-duration">45:16</div>
+                                    </span>
+                                    <span class="video-list-item-description">
+                                        <span class="video-list-item-title">People Have The Power</span>
+                                        <span class="video-list-item-date">20 July 2020</span>
+                                    </span>
+                                </a>
+                                <!-- /.video-list-item -->
+                                <a href="#" class="video-list-item flex">
+                                    <span class="video-list-item-thumb relative">
+                                        <amp-img src="upload/video-thumb2.jpg" width="170" height="96" layout="responsive" alt="Title here"></amp-img>
+                                        <div class="video-list-item-duration">45:16</div>
+                                    </span>
+                                    <span class="video-list-item-description">
+                                        <span class="video-list-item-title">Drink Champs</span>
+                                        <span class="video-list-item-date">20 July 2020</span>
+                                    </span>
+                                </a>
+                                <!-- /.video-list-item -->
+                                <a href="#" class="video-list-item flex">
+                                    <span class="video-list-item-thumb relative">
+                                        <amp-img src="upload/video-thumb2.jpg" width="170" height="96" layout="responsive" alt="Title here"></amp-img>
+                                        <div class="video-list-item-duration">45:16</div>
+                                    </span>
+                                    <span class="video-list-item-description">
+                                        <span class="video-list-item-title">Nobody’ll ever change</span>
+                                        <span class="video-list-item-date">20 July 2020</span>
+                                    </span>
+                                </a>
+                                <!-- /.video-list-item -->
+                                <a href="#" class="video-list-item flex">
+                                    <span class="video-list-item-thumb relative">
+                                        <amp-img src="upload/video-thumb2.jpg" width="170" height="96" layout="responsive" alt="Title here"></amp-img>
+                                        <div class="video-list-item-duration">45:16</div>
+                                    </span>
+                                    <span class="video-list-item-description">
+                                        <span class="video-list-item-title">Inside the Studio: Episode #12</span>
+                                        <span class="video-list-item-date">20 July 2020</span>
+                                    </span>
+                                </a>
+                                <!-- /.video-list-item -->
+                                <a href="#" class="video-list-item flex">
+                                    <span class="video-list-item-thumb relative">
+                                        <amp-img src="upload/video-thumb2.jpg" width="170" height="96" layout="responsive" alt="Title here"></amp-img>
+                                        <div class="video-list-item-duration">45:16</div>
+                                    </span>
+                                    <span class="video-list-item-description">
+                                        <span class="video-list-item-title">People Have The Power</span>
+                                        <span class="video-list-item-date">20 July 2020</span>
+                                    </span>
+                                </a>
+                                <!-- /.video-list-item -->
+                                <a href="#" class="video-list-item flex">
+                                    <span class="video-list-item-thumb relative">
+                                        <amp-img src="upload/video-thumb2.jpg" width="170" height="96" layout="responsive" alt="Title here"></amp-img>
+                                        <div class="video-list-item-duration">45:16</div>
+                                    </span>
+                                    <span class="video-list-item-description">
+                                        <span class="video-list-item-title">Drink Champs</span>
+                                        <span class="video-list-item-date">20 July 2020</span>
+                                    </span>
+                                </a>
+                                <!-- /.video-list-item -->
+                            </div>
+                            <!-- /.video-lits -->
+                        </div>
+                        <!-- /.video-panel -->
+                    </div>
+                    <!-- /.video-col-2 -->
+                </div>
+                <!-- /.video-columns -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.wrap -->
+    </div>
+    <!-- /.radio -->
+    <div class="radio-tab relative radio3" hidden [hidden]="(hidePodcasts == null) ? ampState.hidePodcasts : hidePodcasts">
+        <header class="header-categories">
+            <div class="wrap">
+                <div class="col col-m-none">
+                    <ul class="header-categories-list flex flex-wrap">
+                        <li class="active">
+                            <button>
+                                All Podcasts
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                Red Originals
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                Interviews
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                Weekly Report
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                Backstage
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.col -->
+                <div class="col-m-full">
+                    <select class="select">
+                        <option value="All Podcasts">All Podcasts</option>
+                        <option value="Red Originals">Red Originals</option>
+                        <option value="Interviews">Interviews</option>
+                        <option value="Weekly Report">Weekly Report</option>
+                        <option value="Backstage">Backstage</option>
+                    </select>
+                </div>
+                <!-- /.col-m-full -->
+            </div>
+            <!-- /.wrap -->
+        </header>
+        <!-- /.header-categories -->
+        <div class="wrap">
+            <div class="col">
+                <div class="main-podcasts-title"><div class="radio-title">Red FM</div></div>
+                <div class="main-podcasts-head flex m-none">
+                    <div class="main-podcasts-col-1">Title</div>
+                    <div class="main-podcasts-col-2">Progress</div>
+                    <div class="main-podcasts-col-3">Date</div>
+                    <div class="main-podcasts-col-4">Duration</div>
+                </div>
+                <!-- /.main-podcasts-head -->
+                <div class="main-podcasts-body">
+                    <div class="main-podcasts-item flex">
+                        <div class="main-podcasts-col-1">
+                            <div class="main-podcasts-body-title"><a href="#"><span class="main-podcasts-play"><svg width="34" height="34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg"><g transform="translate(1 1)" fill="none" fill-rule="evenodd"><circle stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" cx="16" cy="16" r="16"/><path d="M10 10.716c0-1.332 1.454-2.154 2.596-1.47l8.572 5.142a1.713 1.713 0 010 2.939l-8.572 5.14C11.454 23.153 10 22.33 10 20.998V10.716z" fill="#FFF" fill-rule="nonzero"/></g></svg></span> Nobody’ll ever change</a></div>
+                            <div class="main-podcasts-m-meta">
+                                <div class="main-podcasts-col-2">
+                                    <div class="progress"><span style="width: 20%; background-color: #F5AB19;"></span></div>
+                                </div>
+                                <div class="main-podcasts-col-3">
+                                    <div class="main-podcasts-date">24 July 2020</div>
+                                </div>
+                                <div class="main-podcasts-col-4">
+                                    <div class="main-podcasts-duration">45 min</div>
+                                </div>
+                            </div>
+                            <div class="main-podcasts-body-description">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultrices in lorem eget scelerisque. Vivamus elit sem, convallis non tincidunt quis, gravida ac odio. Integer ut laoreet eros, sodales finibus nunc.</p>
+                            </div>
+                            <div class="main-podcasts-body-nav flex">
+                                <div class="main-podcasts-body-col">
+                                    <label class="label-mark">
+                                        <input type="checkbox">
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g class="checkbox-svg" stroke="#FFF" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="7.5"/><path d="M4.5 7.5L7 10l5-5"/></g></svg>
+                                        </span>
+                                        <span class="label-mark-text">Mark as played</span>
+                                    </label>
+                                </div>
+                                <div class="main-podcasts-body-col relative tooltip-hover">
+                                    <div class="tooltip">
+                                        <div class="tooltip-title">Share on Social Media</div>
+                                        <p>
+                                            <a class="transition-color" href="#">Facebook</a>
+                                            <a class="transition-color" href="#">Twitter</a>
+                                            <a class="transition-color" href="#">Google+</a>
+                                        </p>
+                                    </div>
+                                    <button class="button-reboot">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g stroke="#fff" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5.5l-8 8M8.5.5h7v7M4.5.5h-3a1 1 0 00-1 1v13a1 1 0 001 1h13a1 1 0 001-1v-3"/></g></svg>
+                                        Share
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-podcasts-col-2 m-none">
+                            <div class="progress"><span style="width: 80%;"></span></div>
+                        </div>
+                        <div class="main-podcasts-col-3 m-none">
+                            <div class="main-podcasts-date">24 July 2020</div>
+                        </div>
+                        <div class="main-podcasts-col-4 m-none">
+                            <div class="main-podcasts-duration">45 min</div>
+                        </div>
+                    </div>
+                    <!-- /.main-podcasts-item -->
+                    <div class="main-podcasts-item flex">
+                        <div class="main-podcasts-col-1">
+                            <div class="main-podcasts-body-title"><a href="#"><span class="main-podcasts-play"><svg width="34" height="34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg"><g transform="translate(1 1)" fill="none" fill-rule="evenodd"><circle stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" cx="16" cy="16" r="16"/><path d="M10 10.716c0-1.332 1.454-2.154 2.596-1.47l8.572 5.142a1.713 1.713 0 010 2.939l-8.572 5.14C11.454 23.153 10 22.33 10 20.998V10.716z" fill="#FFF" fill-rule="nonzero"/></g></svg></span> Nobody’ll ever change</a></div>
+                            <div class="main-podcasts-m-meta">
+                                <div class="main-podcasts-col-2">
+                                    <div class="progress"><span style="width: 20%; background-color: #F5AB19;"></span></div>
+                                </div>
+                                <div class="main-podcasts-col-3">
+                                    <div class="main-podcasts-date">24 July 2020</div>
+                                </div>
+                                <div class="main-podcasts-col-4">
+                                    <div class="main-podcasts-duration">45 min</div>
+                                </div>
+                            </div>
+                            <div class="main-podcasts-body-description">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultrices in lorem eget scelerisque. Vivamus elit sem, convallis non tincidunt quis, gravida ac odio. Integer ut laoreet eros, sodales finibus nunc.</p>
+                            </div>
+                            <div class="main-podcasts-body-nav flex">
+                                <div class="main-podcasts-body-col">
+                                    <label class="label-mark">
+                                        <input type="checkbox">
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g class="checkbox-svg" stroke="#FFF" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="7.5"/><path d="M4.5 7.5L7 10l5-5"/></g></svg>
+                                        </span>
+                                        <span class="label-mark-text">Mark as played</span>
+                                    </label>
+                                </div>
+                                <div class="main-podcasts-body-col relative tooltip-hover">
+                                    <div class="tooltip">
+                                        <div class="tooltip-title">Share on Social Media</div>
+                                        <p>
+                                            <a class="transition-color" href="#">Facebook</a>
+                                            <a class="transition-color" href="#">Twitter</a>
+                                            <a class="transition-color" href="#">Google+</a>
+                                        </p>
+                                    </div>
+                                    <button class="button-reboot">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g stroke="#fff" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5.5l-8 8M8.5.5h7v7M4.5.5h-3a1 1 0 00-1 1v13a1 1 0 001 1h13a1 1 0 001-1v-3"/></g></svg>
+                                        Share
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-podcasts-col-2 m-none">
+                            <div class="progress"><span style="width: 20%; background-color: #F5AB19;"></span></div>
+                        </div>
+                        <div class="main-podcasts-col-3 m-none">
+                            <div class="main-podcasts-date">24 July 2020</div>
+                        </div>
+                        <div class="main-podcasts-col-4 m-none">
+                            <div class="main-podcasts-duration">45 min</div>
+                        </div>
+                    </div>
+                    <!-- /.main-podcasts-item -->
+                    <div class="main-podcasts-item flex">
+                        <div class="main-podcasts-col-1">
+                            <div class="main-podcasts-body-title"><a href="#"><span class="main-podcasts-play"><svg width="34" height="34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg"><g transform="translate(1 1)" fill="none" fill-rule="evenodd"><circle stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" cx="16" cy="16" r="16"/><path d="M10 10.716c0-1.332 1.454-2.154 2.596-1.47l8.572 5.142a1.713 1.713 0 010 2.939l-8.572 5.14C11.454 23.153 10 22.33 10 20.998V10.716z" fill="#FFF" fill-rule="nonzero"/></g></svg></span> Nobody’ll ever change</a></div>
+                            <div class="main-podcasts-m-meta">
+                                <div class="main-podcasts-col-2">
+                                    <div class="progress"><span style="width: 20%; background-color: #F5AB19;"></span></div>
+                                </div>
+                                <div class="main-podcasts-col-3">
+                                    <div class="main-podcasts-date">24 July 2020</div>
+                                </div>
+                                <div class="main-podcasts-col-4">
+                                    <div class="main-podcasts-duration">45 min</div>
+                                </div>
+                            </div>
+                            <div class="main-podcasts-body-description">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultrices in lorem eget scelerisque. Vivamus elit sem, convallis non tincidunt quis, gravida ac odio. Integer ut laoreet eros, sodales finibus nunc.</p>
+                            </div>
+                            <div class="main-podcasts-body-nav flex">
+                                <div class="main-podcasts-body-col">
+                                    <label class="label-mark">
+                                        <input type="checkbox">
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g class="checkbox-svg" stroke="#FFF" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="7.5"/><path d="M4.5 7.5L7 10l5-5"/></g></svg>
+                                        </span>
+                                        <span class="label-mark-text">Mark as played</span>
+                                    </label>
+                                </div>
+                                <div class="main-podcasts-body-col relative tooltip-hover">
+                                    <div class="tooltip">
+                                        <div class="tooltip-title">Share on Social Media</div>
+                                        <p>
+                                            <a class="transition-color" href="#">Facebook</a>
+                                            <a class="transition-color" href="#">Twitter</a>
+                                            <a class="transition-color" href="#">Google+</a>
+                                        </p>
+                                    </div>
+                                    <button class="button-reboot">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g stroke="#fff" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5.5l-8 8M8.5.5h7v7M4.5.5h-3a1 1 0 00-1 1v13a1 1 0 001 1h13a1 1 0 001-1v-3"/></g></svg>
+                                        Share
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-podcasts-col-2 m-none">
+                            <div class="progress"><span style="width: 80%;"></span></div>
+                        </div>
+                        <div class="main-podcasts-col-3 m-none">
+                            <div class="main-podcasts-date">24 July 2020</div>
+                        </div>
+                        <div class="main-podcasts-col-4 m-none">
+                            <div class="main-podcasts-duration">45 min</div>
+                        </div>
+                    </div>
+                    <!-- /.main-podcasts-item -->
+                    <div class="main-podcasts-item flex">
+                        <div class="main-podcasts-col-1">
+                            <div class="main-podcasts-body-title"><a href="#"><span class="main-podcasts-play"><svg width="34" height="34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg"><g transform="translate(1 1)" fill="none" fill-rule="evenodd"><circle stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" cx="16" cy="16" r="16"/><path d="M10 10.716c0-1.332 1.454-2.154 2.596-1.47l8.572 5.142a1.713 1.713 0 010 2.939l-8.572 5.14C11.454 23.153 10 22.33 10 20.998V10.716z" fill="#FFF" fill-rule="nonzero"/></g></svg></span> Nobody’ll ever change</a></div>
+                            <div class="main-podcasts-m-meta">
+                                <div class="main-podcasts-col-2">
+                                    <div class="progress"><span style="width: 20%; background-color: #F5AB19;"></span></div>
+                                </div>
+                                <div class="main-podcasts-col-3">
+                                    <div class="main-podcasts-date">24 July 2020</div>
+                                </div>
+                                <div class="main-podcasts-col-4">
+                                    <div class="main-podcasts-duration">45 min</div>
+                                </div>
+                            </div>
+                            <div class="main-podcasts-body-description">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultrices in lorem eget scelerisque. Vivamus elit sem, convallis non tincidunt quis, gravida ac odio. Integer ut laoreet eros, sodales finibus nunc.</p>
+                            </div>
+                            <div class="main-podcasts-body-nav flex">
+                                <div class="main-podcasts-body-col">
+                                    <label class="label-mark">
+                                        <input type="checkbox">
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g class="checkbox-svg" stroke="#FFF" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="7.5"/><path d="M4.5 7.5L7 10l5-5"/></g></svg>
+                                        </span>
+                                        <span class="label-mark-text">Mark as played</span>
+                                    </label>
+                                </div>
+                                <div class="main-podcasts-body-col relative tooltip-hover">
+                                    <div class="tooltip">
+                                        <div class="tooltip-title">Share on Social Media</div>
+                                        <p>
+                                            <a class="transition-color" href="#">Facebook</a>
+                                            <a class="transition-color" href="#">Twitter</a>
+                                            <a class="transition-color" href="#">Google+</a>
+                                        </p>
+                                    </div>
+                                    <button class="button-reboot">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g stroke="#fff" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5.5l-8 8M8.5.5h7v7M4.5.5h-3a1 1 0 00-1 1v13a1 1 0 001 1h13a1 1 0 001-1v-3"/></g></svg>
+                                        Share
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-podcasts-col-2 m-none">
+                            <div class="progress"><span style="width: 20%; background-color: #F5AB19;"></span></div>
+                        </div>
+                        <div class="main-podcasts-col-3 m-none">
+                            <div class="main-podcasts-date">24 July 2020</div>
+                        </div>
+                        <div class="main-podcasts-col-4 m-none">
+                            <div class="main-podcasts-duration">45 min</div>
+                        </div>
+                    </div>
+                    <!-- /.main-podcasts-item -->
+                </div>
+                <!-- /.main-podcasts-body -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.wrap -->
+    </div>
+    <!-- /.radio -->
+</div>
+<!-- /.radio-main -->
+<div class="radio-main-trigger">
+    <amp-position-observer on="enter:hidePlayer.start; exit:showPlayer.start" layout="nodisplay"></amp-position-observer>
+</div>

@@ -1,0 +1,16 @@
+<amp-sidebar id="sidebar" class="navigation-sidebar" layout="nodisplay" side="right">
+    <button class="sidebar-close" on="tap:sidebar.close">Close sidebar<span class="sidebar-close-icon"></span></button>
+    <ul class="header-navigation-list">
+        <li><a class="header-navigation-add" href="#">Create Station</a></li>
+        <li><a href="#">Discover</a></li>
+        <li><a href="#">Genres</a></li>
+        <li>
+            <form class="search-form" method="GET" action="/components/amp-form/submit-form" target="_top">
+                <svg class="search-icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><title>Search</title><path d="M14.295 15.703a.989.989 0 0 0 1.412 0 1.02 1.02 0 0 0 0-1.43l-3.081-3.08a7.007 7.007 0 1 0-1.42 1.423l3.089 3.087zM2.002 7.007a5.005 5.005 0 1 1 10.01 0 5.005 5.005 0 0 1-10.01 0z" fill="#FFF" fill-rule="nonzero"/></svg>
+                <input type="text" placeholder="Search" name="search" class="header-search" autocomplete="off">
+                <input type="hidden" value="Search">
+            </form>
+        </li>
+    </ul>
+</amp-sidebar>
+<!-- /.navigation-sidebar -->

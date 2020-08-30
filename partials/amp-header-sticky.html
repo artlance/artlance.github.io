@@ -1,0 +1,54 @@
+<header class="header-sticky">
+    <div class="wrap">
+        <div class="col">
+            <ul class="header-sticky-list flex flex-wrap">
+                <li class="active" [class]="(activeRadio == null) ? ampState.activeRadio : activeRadio">
+                    <button on="tap:AMP.setState({ hideRadio: false, hideVideo: true, hidePodcasts: true, activeRadio: 'active', activeVideo: '', activePodcasts: ''})">
+                        Radio
+                    </button>
+                </li>
+                <li [class]="(activeVideo == null) ? ampState.activeVideo : activeVideo">
+                    <button on="tap:AMP.setState({ hideRadio: true, hideVideo: false, hidePodcasts: true, activeRadio: '', activeVideo: 'active', activePodcasts: '' })">
+                        Video
+                    </button>
+                </li>
+                <li [class]="(activePodcasts == null) ? ampState.activePodcasts : activePodcasts">
+                    <button on="tap:AMP.setState({ hideRadio: true, hideVideo: true, hidePodcasts: false, activeRadio: '', activeVideo: '', activePodcasts: 'active' })">
+                        Podcasts
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.wrap -->
+    <amp-position-observer on="enter:hideHeader.start; exit:showHeader.start" layout="nodisplay"></amp-position-observer>
+</header>
+<!-- /.header-sticky -->
+
+<header class="header-sticky header-sticky2" id="scrollToTopButton">
+    <div class="wrap">
+        <div class="col">
+            <ul class="header-sticky-list flex flex-wrap">
+                <li class="active" [class]="(activeRadio == null) ? ampState.activeRadio : activeRadio">
+                    <button on="tap:AMP.setState({ hideRadio: false, hideVideo: true, hidePodcasts: true, activeRadio: 'active', activeVideo: '', activePodcasts: ''}), top.scrollTo(duration=200)">
+                        Radio
+                    </button>
+                </li>
+                <li [class]="(activeVideo == null) ? ampState.activeVideo : activeVideo">
+                    <button on="tap:AMP.setState({ hideRadio: true, hideVideo: false, hidePodcasts: true, activeRadio: '', activeVideo: 'active', activePodcasts: '' }), top.scrollTo(duration=200)">
+                        Video
+                    </button>
+                </li>
+                <li [class]="(activePodcasts == null) ? ampState.activePodcasts : activePodcasts">
+                    <button on="tap:AMP.setState({ hideRadio: true, hideVideo: true, hidePodcasts: false, activeRadio: '', activeVideo: '', activePodcasts: 'active' }), top.scrollTo(duration=200)">
+                        Podcasts
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.wrap -->
+</header>
+<!-- /.header-sticky -->

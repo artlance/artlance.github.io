@@ -1,0 +1,139 @@
+.navigation-sidebar {
+    background: $s;
+}
+.sidebar-close,
+.navigation-toggle {
+    font-size: 0;
+    line-height: 0;
+    display: none;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    z-index: 5050;
+    border: 0;
+    padding: 0;
+    background: transparent;
+}
+.sidebar-close {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.sidebar-close-icon,
+.navigation-toggle-icon {
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    right: 6px;
+    height: 2px;
+    background: $p;
+    transform: translate3d(0, -50%, 0);
+    transition: background-color $d $f;
+    border-radius: 1px;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background: $p;
+        transform: translate3d(0, -6px, 0);
+        transition: transform $d $f;
+        border-radius: 1px;
+    }
+    &:after {
+        transform: translate3d(0, 6px, 0);
+    }
+}
+.sidebar-close-icon {
+    background-color: transparent;
+    &:after {
+        transform: rotate(-45deg);
+    }
+    &:before {
+        transform: rotate(45deg);
+    }
+}
+
+.navigation-sidebar {
+    padding: 50px;
+    .header-navigation-list {
+        a, button {
+            &.header-navigation-add {
+                margin-left: -24px;
+            }
+        }
+        & > li {
+            margin-left: 0;
+        }
+    }
+    .search-form {
+        margin-left: -32px;
+    }
+    input.header-search {
+        width: 120px;
+    }
+}
+
+.schedule-group {
+    font-size: 16px;
+    margin-bottom: 46px;
+}
+.schedule-group-title {
+    color: #6A6A6C;
+    margin-bottom: 10px;
+}
+.schedule-list-title {
+    color: #6A6A6C;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.schedule-list {
+    margin-left: -30px;
+    margin-right: -30px;
+    padding-bottom: 30px;
+    &::after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+}
+.schedule-item {
+    width: 50%;
+    float: left;
+    padding: 0 30px 35px;
+}
+.schedule-item-info {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+.schedule-item-meta {
+    flex: 0 0 calc(100% - 135px);
+    max-width: calc(100% - 135px);
+}
+.schedule-item-meta-nowrap {
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.schedule-item-duration {
+    color: #6A6A6C;
+    padding-left: 10px;
+    text-align: right;
+    white-space: nowrap;
+    flex: 0 0 135px;
+    max-width: 135px;
+    span {
+        padding-left: 10px;
+        color: $w;
+    }
+}
+.schedule-item-player {
+    background: #E7E7EE;
+    min-height: 50px;
+    border-radius: 25px;
+}

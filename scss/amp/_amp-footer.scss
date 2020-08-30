@@ -1,0 +1,28 @@
+.footer-amp {
+    padding: 30px 0 20px;
+    font-size: 15px;
+}
+.footer-line {
+    height: 1px;
+    background: #28282A;
+    opacity: 0.1;
+    margin-bottom: 17px;
+}
+.copyright {
+    color: #6A6A6C;
+}
+.footer-navigation-list {
+    justify-content: flex-end;
+    li {
+        padding: 0 0 0 19px;
+    }
+    a {
+        color: #6A6A6C;
+        &:hover {
+            color: #28282A;
+        }
+    }
+}
+.footer-amp-push {
+    height: 70px;
+}

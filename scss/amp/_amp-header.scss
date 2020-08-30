@@ -1,0 +1,187 @@
+.header-amp {
+    color: $w;
+    position: absolute;
+    z-index: 50;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding-top: 29px;
+}
+.logo {
+    display: inline-block;
+    margin-top: 2px;
+    svg {
+        display: block;
+        width: 61px;
+        height: 29px;
+    }
+}
+.header-line {
+    margin-top: 23px;
+    height: 1px;
+    background: $w;
+    opacity: 0.1;
+}
+.header-account {
+    width: 34px;
+    height: 34px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-top: -1px;
+}
+.header-navigation-list {
+    a, button {
+        font-size: 15px;
+        background-color: transparent;
+        border: 0;
+        color: $w;
+        font-weight: 500;
+        line-height: 2;
+        display: inline-block;
+        &:hover {
+            color: $p;
+        }
+        &.header-navigation-add {
+            padding-left: 24px;
+            position: relative;
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                top: 8px;
+                left: 6px;
+                width: 2px;
+                height: 14px;
+                background: $p;
+            }
+            &:after {
+                left: 0;
+                top: 14px;
+                height: 2px;
+                width: 14px;
+            }
+        }
+    }
+    & > li {
+        margin-left: 40px;
+        &:first-child {
+            margin-left: 10px;
+        }
+    }
+}
+.search-form {
+    position: relative;
+}
+.search-icon {
+    position: absolute;
+    left: 2px;
+    top: 7px;
+    opacity: 0.2;
+}
+input.header-search {
+    border-radius: 0;
+    color: $w;
+    position: relative;
+    width: 300px;
+    background: transparent;
+    border: 0;
+    height: 32px;
+    border-radius: 0;
+    font-size: 15px;
+    padding-left: 32px;
+    font-family: "Larsseit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+.header-amp {
+    z-index: 6080;
+}
+.header-push {
+    height: 90px;
+    background: #000;
+    position: relative;
+    z-index: 6070;
+}
+.header-sticky {
+    background: $w;
+    z-index: 6060;
+    position: relative;
+    .wrap {
+        max-width: 1230px;
+    }
+}
+.header-sticky2 {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 5050;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+.header-sticky-list {
+    padding: 22px 0 26px;
+    margin-left: -25px;
+    li {
+        margin-left: 25px;
+    }
+    button {
+        border: 0;
+        font-weight: 500;
+        font-size: 20px;
+        background: transparent;
+        display: block;
+        font-family: 'Larsseit';
+        border-bottom: 2px solid transparent;
+        color: #6A6A6C;
+    }
+    li.active button {
+        color: $text;
+        border-bottom-color: $p;
+        cursor: default;
+    }
+}
+.header-categories {
+    background: #F3F3F3;
+    padding: 16px 0 8px;
+    .wrap {
+        max-width: 1230px;
+    }
+}
+.header-categories-list {
+    margin-left: -10px;
+    li {
+        margin-left: 10px;
+        margin-bottom: 8px;
+        &.active {
+            button {
+                background: $w;
+                border-color: $w;
+                box-shadow: 0 1px 2px 0 rgba(123,122,116,0.10);
+            }
+        }
+    }
+    button {
+        background: transparent;
+        border: 1px solid #D5D5DC;
+        height: 32px;
+        padding: 0 17px;
+        border-radius: 16px;
+        font-weight: 500;
+        font-family: 'Larsseit';
+        &:hover {
+            background-color: rgba($w, 0.5);
+        }
+    }
+}
+select.select {
+    width: 100%;
+    height: 32px;
+    appearance: none;
+    padding: 5px 20px 5px 10px;
+    border-radius: 16px;
+    background: $w url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iNyIgdmlld0JveD0iMCAwIDEwIDciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEgMS4wMDVMNC45OTcgNSA5IDEiIHN0cm9rZT0iI0JBQkFDNSIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=") no-repeat calc(100% - 10px) 50%;
+    background-size: 10px 7px;
+    box-shadow: 0 1px 2px 0 rgba(123,122,116,0.10);
+    border: 1px solid $w;
+}
