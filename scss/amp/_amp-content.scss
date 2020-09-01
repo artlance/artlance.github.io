@@ -229,7 +229,7 @@
     background: #F3F3F3;
     padding: 48px 0 17px;
     .wrap {
-        max-width: 1230px;
+        max-width: 1130px;
     }
 }
 .content-grid {
@@ -256,6 +256,8 @@
         color: #fff;
         text-align: center;
         .get-app-list {
+            margin-left: -24px;
+            margin-right: -24px;
             li {
                 margin-bottom: 0;
                 padding-bottom: 10px;

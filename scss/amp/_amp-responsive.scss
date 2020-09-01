@@ -42,6 +42,9 @@
         flex: 0 0 100%;
         max-width: 100%;
     }
+    .col-m-only {
+        display: block;
+    }
     .col-m-6 {
         flex: 0 0 50%;
         max-width: 50%;
@@ -339,6 +342,7 @@
     .single-content {
         padding: 8px 0 0;
         .wrap {
+            max-width: 480px;
             padding-left: 0;
             padding-right: 0;
         }
