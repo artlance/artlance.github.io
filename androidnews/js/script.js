@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     //ready
     document.querySelector('body').classList.remove('no-js');
 
-    //------------------------------------------------------------------------//
-
     //fakelink
     const fakeLinks = document.querySelectorAll('a[href="#"]');
 
@@ -14,7 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    //------------------------------------------------------------------------//
+    //navigation
+    document.querySelector('.navigation-toggle').addEventListener('click', (event) => {
+        event.preventDefault();
+        document.querySelector('body').classList.toggle('navigation-open');
+    });
 
 }); //DOMContentLoaded
 
