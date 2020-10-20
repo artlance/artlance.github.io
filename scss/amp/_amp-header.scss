@@ -108,7 +108,7 @@ input.header-search {
     z-index: 6060;
     position: relative;
     .wrap {
-        max-width: 1130px;
+        max-width: 1230px;
     }
 }
 .header-sticky2 {
@@ -120,7 +120,7 @@ input.header-search {
     box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
 .header-sticky-list {
-    padding: 22px 0 26px;
+    padding: 18px 0 20px;
     margin-left: -25px;
     li {
         margin-left: 25px;
@@ -128,7 +128,7 @@ input.header-search {
     button {
         border: 0;
         font-weight: 500;
-        font-size: 20px;
+        font-size: 18px;
         background: transparent;
         display: block;
         font-family: 'Larsseit';
@@ -143,7 +143,7 @@ input.header-search {
 }
 .header-categories {
     background: #F3F3F3;
-    padding: 16px 0 8px;
+    padding: 12px 0 4px;
     .wrap {
         max-width: 1130px;
     }
