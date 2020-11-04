@@ -76,3 +76,14 @@
     background: transparent;
     vertical-align: top;
 }
+button.button-reboot svg.button-icon-active {
+    display: none;
+}
+button.button-reboot.active {
+    svg.button-icon-default {
+        display: none;
+    }
+    svg.button-icon-active {
+        display: block;
+    }
+}

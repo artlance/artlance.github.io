@@ -13,7 +13,7 @@
                     </button>
                 </li>
                 <li [class]="(activePodcasts == null) ? ampState.activePodcasts : activePodcasts">
-                    <button on="tap:AMP.setState({ hideRadio: true, hideVideo: true, hidePodcasts: false, activeRadio: '', activeVideo: '', activePodcasts: 'active' })">
+                    <button on="tap:AMP.setState({ hideRadio: true, hideVideo: true, hidePodcasts: false, activeRadio: '', activeVideo: '', activePodcasts: 'active' }), categoriesList.refresh, categoriesListMobile.refresh, podcastsList.refresh">
                         Podcasts
                     </button>
                 </li>
@@ -41,7 +41,7 @@
                     </button>
                 </li>
                 <li [class]="(activePodcasts == null) ? ampState.activePodcasts : activePodcasts">
-                    <button on="tap:AMP.setState({ hideRadio: true, hideVideo: true, hidePodcasts: false, activeRadio: '', activeVideo: '', activePodcasts: 'active' }), top.scrollTo(duration=200)">
+                    <button on="tap:AMP.setState({ hideRadio: true, hideVideo: true, hidePodcasts: false, activeRadio: '', activeVideo: '', activePodcasts: 'active' }), top.scrollTo(duration=200), categoriesList.refresh, categoriesListMobile.refresh, podcastsList.refresh">
                         Podcasts
                     </button>
                 </li>

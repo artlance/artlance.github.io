@@ -148,8 +148,11 @@ input.header-search {
         max-width: 1130px;
     }
 }
+.header-categories-repeater amp-list div[role='list'],
 .header-categories-list {
     margin-left: -10px;
+    display: flex;
+    .list-item,
     li {
         margin-left: 10px;
         margin-bottom: 8px;
