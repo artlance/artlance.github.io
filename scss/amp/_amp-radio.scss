@@ -295,3 +295,41 @@
 .main-podcasts-m-meta {
     display: none;
 }
+.label-play {
+    cursor: pointer;
+    user-select: none;
+    &-icon {
+        padding-top: 5px;
+        margin-right: 8px;
+        width: 32px;
+        height: 32px;
+        border: 2px solid $white;
+        display: inline-block;
+        border-radius: 50%;
+        vertical-align: middle;
+    }
+    svg {
+        display: block;
+        margin: 0 auto;
+    }
+    input {
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: -9999px;
+        appearance: none;
+        &:checked {
+            & + span {
+                .label-icon-active {
+                    display: block;
+                }
+                .label-icon-default {
+                    display: none;
+                }
+            }
+        }
+    }
+    .label-icon-active {
+        display: none;
+    }
+}
