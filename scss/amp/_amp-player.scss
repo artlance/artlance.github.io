@@ -24,6 +24,37 @@
             }
         }
     }
+    &-columns {
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-meta {
+        padding: 0 30px;
+        flex: 0 0 200px;
+        max-width: 200px;
+        text-align: left;
+        line-height: 1.2;
+        a {
+            color: $text;
+        }
+        &.text-right {
+            text-align: right;
+        }
+        &-title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        &-subtitle {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 14px;
+            opacity: 0.5;
+        }
+    }
 }
 .radio-main-trigger {
     position: relative;
