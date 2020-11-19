@@ -27,6 +27,9 @@
     &-columns {
         align-items: center;
         justify-content: space-between;
+        &-dark {
+            display: none;
+        }
     }
     &-meta {
         padding: 0 30px;
@@ -53,6 +56,29 @@
             text-overflow: ellipsis;
             font-size: 14px;
             opacity: 0.5;
+        }
+    }
+    &-dark {
+        background: #28282a;
+        color: $w;
+        a {
+            color: $w;
+        }
+        .player-sticky {
+            &-nav {
+                background: #3b3a3f;
+                path {
+                    fill: $w;
+                }
+            }
+            &-columns {
+                &-light {
+                    display: none;
+                }
+                &-dark {
+                    display: flex;
+                }
+            }
         }
     }
 }

@@ -3,17 +3,17 @@
         <div class="col">
             <ul class="header-sticky-list flex flex-wrap">
                 <li class="active" [class]="(activeRadio == null) ? ampState.activeRadio : activeRadio">
-                    <button on="tap:AMP.setState({ hideRadio: false, hideVideo: true, hidePodcasts: true, activeRadio: 'active', activeVideo: '', activePodcasts: ''})">
+                    <button on="tap:AMP.setState({ hideRadio: false, hideVideo: true, hidePodcasts: true, activeRadio: 'active', activeVideo: '', activePodcasts: '', activePodcastsPlayer: 'player-sticky'})">
                         Radio
                     </button>
                 </li>
                 <li [class]="(activeVideo == null) ? ampState.activeVideo : activeVideo">
-                    <button on="tap:AMP.setState({ hideRadio: true, hideVideo: false, hidePodcasts: true, activeRadio: '', activeVideo: 'active', activePodcasts: '' })">
+                    <button on="tap:AMP.setState({ hideRadio: true, hideVideo: false, hidePodcasts: true, activeRadio: '', activeVideo: 'active', activePodcasts: '', activePodcastsPlayer: 'player-sticky' })">
                         Video
                     </button>
                 </li>
                 <li [class]="(activePodcasts == null) ? ampState.activePodcasts : activePodcasts">
-                    <button on="tap:AMP.setState({ hideRadio: true, hideVideo: true, hidePodcasts: false, activeRadio: '', activeVideo: '', activePodcasts: 'active' }), categoriesList.refresh, categoriesListMobile.refresh, podcastsList.refresh">
+                    <button on="tap:AMP.setState({ hideRadio: true, hideVideo: true, hidePodcasts: false, activeRadio: '', activeVideo: '', activePodcasts: 'active', activePodcastsPlayer: 'player-sticky player-sticky-dark' }), categoriesList.refresh, categoriesListMobile.refresh, podcastsList.refresh">
                         Podcasts
                     </button>
                 </li>
@@ -31,17 +31,17 @@
         <div class="col">
             <ul class="header-sticky-list flex flex-wrap">
                 <li class="active" [class]="(activeRadio == null) ? ampState.activeRadio : activeRadio">
-                    <button on="tap:AMP.setState({ hideRadio: false, hideVideo: true, hidePodcasts: true, activeRadio: 'active', activeVideo: '', activePodcasts: ''}), top.scrollTo(duration=200)">
+                    <button on="tap:AMP.setState({ hideRadio: false, hideVideo: true, hidePodcasts: true, activeRadio: 'active', activeVideo: '', activePodcasts: '', activePodcastsPlayer: 'player-sticky'}), top.scrollTo(duration=200)">
                         Radio
                     </button>
                 </li>
                 <li [class]="(activeVideo == null) ? ampState.activeVideo : activeVideo">
-                    <button on="tap:AMP.setState({ hideRadio: true, hideVideo: false, hidePodcasts: true, activeRadio: '', activeVideo: 'active', activePodcasts: '' }), top.scrollTo(duration=200)">
+                    <button on="tap:AMP.setState({ hideRadio: true, hideVideo: false, hidePodcasts: true, activeRadio: '', activeVideo: 'active', activePodcasts: '', activePodcastsPlayer: 'player-sticky' }), top.scrollTo(duration=200)">
                         Video
                     </button>
                 </li>
                 <li [class]="(activePodcasts == null) ? ampState.activePodcasts : activePodcasts">
-                    <button on="tap:AMP.setState({ hideRadio: true, hideVideo: true, hidePodcasts: false, activeRadio: '', activeVideo: '', activePodcasts: 'active' }), top.scrollTo(duration=200), categoriesList.refresh, categoriesListMobile.refresh, podcastsList.refresh">
+                    <button on="tap:AMP.setState({ hideRadio: true, hideVideo: true, hidePodcasts: false, activeRadio: '', activeVideo: '', activePodcasts: 'active', activePodcastsPlayer: 'player-sticky player-sticky-dark' }), top.scrollTo(duration=200), categoriesList.refresh, categoriesListMobile.refresh, podcastsList.refresh">
                         Podcasts
                     </button>
                 </li>
