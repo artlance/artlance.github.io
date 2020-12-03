@@ -33,12 +33,15 @@
     }
     &-meta {
         padding: 0 30px;
-        flex: 0 0 200px;
-        max-width: 200px;
+        flex: 0 0 370px;
+        max-width: 370px;
         text-align: left;
         line-height: 1.2;
         a {
             color: $text;
+        }
+        &-mobile {
+            display: none;
         }
         &.text-right {
             text-align: right;

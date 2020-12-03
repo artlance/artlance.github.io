@@ -489,25 +489,39 @@
         padding: 16px 0;
     }
     .player-sticky {
+        &-columns {}
         &-meta {
-            flex: 0 0 130px;
-            max-width: 130px;
+            flex: 0 0 auto;
+            flex-grow: 1;
+            max-width: none;
             padding-left: 16px;
             padding-right: 16px;
             &-title {
+                line-height: 1.2;
+                margin-bottom: 2px;
                 font-size: 14px;
+                .player-sticky-meta-mobile {
+                    display: block;
+                }
             }
             &-subtitle {
                 font-size: 12px;
             }
+            &-desktop {
+                display: none;
+            }
+            &-mobile {
+                display: inline-block;
+            }
         }
         &-nav {
+            order: -1;
             background: transparent;
-            flex: 0 0 111px;
-            max-width: 111px;
+            flex: 0 0 135px;
+            max-width: 135px;
             padding: 0;
             button {
-                width: 37px;
+                width: 45px;
             }
         }
     }
