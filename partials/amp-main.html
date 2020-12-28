@@ -240,12 +240,13 @@
                 </div>
                 <!-- /.col -->
                 <div class="col-m-full col-m-only">
+
                     <amp-list
                         id="categoriesListMobile"
                         width="auto"
                         height="40"
                         layout="fixed-height"
-                        src="upload/podcasts.json"
+                        src="upload/podcasts2.json"
                         binding="refresh"
                         single-item
                         items="."
@@ -254,10 +255,11 @@
                         <template type="amp-mustache">
                             <select class="select">
                                 {{#items}}
-                                    <option value="{{title}}">{{title}}</option>
+                                <option value="{{title}}">{{title}}</option>
                                 {{/items}}
                             </select>
                         </template>
+
                     </amp-list>
                 </div>
                 <!-- /.col-m-full -->
