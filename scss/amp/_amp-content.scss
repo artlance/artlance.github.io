@@ -233,14 +233,27 @@
     }
 }
 .content-grid {
-    // column-count: 3;
-    // column-gap: 30px;
-    // font-size: 0;
     display: flex;
     flex-wrap: wrap;
     align-items: start;
     margin-left: -15px;
     margin-right: -15px;
+}
+.content-grid-2 {
+    column-count: 3;
+    column-gap: 30px;
+    font-size: 0;
+    padding: 0 15px;
+    .content-block-wrapper {
+        flex: none;
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
+    }
+    .content-block {
+        display: inline-block;
+        width: 100%;
+    }
 }
 .content-block-wrapper {
     flex: 0 0 33.333333%;
