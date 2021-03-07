@@ -152,10 +152,11 @@ input.header-search {
 .header-categories-list {
     margin-left: -10px;
     display: flex;
+    flex-wrap: wrap;
     .list-item,
     li {
         margin-left: 10px;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
         &.active {
             button {
                 background: $w;
