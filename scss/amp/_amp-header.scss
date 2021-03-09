@@ -152,11 +152,22 @@ input.header-search {
 .header-categories-list {
     margin-left: -10px;
     display: flex;
-    flex-wrap: wrap;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 4px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
     .list-item,
     li {
         margin-left: 10px;
         margin-bottom: 10px;
+        white-space: nowrap;
         &.active {
             button {
                 background: $w;
