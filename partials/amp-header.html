@@ -3,35 +3,39 @@
     <div class="wrap flex-align">
         <div class="col col-m-grow">
             <a href="#" class="logo transition-opacity">
-                <svg width="68" height="16" viewBox="0 0 68 16" xmlns="http://www.w3.org/2000/svg"><title>Zeno</title><g fill="#FEFEFE" fill-rule="evenodd"><path d="M50.653 2.073A1.845 1.845 0 1 0 48.35 3.86v9.049L36.415.972v11.252a1.845 1.845 0 1 0 .912 0V3.175l11.936 11.936V3.86a1.845 1.845 0 0 0 1.39-1.787M13.782 11.936c-.862 0-1.583.591-1.786 1.39h-9.05L14.883 1.388H3.63a1.845 1.845 0 1 0 0 .912h9.05L.743 14.238h11.252a1.844 1.844 0 1 0 1.786-2.302M60.454 14.815a6.78 6.78 0 0 1-6.773-6.774 6.78 6.78 0 0 1 6.773-6.772 6.78 6.78 0 0 1 6.773 6.772 6.78 6.78 0 0 1-6.773 6.774m0-12.393a5.626 5.626 0 0 0-5.62 5.62 5.626 5.626 0 0 0 5.62 5.62 5.626 5.626 0 0 0 5.62-5.62 5.626 5.626 0 0 0-5.62-5.62M19.952 14.238h11.275v-.942H19.952v.942zm0-11.907h11.275v-.942H19.952v.942zm0 5.954h11.275v-.942H19.952v.942z" /></g></svg>
+                <svg width="68" height="16" viewBox="0 0 68 16" xmlns="http://www.w3.org/2000/svg"><title>Group</title><g class="animate-fill" fill="#FEFEFE" fill-rule="evenodd"><path d="M50.653 2.073A1.845 1.845 0 1 0 48.35 3.86v9.049L36.415.972v11.252a1.845 1.845 0 1 0 .912 0V3.175l11.936 11.936V3.86a1.845 1.845 0 0 0 1.39-1.787M13.782 11.936c-.862 0-1.583.591-1.786 1.39h-9.05L14.883 1.388H3.63a1.845 1.845 0 1 0 0 .912h9.05L.743 14.238h11.252a1.844 1.844 0 1 0 1.786-2.302M60.454 14.815a6.78 6.78 0 0 1-6.773-6.774 6.78 6.78 0 0 1 6.773-6.772 6.78 6.78 0 0 1 6.773 6.772 6.78 6.78 0 0 1-6.773 6.774m0-12.393a5.626 5.626 0 0 0-5.62 5.62 5.626 5.626 0 0 0 5.62 5.62 5.626 5.626 0 0 0 5.62-5.62 5.626 5.626 0 0 0-5.62-5.62M19.952 14.238h11.275v-.942H19.952v.942zm0-11.907h11.275v-.942H19.952v.942zm0 5.954h11.275v-.942H19.952v.942z"/></g></svg>
             </a>
         </div>
         <div class="col col-grow col-m-none">
             <ul class="header-navigation-list flex">
-                <li><a class="header-navigation-add" href="#">Create Station</a></li>
-                <li><a href="#">Discover</a></li>
-                <li><a href="#">Genres</a></li>
                 <li>
-                    <form class="search-form" method="GET" action="/search-instant.html" target="_top">
-                        <svg class="search-icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><title>Search</title><path d="M14.295 15.703a.989.989 0 0 0 1.412 0 1.02 1.02 0 0 0 0-1.43l-3.081-3.08a7.007 7.007 0 1 0-1.42 1.423l3.089 3.087zM2.002 7.007a5.005 5.005 0 1 1 10.01 0 5.005 5.005 0 0 1-10.01 0z" fill="#FFF" fill-rule="nonzero"/></svg>
-                        <input type="text" placeholder="Search by Genre, Location or Country" name="search" class="header-search" autocomplete="off">
-                        <input type="hidden" value="Search">
-                    </form>
+                    <a class="header-menu-station" href="#">
+                        <span class="icon-create"></span>
+                        Create Station
+                    </a>
+                    <span class="header-menu-or">or</span>
+                    <a href="#">Podcasts</a>
                 </li>
+                <li><a href="#">Discovery</a></li>
             </ul>
         </div>
         <div class="col">
             <button class="navigation-toggle" on="tap:sidebar.toggle">Menu<span class="navigation-toggle-icon"></span></button>
-            <div class="header-account m-none">
-                <a href="#">
-                    <amp-img src="upload/account.jpg" width="38" height="38" layout="responsive" alt="Nick Name"></amp-img>
-                </a>
+            <div class="header-amp-toolbar wrap m-none">
+                <div class="header-amp-toolbar-item">
+                    <a class="header-amp-toolbar-button-transparent" href="#">
+                        <div class="button-icon">
+                            <svg width="14" height="16" viewBox="0 0 14 16" xmlns="http://www.w3.org/2000/svg"><path d="M11.311 9.527c-1.161-.393-1.85-.825-2.143-1.175A3.991 3.991 0 0011 5V4c0-2.206-1.794-4-4-4S3 1.794 3 4v1c0 1.406.732 2.639 1.832 3.352-.292.35-.981.782-2.142 1.175A3.942 3.942 0 000 13.26V16h14v-2.74c0-1.69-1.081-3.19-2.689-3.733zM5 4c0-1.103.897-2 2-2s2 .897 2 2v1c0 1.103-.897 2-2 2s-2-.897-2-2V4zm7 10H2v-.74c0-.831.534-1.569 1.33-1.838 1.845-.624 3-1.436 3.452-2.422h.436c.452.986 1.607 1.798 3.453 2.422A1.943 1.943 0 0112 13.26V14z" fill="#FFF" class="animate-fill" fill-rule="nonzero"/></svg>
+                        </div>
+                        Log in
+                    </a>
+                </div>
+                <div class="header-amp-toolbar-item">
+                    <a class="header-amp-toolbar-button" href="#">Sign up</a>
+                </div>
             </div>
         </div>
         <!-- /.col -->
-        <div class="col col-full">
-            <div class="header-line"></div>
-        </div>
     </div>
 </header>
 <!-- /.header-amp -->
