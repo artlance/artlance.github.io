@@ -1,0 +1,85 @@
+.body-prayer {
+    .radio-single-content {
+        margin-bottom: 60px;
+        max-width: 100%;
+        .wrap {
+            max-width: 1110px;
+        }
+    }
+    .footer-amp-push {
+        display: none;
+    }
+    .about-social li:last-child {
+        padding-right: 0;
+    }
+    .radio-tab {
+        min-height: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+.add-prayer-line {
+    background: #000 no-repeat 50% 50%;
+    background-size: cover;
+    color: $white;
+    text-align: center;
+    padding: 60px 0;
+    .button {
+        width: auto;
+        display: inline-block;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    &-title {
+        margin-bottom: 10px;
+        h2 {
+            font-weight: bold;
+            font-size: 30px;
+            margin-bottom: 0;
+        }
+    }
+    &-info {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+}
+.add-station-icon {
+    display: block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: #f5ab19;
+    margin: 0 auto;
+    border-radius: 8px;
+    margin-bottom: 26px;
+}
+.add-station-plus {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border: 4px solid #fff;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-50%,0);
+}
+.add-station-plus:after,
+.add-station-plus:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 20px;
+    background: #fff;
+    left: 50%;
+    top: 50%;
+    border-radius: 2px;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-50%,0);
+}
+.add-station-plus:after {
+    width: 20px;
+    height: 4px;
+}
