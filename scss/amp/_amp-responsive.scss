@@ -143,6 +143,16 @@
     .radio-toolbar-small {
         order: 1;
     }
+    .main-podcasts {
+        &-title {
+            font-size: 24px;
+        }
+    }
+    .main-podcast-item {
+        &-title {
+            font-size: 16px;
+        }
+    }
 
     //get app
     .get-app-link {
@@ -408,7 +418,9 @@
     .content-block-img {
         margin: 18px -16px;
     }
-    .content-block h1, .content-block h2, .content-block h3 {
+    .content-block h1,
+    .content-block h2,
+    .content-block h3 {
         margin-bottom: 6px;
     }
     .header-push {
@@ -502,7 +514,8 @@
         padding: 16px 0;
     }
     .player-sticky {
-        &-columns {}
+        &-columns {
+        }
         &-meta {
             flex: 0 0 auto;
             flex-grow: 1;

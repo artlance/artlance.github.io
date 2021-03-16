@@ -37,7 +37,7 @@
             left: -14px;
             width: 6px;
             height: 6px;
-            background: #D0021A;
+            background: #d0021a;
             border-radius: 50%;
         }
     }
@@ -120,6 +120,10 @@
     flex: 0 0 260px;
     max-width: 260px;
     padding: 0 38px;
+    &-full {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 .radio-toolbar-normal {
     flex: 0 0 157px;
@@ -173,7 +177,7 @@
 }
 .radio-audio-wrap {
     audio::-webkit-media-controls-panel {
-        background: #E7E7E7;
+        background: #e7e7e7;
     }
 }
 .radio-single {
@@ -257,12 +261,12 @@
 .radio-audio-separator {
     width: 1px;
     height: 32px;
-    background: rgba(#28282A, 0.1);
+    background: rgba(#28282a, 0.1);
 }
 .tooltip {
     display: none;
     padding: 20px;
-    background: #18181A;
+    background: #18181a;
     border: 1px solid rgba($w, 0.16);
     border-radius: 8px;
     position: absolute;
@@ -331,5 +335,53 @@
     }
     .label-icon-active {
         display: none;
+    }
+}
+.main-podcasts {
+    padding-top: 20px;
+    &-title {
+        font-size: 30px;
+    }
+    .wrap {
+        max-width: 1100px;
+    }
+    &-list {
+        padding-bottom: 20px;
+        padding-top: 40px;
+    }
+}
+.main-podcast-item {
+    display: flex;
+    margin-bottom: 40px;
+    &-control {
+        flex: 0 0 44px;
+        max-width: 44px;
+        button.button-reboot {
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            border: 1px solid rgba(40, 40, 42, 0.2);
+            svg {
+                margin: 0 auto;
+            }
+        }
+    }
+    &-content {
+        flex: 0 0 calc(100% - 44px);
+        max-width: calc(100% - 44px);
+        padding-top: 3px;
+        padding-left: 10px;
+    }
+    &-title {
+        max-width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 18px;
+        line-height: 1.2;
+    }
+    &-duration {
+        font-size: 14px;
+        color: rgba($text, 0.5);
     }
 }
